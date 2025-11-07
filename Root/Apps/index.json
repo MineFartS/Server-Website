@@ -1,0 +1,65 @@
+[
+   {
+      "URL": "/Apps/AI/",
+      "Visible": false,
+      "Title": "AI",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/AI/"
+   },
+   {
+      "URL": "/Apps/",
+      "Visible": false,
+      "Title": "Apps",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Apps/index.html"
+   },
+   {
+      "URL": "/Apps/Bookmark/",
+      "Visible": false,
+      "Title": "Bookmark",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Bookmark/"
+   },
+   {
+      "URL": "/Apps/Dog Age Calculator/",
+      "Visible": true,
+      "Title": "Dog Age Calculator",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Dog Age Calculator/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/",
+      "Visible": true,
+      "Title": "Goofy Stuff",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/"
+   },
+   {
+      "URL": "/Apps/To Do List/",
+      "Visible": false,
+      "Title": "To Do List",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/To Do List/"
+   },
+   {
+      "URL": "/Apps/Videos/",
+      "Visible": false,
+      "Title": "Videos",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/"
+   },
+   {
+      "URL": "/Apps/YouTube Downloader/",
+      "Visible": true,
+      "Title": "YouTube Downloader",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/YouTube Downloader/"
+   },
+   {
+      "URL": "/Apps/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/index.json"
+   }
+]

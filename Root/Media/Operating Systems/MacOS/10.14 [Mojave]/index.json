@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "https://archive.org/download/macos_iso/Mojave_10.14.6.iso",
+      "Visible": true,
+      "Title": "ISO",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.14 [Mojave]/ISO.href"
+   },
+   {
+      "URL": "https://drive.google.com/file/d/1X2vb9AyPoN8vqDWLmXhXqth1DUqQnmEj/edit#:~:text=Download",
+      "Visible": true,
+      "Title": "Patcher",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.14 [Mojave]/Patcher.href"
+   },
+   {
+      "URL": "/Media/Operating Systems/MacOS/10.14 [Mojave]/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.14 [Mojave]/index.json"
+   }
+]

@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Riddles/",
+      "Visible": false,
+      "Title": "Riddles",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Riddles/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Riddles/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Riddles/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Riddles/lines.json",
+      "Visible": false,
+      "Title": "lines",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Riddles/lines.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Riddles/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Riddles/type.ini"
+   }
+]

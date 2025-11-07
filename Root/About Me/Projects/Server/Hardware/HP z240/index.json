@@ -1,0 +1,37 @@
+[
+   {
+      "URL": "/About Me/Projects/Server/Hardware/HP z240/",
+      "Visible": false,
+      "Title": "HP z240",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/index.html"
+   },
+   {
+      "URL": "/About Me/Projects/Server/Hardware/HP z240/Manual.pdf",
+      "Visible": true,
+      "Title": "Manual",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/Manual.pdf"
+   },
+   {
+      "URL": "https://support.hp.com/us-en/product/details/hp-z240-tower-workstation/model/8354566?serialnumber=2UA8261YQC",
+      "Visible": true,
+      "Title": "Product Support Page",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/Product Support Page.href"
+   },
+   {
+      "URL": "/About Me/Projects/Server/Hardware/HP z240/System Board.png",
+      "Visible": true,
+      "Title": "System Board",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/System Board.png"
+   },
+   {
+      "URL": "/About Me/Projects/Server/Hardware/HP z240/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/index.json"
+   }
+]

@@ -1,0 +1,65 @@
+[
+   {
+      "URL": "/.well-known/",
+      "Visible": false,
+      "Title": ".well-known",
+      "SRC": "None",
+      "Path": "E:/Website/Root/.well-known/"
+   },
+   {
+      "URL": "/About Me/",
+      "Visible": true,
+      "Title": "About Me",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/"
+   },
+   {
+      "URL": "/Apps/",
+      "Visible": true,
+      "Title": "Apps",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/"
+   },
+   {
+      "URL": "/Media/",
+      "Visible": true,
+      "Title": "Media",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/"
+   },
+   {
+      "URL": "/",
+      "Visible": false,
+      "Title": "Phil's Server",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/index.html"
+   },
+   {
+      "URL": "/Servers/",
+      "Visible": true,
+      "Title": "Servers",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/"
+   },
+   {
+      "URL": "/_/",
+      "Visible": false,
+      "Title": "_",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/"
+   },
+   {
+      "URL": "/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/index.json"
+   },
+   {
+      "URL": "/web.config",
+      "Visible": false,
+      "Title": "web",
+      "SRC": "None",
+      "Path": "E:/Website/Root/web.config"
+   }
+]

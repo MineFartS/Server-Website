@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/About Me/Projects/Server/Hardware/Camera/",
+      "Visible": false,
+      "Title": "Camera",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/Camera/index.html"
+   },
+   {
+      "URL": "https://ipc-us.ismartlife.me/login",
+      "Visible": true,
+      "Title": "IPC Terminal",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/Camera/IPC Terminal.href"
+   },
+   {
+      "URL": "/About Me/Projects/Server/Hardware/Camera/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/Camera/index.json"
+   }
+]

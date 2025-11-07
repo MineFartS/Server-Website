@@ -1,0 +1,65 @@
+[
+   {
+      "URL": "/Media/Books/",
+      "Visible": true,
+      "Title": "Books",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/"
+   },
+   {
+      "URL": "/Media/Documents/",
+      "Visible": true,
+      "Title": "Documents",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Documents/"
+   },
+   {
+      "URL": "/Media/Drivers/",
+      "Visible": true,
+      "Title": "Drivers",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Drivers/"
+   },
+   {
+      "URL": "/Media/",
+      "Visible": false,
+      "Title": "Media",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/index.html"
+   },
+   {
+      "URL": "/Media/Music/",
+      "Visible": true,
+      "Title": "Music",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Music/"
+   },
+   {
+      "URL": "/Media/Operating Systems/",
+      "Visible": true,
+      "Title": "Operating Systems",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/"
+   },
+   {
+      "URL": "/Media/Programs/",
+      "Visible": true,
+      "Title": "Programs",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/"
+   },
+   {
+      "URL": "/Media/Stories/",
+      "Visible": true,
+      "Title": "Stories",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/"
+   },
+   {
+      "URL": "/Media/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/index.json"
+   }
+]

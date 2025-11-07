@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/_/Search/Protect.ini",
+      "Visible": false,
+      "Title": "Protect",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Search/Protect.ini"
+   },
+   {
+      "URL": "/_/Search/",
+      "Visible": false,
+      "Title": "Search",
+      "SRC": "E:/Website/Root/_/Search/index.html",
+      "Path": "E:/Website/Root/_/Search/index.html"
+   },
+   {
+      "URL": "/_/Search/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Search/index.json"
+   },
+   {
+      "URL": "/_/Search/search.json",
+      "Visible": false,
+      "Title": "search",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Search/search.json"
+   }
+]

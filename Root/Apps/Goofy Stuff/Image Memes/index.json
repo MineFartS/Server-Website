@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Image Memes/",
+      "Visible": false,
+      "Title": "Image Memes",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Image Memes/files/",
+      "Visible": true,
+      "Title": "files",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/files/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Image Memes/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Image Memes/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/type.ini"
+   }
+]

@@ -1,0 +1,44 @@
+[
+   {
+      "URL": "/Media/Operating Systems/Linux/Ubuntu/2025-02-19.iso",
+      "Visible": true,
+      "Title": "2025-02-19",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Ubuntu/2025-02-19.iso"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Ubuntu/2025-10-28.iso",
+      "Visible": true,
+      "Title": "2025-10-28",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Ubuntu/2025-10-28.iso"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Ubuntu/2025-10-30.iso",
+      "Visible": true,
+      "Title": "2025-10-30",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Ubuntu/2025-10-30.iso"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Ubuntu/",
+      "Visible": false,
+      "Title": "Ubuntu",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Ubuntu/index.html"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Ubuntu/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Ubuntu/index.json"
+   },
+   {
+      "URL": "https://ubuntu.com/download/desktop#:~:text=Intel or AMD, Download",
+      "Visible": true,
+      "Title": "latest",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Ubuntu/latest.href"
+   }
+]

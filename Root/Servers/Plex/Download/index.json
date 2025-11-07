@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Servers/Plex/Download/",
+      "Visible": false,
+      "Title": "Download",
+      "SRC": "E:/Website/Root/Servers/Plex/Download/index.html",
+      "Path": "E:/Website/Root/Servers/Plex/Download/index.html"
+   },
+   {
+      "URL": "/Servers/Plex/Download/Protect.ini",
+      "Visible": false,
+      "Title": "Protect",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Plex/Download/Protect.ini"
+   },
+   {
+      "URL": "/Servers/Plex/Download/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Plex/Download/index.json"
+   }
+]

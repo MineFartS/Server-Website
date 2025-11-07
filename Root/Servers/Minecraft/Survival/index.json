@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Servers/Minecraft/Survival/Index.html",
+      "Visible": true,
+      "Title": "Index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/Survival/Index.html"
+   },
+   {
+      "URL": "/Servers/Minecraft/Survival/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/Survival/index.json"
+   },
+   {
+      "URL": "/Servers/Minecraft/Survival/ports.json",
+      "Visible": false,
+      "Title": "ports",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/Survival/ports.json"
+   }
+]

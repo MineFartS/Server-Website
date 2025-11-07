@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "https://archive.org/download/Windows7-iso/Win7Pro32bit.iso",
+      "Visible": true,
+      "Title": "32 bit",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Windows/7/2011-04-12/32 bit.href"
+   },
+   {
+      "URL": "https://archive.org/download/Windows7-iso/win7_64_bit.iso",
+      "Visible": true,
+      "Title": "64 bit",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Windows/7/2011-04-12/64 bit.href"
+   },
+   {
+      "URL": "/Media/Operating Systems/Windows/7/2011-04-12/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Windows/7/2011-04-12/index.json"
+   }
+]

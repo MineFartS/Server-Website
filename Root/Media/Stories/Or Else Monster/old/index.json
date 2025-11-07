@@ -1,0 +1,44 @@
+[
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/hide.ini",
+      "Visible": false,
+      "Title": "hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/hide.ini"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/images/",
+      "Visible": true,
+      "Title": "images",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/index.json"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/",
+      "Visible": false,
+      "Title": "old",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/index.html"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/projects/",
+      "Visible": true,
+      "Title": "projects",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/projects/"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/story/",
+      "Visible": true,
+      "Title": "story",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/"
+   }
+]

@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/_/Account/Create/",
+      "Visible": false,
+      "Title": "Create",
+      "SRC": "E:/Website/Root/_/Account/Create/index.html",
+      "Path": "E:/Website/Root/_/Account/Create/index.html"
+   },
+   {
+      "URL": "/_/Account/Create/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Create/Hide.ini"
+   },
+   {
+      "URL": "/_/Account/Create/Protect.ini",
+      "Visible": false,
+      "Title": "Protect",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Create/Protect.ini"
+   },
+   {
+      "URL": "/_/Account/Create/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Create/index.json"
+   }
+]

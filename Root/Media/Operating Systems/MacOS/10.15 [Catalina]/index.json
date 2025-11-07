@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "https://archive.org/download/macos_iso/Catalina_10.15.7.iso",
+      "Visible": true,
+      "Title": "ISO",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.15 [Catalina]/ISO.href"
+   },
+   {
+      "URL": "https://github.com/dosdude1/macos-catalina-patcher/releases/download/1.4.7/macOS.Catalina.Patcher.dmg",
+      "Visible": true,
+      "Title": "Patcher",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.15 [Catalina]/Patcher.href"
+   },
+   {
+      "URL": "/Media/Operating Systems/MacOS/10.15 [Catalina]/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.15 [Catalina]/index.json"
+   }
+]

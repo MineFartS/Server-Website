@@ -1,0 +1,37 @@
+[
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/images/Original/Or Else 1.jpg",
+      "Visible": true,
+      "Title": "Or Else 1",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/Original/Or Else 1.jpg"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/images/Original/Or Else 2.jpg",
+      "Visible": true,
+      "Title": "Or Else 2",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/Original/Or Else 2.jpg"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/images/Original/Or What 1.jpg",
+      "Visible": true,
+      "Title": "Or What 1",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/Original/Or What 1.jpg"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/images/Original/",
+      "Visible": false,
+      "Title": "Original",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/Original/index.html"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/images/Original/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/Original/index.json"
+   }
+]

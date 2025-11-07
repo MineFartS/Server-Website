@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Deep Thoughts/",
+      "Visible": false,
+      "Title": "Deep Thoughts",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Deep Thoughts/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Deep Thoughts/lines.json",
+      "Visible": false,
+      "Title": "lines",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/lines.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Deep Thoughts/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/type.ini"
+   }
+]

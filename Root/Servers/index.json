@@ -1,0 +1,37 @@
+[
+   {
+      "URL": "/Servers/FTP/",
+      "Visible": true,
+      "Title": "FTP",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/FTP/"
+   },
+   {
+      "URL": "/Servers/Minecraft/",
+      "Visible": true,
+      "Title": "Minecraft",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/"
+   },
+   {
+      "URL": "/Servers/Plex/",
+      "Visible": true,
+      "Title": "Plex",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Plex/"
+   },
+   {
+      "URL": "/Servers/",
+      "Visible": false,
+      "Title": "Servers",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Servers/index.html"
+   },
+   {
+      "URL": "/Servers/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/index.json"
+   }
+]

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Manage</title>
+<style>
+@font-face{
+	font-family: 'CustomFont';
+	src: url('/_embed_media/font.ttf');
+}
+
+button, input, html {
+	font-family: CustomFont;
+}
+
+body {
+  background-position: center center;   
+  flex-direction: column;
+  display: flex;
+   text-align: center;
+   margin: 0;
+   justify-content: center;
+   align-items: center;
+   line-height: 0.2;
+ }
+
+ input[type="text"].form {
+  text-align: center;
+   font-size: 3em;
+   padding: .4em 0.25em;
+   background-color: rgb(228, 228, 228);
+   width: 75vw;
+   height: 60px;
+ }
+
+ input[type="radio"].form {
+width: 60px;
+height: 60px;
+cursor: pointer;
+background-color: red;
+appearance: none;
+border-radius: 50%;
+vertical-align:-10px
+ }
+
+ input[type="radio"]:checked {
+background-color: grey;
+ }
+ hr {
+	border: 3px solid black
+ }
+</style>
+</head>
+<body onLoad="run()">
+	<hr style="height:5px; border-color:transparent">
+
+	<button id="back" onMouseOver="this.style.backgroundColor = 'rgb(26, 105, 158)'" onMouseOut="this.style.backgroundColor = 'rgb(0, 153, 255)'" style="border: 2px solid black;
+		 font-size: 2em; padding: .4em .4em; cursor: pointer; color: white; border-radius: 5px; background-color: rgb(0, 153, 255);">Back</button>
+
+	<hr style="height:5px; border-color:transparent">
+
+
+	<button class="title" id="title" style="border: 2px solid black; font-size: 4em;	padding: .2em 0.1em; color: white;	border-radius: 5px;	width: 60%;	background-color: rgb(6, 170, 69);"></button>
+
+	<hr style="height:5px; border-color:transparent">
+
+	<hr style="height:5px; border-color:transparent">
+
+  <div id="boxes"><hr></div>
+
+  <span>
+	<div id="imageDiv"></div>
+</span>
+
+</body><script> 
+function run() {
+
+		var cookies = document.cookie
+
+		var values = []
+		for (x=0; x<cookies.length; x++) {
+			try {
+  			var cookie = cookies.split('ToDo-'+x+'=')[1].split(';')[0]
+			if (cookie !== '' && cookie !== undefined)  {
+				values.push(cookie)
+  			}
+			} catch {}
+		}
+
+
+
+	values.push('')
+	for (x=0; x<values.length; x++)  {
+		document.getElementById('boxes').insertAdjacentHTML('beforeend',`
+			<span>
+			<input type="radio" class="form" id="c${x}">
+			<input id="t${x}" type="text" class="form" maxlength="100" value="${values[x]}"/>
+			</span>
+			<hr id="h${x}">
+		`)
+	}
+	for (x=0; x<cookies.split(';').length+2; x++) {
+				document.cookie = 'ToDo-' + x + '= ; expires=Thu, 01 Jan 1970 00:00:00 GMT'
+		}
+	onLoad()
+	setInterval(() => {
+		var buttons = []
+		for (x=0; x<500; x++) {
+			try {
+				document.getElementById('t'+x).value
+				buttons.push(x)
+			} catch {}
+		}
+
+		for (x=0; x<buttons.length; x++) {
+			if (document.getElementById('c'+buttons[x]).checked) {
+				document.getElementById('t'+buttons[x]).remove()
+				document.getElementById('c'+buttons[x]).remove()
+				document.getElementById('h'+buttons[x]).remove()
+			} else {
+  				document.cookie = 'ToDo-' + x + '=' + document.getElementById('t'+x).value + ";expires=Fri, 31 Dec 9999 23:59:59 GMT"
+			}
+		}
+		
+
+		try {
+			var condition = document.getElementById('t'.concat(buttons[buttons.length-1])).value.length !== 0
+		} catch{
+			var condition = true
+		}
+			if (condition) {
+				document.getElementById('boxes').insertAdjacentHTML('beforeend',`
+					<span>
+					<input type="radio" class="form" id="c${buttons[buttons.length-1]+1}">
+					<input id="t${buttons[buttons.length-1]+1}" type="text" class="form" maxlength="100" "/>
+					</span>
+					<hr id="h${buttons[buttons.length-1]+1}">
+				`)
+			}
+	}, 100);
+}
+
+function onLoad() {
+	// Set Title, Header and Back Button
+	if (window.location.pathname == '/') {
+		// Execute if page is being viewed in the root directory
+		var title = 'Phil\'s Server';
+		var url = '/Search'
+		document.getElementById("back").textContent = 'Search'
+		} else {
+			// Execute if page is being viewed in subdirectory
+			var url = ""
+			for (x = 0; x < window.location.pathname.split("/").length - 2; x++) {
+				var url = url + window.location.pathname.split("/")[x] + "/"
+			}
+			// Set Title from either file name or directory name
+			if (window.location.pathname.split("/")[window.location.pathname.split("/").length - 1].includes('.html')) {
+				var title = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1].split('.html')[0]
+			} else {
+				var title = window.location.pathname.split("/")[window.location.pathname.split("/").length - 2]
+			}
+			// Replace '%20' with actual spaces
+			for (x = 0; x < title.split('%20').length + 3; x++) {
+				var title = title.replace("%20", " ")
+			}
+			document.title = "Phil's Server (" + title + ")"
+		}
+		document.getElementById('back').setAttribute('onclick', "window.top.location.href = '" + url + "'")
+		document.getElementById('title').textContent = title
+
+		// Load 2 random gifs
+		fetch("/_embed_media/gifs/index.txt").then(r => r.text()).then(t => t.split('\n')).then(t => {
+			var imgHTML = ''
+			for (x = 1; x < 3; x++) {
+				y = Math.trunc(Math.random() * Math.floor(t.length - 1))
+				var file = '/_embed_media/gifs/' + t[y].split('"')[1].split('\\')[t[y].split('"')[1].split('\\').length - 1]
+				var imgHTML = imgHTML + `<img height="100px" src="${file}">`
+			}
+			document.getElementById("imageDiv").innerHTML = '<span>' + imgHTML + '</span>'
+		})
+		// Set Background Color To Random RGB Value 
+		document.body.style.backgroundColor = "rgb(" + Math.trunc(Math.random() * [255][0]) + "," + Math.trunc(Math.random() * [255][0]) + "," + Math.trunc(Math.random() * [255][0]) + ",.25)"
+		// Show contents of alert.txt as alert if it exists
+		fetch('alert.txt').then(r => r.text()).then(message => {
+			if (message.includes('<!DOCTYPE html')) {
+				return
+			} else {
+				alert(message)
+			}
+		})
+	}
+</script></body></html>

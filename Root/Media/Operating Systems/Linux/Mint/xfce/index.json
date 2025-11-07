@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/xfce/2025-10-29.iso",
+      "Visible": true,
+      "Title": "2025-10-29",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/xfce/2025-10-29.iso"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/xfce/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/xfce/index.json"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/xfce/",
+      "Visible": false,
+      "Title": "xfce",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/xfce/index.html"
+   }
+]

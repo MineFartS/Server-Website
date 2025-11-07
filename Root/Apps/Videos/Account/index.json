@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Apps/Videos/Account/",
+      "Visible": false,
+      "Title": "Account",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Apps/Videos/Account/index.html"
+   },
+   {
+      "URL": "/Apps/Videos/Account/Upload/",
+      "Visible": true,
+      "Title": "Upload",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Account/Upload/"
+   },
+   {
+      "URL": "/Apps/Videos/Account/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Account/index.json"
+   }
+]

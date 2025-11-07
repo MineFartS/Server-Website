@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Rational Nonsense/",
+      "Visible": false,
+      "Title": "Rational Nonsense",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Rational Nonsense/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Rational Nonsense/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Rational Nonsense/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Rational Nonsense/lines.json",
+      "Visible": false,
+      "Title": "lines",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Rational Nonsense/lines.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Rational Nonsense/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Rational Nonsense/type.ini"
+   }
+]

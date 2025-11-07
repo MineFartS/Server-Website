@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/Cinnamon/",
+      "Visible": true,
+      "Title": "Cinnamon",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/Cinnamon/"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/",
+      "Visible": false,
+      "Title": "Mint",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/index.html"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/index.json"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/xfce/",
+      "Visible": true,
+      "Title": "xfce",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/xfce/"
+   }
+]

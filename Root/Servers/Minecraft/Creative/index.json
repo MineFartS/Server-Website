@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Servers/Minecraft/Creative/",
+      "Visible": false,
+      "Title": "Creative",
+      "SRC": "E:/Website/Root/Servers/Minecraft/__template__.html",
+      "Path": "E:/Website/Root/Servers/Minecraft/Creative/index.html"
+   },
+   {
+      "URL": "/Servers/Minecraft/Creative/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/Creative/index.json"
+   },
+   {
+      "URL": "/Servers/Minecraft/Creative/ports.json",
+      "Visible": false,
+      "Title": "ports",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/Creative/ports.json"
+   }
+]

@@ -1,0 +1,58 @@
+[
+   {
+      "URL": "/Servers/FTP/",
+      "Visible": true,
+      "Title": "FTP",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/FTP.href"
+   },
+   {
+      "URL": "/About Me/Projects/Server/Hardware/",
+      "Visible": true,
+      "Title": "Hardware",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/"
+   },
+   {
+      "URL": "/Servers/Minecraft/",
+      "Visible": true,
+      "Title": "Minecraft",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Minecraft.href"
+   },
+   {
+      "URL": "/Servers/Plex/",
+      "Visible": true,
+      "Title": "Plex",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Plex.href"
+   },
+   {
+      "URL": "https://github.com/MineFartS/philh_myftp_biz",
+      "Visible": true,
+      "Title": "Python Package",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Python Package.href"
+   },
+   {
+      "URL": "/About Me/Projects/Server/",
+      "Visible": false,
+      "Title": "Server",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/About Me/Projects/Server/index.html"
+   },
+   {
+      "URL": "https://github.com/MineFartS/Server-Status",
+      "Visible": true,
+      "Title": "Status",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Status.href"
+   },
+   {
+      "URL": "/About Me/Projects/Server/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/index.json"
+   }
+]

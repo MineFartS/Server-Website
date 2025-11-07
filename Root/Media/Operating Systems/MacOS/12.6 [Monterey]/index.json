@@ -1,0 +1,16 @@
+[
+   {
+      "URL": "https://archive.org/download/macos_iso/Monterey_12.6.1.iso",
+      "Visible": true,
+      "Title": "ISO",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/12.6 [Monterey]/ISO.href"
+   },
+   {
+      "URL": "/Media/Operating Systems/MacOS/12.6 [Monterey]/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/12.6 [Monterey]/index.json"
+   }
+]

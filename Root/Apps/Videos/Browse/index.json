@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Apps/Videos/Browse/",
+      "Visible": false,
+      "Title": "Browse",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Apps/Videos/Browse/index.html"
+   },
+   {
+      "URL": "/Apps/Videos/Browse/Channels/",
+      "Visible": true,
+      "Title": "Channels",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Browse/Channels/"
+   },
+   {
+      "URL": "/Apps/Videos/Browse/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Browse/index.json"
+   }
+]

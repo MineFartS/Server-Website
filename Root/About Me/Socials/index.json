@@ -1,0 +1,51 @@
+[
+   {
+      "URL": "https://github.com/MineFartS",
+      "Visible": true,
+      "Title": "GitHub",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/GitHub.href"
+   },
+   {
+      "URL": "https://laby.net/@MineFartS_",
+      "Visible": true,
+      "Title": "Minecraft",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/Minecraft.href"
+   },
+   {
+      "URL": "https://www.reddit.com/user/philtrondaboss/submitted/",
+      "Visible": true,
+      "Title": "Reddit",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/Reddit.href"
+   },
+   {
+      "URL": "/About Me/Socials/",
+      "Visible": false,
+      "Title": "Socials",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/About Me/Socials/index.html"
+   },
+   {
+      "URL": "https://stackoverflow.com/users/31195538/minefarts?tab=profile",
+      "Visible": true,
+      "Title": "Stack Overflow",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/Stack Overflow.href"
+   },
+   {
+      "URL": "/About Me/Socials/YouTube/",
+      "Visible": true,
+      "Title": "YouTube",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/YouTube/"
+   },
+   {
+      "URL": "/About Me/Socials/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/index.json"
+   }
+]

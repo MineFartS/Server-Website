@@ -1,0 +1,51 @@
+[
+   {
+      "URL": "/Media/Books/1984 (George Orwell).pdf",
+      "Visible": true,
+      "Title": "1984 (George Orwell)",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/1984 (George Orwell).pdf"
+   },
+   {
+      "URL": "/Media/Books/",
+      "Visible": false,
+      "Title": "Books",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Books/index.html"
+   },
+   {
+      "URL": "/Media/Books/Minecraft Handbooks/",
+      "Visible": true,
+      "Title": "Minecraft Handbooks",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Minecraft Handbooks/"
+   },
+   {
+      "URL": "/Media/Books/The 100 (Kass Morgan)/",
+      "Visible": true,
+      "Title": "The 100 (Kass Morgan)",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The 100 (Kass Morgan)/"
+   },
+   {
+      "URL": "/Media/Books/The Hunger Games (Suzanne Collins)/",
+      "Visible": true,
+      "Title": "The Hunger Games (Suzanne Collins)",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The Hunger Games (Suzanne Collins)/"
+   },
+   {
+      "URL": "/Media/Books/Worlds Collide (Philip Wylie)/",
+      "Visible": true,
+      "Title": "Worlds Collide (Philip Wylie)",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Worlds Collide (Philip Wylie)/"
+   },
+   {
+      "URL": "/Media/Books/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/index.json"
+   }
+]

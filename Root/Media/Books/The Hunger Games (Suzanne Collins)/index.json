@@ -1,0 +1,44 @@
+[
+   {
+      "URL": "/Media/Books/The Hunger Games (Suzanne Collins)/1. The Hunger Games.pdf",
+      "Visible": true,
+      "Title": "1. The Hunger Games",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The Hunger Games (Suzanne Collins)/1. The Hunger Games.pdf"
+   },
+   {
+      "URL": "/Media/Books/The Hunger Games (Suzanne Collins)/2. Catching Fire.pdf",
+      "Visible": true,
+      "Title": "2. Catching Fire",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The Hunger Games (Suzanne Collins)/2. Catching Fire.pdf"
+   },
+   {
+      "URL": "/Media/Books/The Hunger Games (Suzanne Collins)/3. Mockingjay.pdf",
+      "Visible": true,
+      "Title": "3. Mockingjay",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The Hunger Games (Suzanne Collins)/3. Mockingjay.pdf"
+   },
+   {
+      "URL": "/Media/Books/The Hunger Games (Suzanne Collins)/4. The Ballad of Songbirds and Snakes.pdf",
+      "Visible": true,
+      "Title": "4. The Ballad of Songbirds and Snakes",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The Hunger Games (Suzanne Collins)/4. The Ballad of Songbirds and Snakes.pdf"
+   },
+   {
+      "URL": "/Media/Books/The Hunger Games (Suzanne Collins)/",
+      "Visible": false,
+      "Title": "The Hunger Games (Suzanne Collins)",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Books/The Hunger Games (Suzanne Collins)/index.html"
+   },
+   {
+      "URL": "/Media/Books/The Hunger Games (Suzanne Collins)/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The Hunger Games (Suzanne Collins)/index.json"
+   }
+]

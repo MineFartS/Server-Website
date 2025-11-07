@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Media/Documents/IT/Git/",
+      "Visible": false,
+      "Title": "Git",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Documents/IT/Git/index.html"
+   },
+   {
+      "URL": "/Media/Documents/IT/Git/Host repo via ssh.pdf",
+      "Visible": true,
+      "Title": "Host repo via ssh",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Documents/IT/Git/Host repo via ssh.pdf"
+   },
+   {
+      "URL": "/Media/Documents/IT/Git/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Documents/IT/Git/index.json"
+   }
+]

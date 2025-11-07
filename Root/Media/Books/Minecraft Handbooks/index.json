@@ -1,0 +1,44 @@
+[
+   {
+      "URL": "/Media/Books/Minecraft Handbooks/Combat Handbook.pdf",
+      "Visible": true,
+      "Title": "Combat Handbook",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Minecraft Handbooks/Combat Handbook.pdf"
+   },
+   {
+      "URL": "/Media/Books/Minecraft Handbooks/Construction Handbook.pdf",
+      "Visible": true,
+      "Title": "Construction Handbook",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Minecraft Handbooks/Construction Handbook.pdf"
+   },
+   {
+      "URL": "/Media/Books/Minecraft Handbooks/Essential Handbook.pdf",
+      "Visible": true,
+      "Title": "Essential Handbook",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Minecraft Handbooks/Essential Handbook.pdf"
+   },
+   {
+      "URL": "/Media/Books/Minecraft Handbooks/",
+      "Visible": false,
+      "Title": "Minecraft Handbooks",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Books/Minecraft Handbooks/index.html"
+   },
+   {
+      "URL": "/Media/Books/Minecraft Handbooks/Redstone Handbook.pdf",
+      "Visible": true,
+      "Title": "Redstone Handbook",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Minecraft Handbooks/Redstone Handbook.pdf"
+   },
+   {
+      "URL": "/Media/Books/Minecraft Handbooks/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Minecraft Handbooks/index.json"
+   }
+]

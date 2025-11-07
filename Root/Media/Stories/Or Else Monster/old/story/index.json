@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/story/Original.docx",
+      "Visible": true,
+      "Title": "Original",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/Original.docx"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/story/Revised.docx",
+      "Visible": true,
+      "Title": "Revised",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/Revised.docx"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/story/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/index.json"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/old/story/",
+      "Visible": false,
+      "Title": "story",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/index.html"
+   }
+]

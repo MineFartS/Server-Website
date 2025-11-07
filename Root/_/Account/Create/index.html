@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Create</title>
+		
+		<link rel="icon" type="image/x-icon" href="/_/main.ico">
+		<link rel="stylesheet" href="/_/main.css">
+
+	</head>	
+
+	<body>
+
+		<a
+			class = "back"
+			id = "back"
+			onclick = "href = `../Login?dest=${parameters.dest}`"
+		>Log In</a>
+
+		<a class="title" id="title">{Title}</a>
+
+		<input
+			class = "smalloption"
+			type = "text"
+			id = "username"
+			placeholder = "Username"
+		>
+
+		<input
+			class = "smalloption"
+			type = "password"
+			id = "password"
+			placeholder = "Password"
+		>
+
+		<a
+			class = "submit"
+			onclick = "run()"
+		>Create</a>
+
+	</body>
+
+	<script type="text/javascript" src="/_/main.js"></script>
+
+	<script>
+
+		e['username'] = document.getElementById('username')
+		e['password'] = document.getElementById('password')
+
+		let dest = parameters['dest']
+		let back = ParentPathname(dest)
+
+		function run() {
+
+			// Call API with login details
+			let conn = API.call(
+				'/login/create',
+				{
+					'username': e.username.value,
+					'password': e.password.value
+				}
+			)
+
+			// Read Server Response
+			conn.then(t => {
+
+				if (t.Alert) {
+					alert(t.Alert)
+				}
+
+				if (t.Valid) {
+					
+					// Click the back button
+					e.back.click()
+
+				}
+
+			})
+
+		}
+
+	</script>
+
+</html>

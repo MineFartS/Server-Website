@@ -1,0 +1,44 @@
+[
+   {
+      "URL": "/Media/Books/The 100 (Kass Morgan)/1. The 100.pdf",
+      "Visible": true,
+      "Title": "1. The 100",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The 100 (Kass Morgan)/1. The 100.pdf"
+   },
+   {
+      "URL": "/Media/Books/The 100 (Kass Morgan)/2. Day 21.pdf",
+      "Visible": true,
+      "Title": "2. Day 21",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The 100 (Kass Morgan)/2. Day 21.pdf"
+   },
+   {
+      "URL": "/Media/Books/The 100 (Kass Morgan)/3. Homecoming.pdf",
+      "Visible": true,
+      "Title": "3. Homecoming",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The 100 (Kass Morgan)/3. Homecoming.pdf"
+   },
+   {
+      "URL": "/Media/Books/The 100 (Kass Morgan)/4. Rebellion.pdf",
+      "Visible": true,
+      "Title": "4. Rebellion",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The 100 (Kass Morgan)/4. Rebellion.pdf"
+   },
+   {
+      "URL": "/Media/Books/The 100 (Kass Morgan)/",
+      "Visible": false,
+      "Title": "The 100 (Kass Morgan)",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Books/The 100 (Kass Morgan)/index.html"
+   },
+   {
+      "URL": "/Media/Books/The 100 (Kass Morgan)/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/The 100 (Kass Morgan)/index.json"
+   }
+]

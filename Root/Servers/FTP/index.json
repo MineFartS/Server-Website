@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Servers/FTP/Clients/",
+      "Visible": true,
+      "Title": "Clients",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/FTP/Clients/"
+   },
+   {
+      "URL": "/Servers/FTP/",
+      "Visible": false,
+      "Title": "FTP",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Servers/FTP/index.html"
+   },
+   {
+      "URL": "/Servers/FTP/User Web Shares/",
+      "Visible": true,
+      "Title": "User Web Shares",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/FTP/User Web Shares/"
+   },
+   {
+      "URL": "/Servers/FTP/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/FTP/index.json"
+   }
+]

@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Dad Jokes/",
+      "Visible": false,
+      "Title": "Dad Jokes",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Dad Jokes/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Dad Jokes/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Dad Jokes/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Dad Jokes/lines.json",
+      "Visible": false,
+      "Title": "lines",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Dad Jokes/lines.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Dad Jokes/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Dad Jokes/type.ini"
+   }
+]

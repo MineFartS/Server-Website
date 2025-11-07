@@ -1,0 +1,16 @@
+[
+   {
+      "URL": "https://archive.org/download/macos_iso/BigSur_11.7.1.iso",
+      "Visible": true,
+      "Title": "ISO",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/11.7 [BigSur]/ISO.href"
+   },
+   {
+      "URL": "/Media/Operating Systems/MacOS/11.7 [BigSur]/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/11.7 [BigSur]/index.json"
+   }
+]

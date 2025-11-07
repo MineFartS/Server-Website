@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Servers/Plex/Download/",
+      "Visible": true,
+      "Title": "Download",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Plex/Download/"
+   },
+   {
+      "URL": "/Servers/Plex/",
+      "Visible": false,
+      "Title": "Plex",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Servers/Plex/index.html"
+   },
+   {
+      "URL": "/Servers/Plex/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Plex/index.json"
+   }
+]

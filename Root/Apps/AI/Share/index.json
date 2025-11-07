@@ -1,0 +1,37 @@
+[
+   {
+      "URL": "/Apps/AI/Share/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/AI/Share/Hide.ini"
+   },
+   {
+      "URL": "/Apps/AI/Share/Protect.ini",
+      "Visible": false,
+      "Title": "Protect",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/AI/Share/Protect.ini"
+   },
+   {
+      "URL": "/Apps/AI/Share/",
+      "Visible": false,
+      "Title": "Share",
+      "SRC": "E:/Website/Root/Apps/AI/Share/index.html",
+      "Path": "E:/Website/Root/Apps/AI/Share/index.html"
+   },
+   {
+      "URL": "/Apps/AI/Share/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/AI/Share/index.json"
+   },
+   {
+      "URL": "/Apps/AI/Share/responses/",
+      "Visible": true,
+      "Title": "responses",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/AI/Share/responses/"
+   }
+]

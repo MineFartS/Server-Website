@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/_/Account/Reset Password/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Reset Password/Hide.ini"
+   },
+   {
+      "URL": "/_/Account/Reset Password/Protect.ini",
+      "Visible": false,
+      "Title": "Protect",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Reset Password/Protect.ini"
+   },
+   {
+      "URL": "/_/Account/Reset Password/",
+      "Visible": false,
+      "Title": "Reset Password",
+      "SRC": "E:/Website/Root/_/Account/Reset Password/index.html",
+      "Path": "E:/Website/Root/_/Account/Reset Password/index.html"
+   },
+   {
+      "URL": "/_/Account/Reset Password/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Reset Password/index.json"
+   }
+]

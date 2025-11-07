@@ -1,0 +1,16 @@
+[
+   {
+      "URL": "/Servers/FTP/Clients/",
+      "Visible": false,
+      "Title": "Clients",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Servers/FTP/Clients/index.html"
+   },
+   {
+      "URL": "/Servers/FTP/Clients/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/FTP/Clients/index.json"
+   }
+]

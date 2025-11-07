@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Apps/Videos/Account/Upload/Protect.ini",
+      "Visible": false,
+      "Title": "Protect",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Account/Upload/Protect.ini"
+   },
+   {
+      "URL": "/Apps/Videos/Account/Upload/",
+      "Visible": false,
+      "Title": "Upload",
+      "SRC": "E:/Website/Root/Apps/Videos/Account/Upload/index.html",
+      "Path": "E:/Website/Root/Apps/Videos/Account/Upload/index.html"
+   },
+   {
+      "URL": "/Apps/Videos/Account/Upload/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Account/Upload/index.json"
+   }
+]

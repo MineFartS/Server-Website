@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/.well-known/",
+      "Visible": false,
+      "Title": ".well-known",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/.well-known/index.html"
+   },
+   {
+      "URL": "/.well-known/acme-challenge/",
+      "Visible": false,
+      "Title": "acme-challenge",
+      "SRC": "None",
+      "Path": "E:/Website/Root/.well-known/acme-challenge/"
+   },
+   {
+      "URL": "/.well-known/hide.ini",
+      "Visible": false,
+      "Title": "hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/.well-known/hide.ini"
+   },
+   {
+      "URL": "/.well-known/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/.well-known/index.json"
+   }
+]

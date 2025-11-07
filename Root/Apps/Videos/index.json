@@ -1,0 +1,58 @@
+[
+   {
+      "URL": "/Apps/Videos/Account/",
+      "Visible": true,
+      "Title": "Account",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Account/"
+   },
+   {
+      "URL": "/Apps/Videos/Browse/",
+      "Visible": true,
+      "Title": "Browse",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Browse/"
+   },
+   {
+      "URL": "/Apps/Videos/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Hide.ini"
+   },
+   {
+      "URL": "/Apps/Videos/My Channel/",
+      "Visible": true,
+      "Title": "My Channel",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/My Channel/"
+   },
+   {
+      "URL": "/Apps/Videos/Search/",
+      "Visible": true,
+      "Title": "Search",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/Search/"
+   },
+   {
+      "URL": "/Apps/Videos/",
+      "Visible": false,
+      "Title": "Videos",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Apps/Videos/index.html"
+   },
+   {
+      "URL": "/Apps/Videos/files/",
+      "Visible": false,
+      "Title": "files",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/files/"
+   },
+   {
+      "URL": "/Apps/Videos/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/index.json"
+   }
+]

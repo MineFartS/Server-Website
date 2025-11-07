@@ -1,0 +1,65 @@
+[
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/Boss Fight.JPG",
+      "Visible": true,
+      "Title": "Boss Fight",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/Boss Fight.JPG"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/Chillin on the Couch.jpg",
+      "Visible": true,
+      "Title": "Chillin on the Couch",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/Chillin on the Couch.jpg"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/Fallen in the Pool.jpg",
+      "Visible": true,
+      "Title": "Fallen in the Pool",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/Fallen in the Pool.jpg"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/In Bed.jpg",
+      "Visible": true,
+      "Title": "In Bed",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/In Bed.jpg"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/",
+      "Visible": false,
+      "Title": "Photos",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/index.html"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/Sitting on the Couch.jpg",
+      "Visible": true,
+      "Title": "Sitting on the Couch",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/Sitting on the Couch.jpg"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/Smiling.jpg",
+      "Visible": true,
+      "Title": "Smiling",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/Smiling.jpg"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/With a Lei.jpg",
+      "Visible": true,
+      "Title": "With a Lei",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/With a Lei.jpg"
+   },
+   {
+      "URL": "/About Me/My Dog, Raleigh/Photos/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/My Dog, Raleigh/Photos/index.json"
+   }
+]

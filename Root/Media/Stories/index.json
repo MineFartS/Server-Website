@@ -1,0 +1,37 @@
+[
+   {
+      "URL": "/Media/Stories/Or Else Monster/",
+      "Visible": true,
+      "Title": "Or Else Monster",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/"
+   },
+   {
+      "URL": "/Media/Stories/",
+      "Visible": false,
+      "Title": "Stories",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Stories/index.html"
+   },
+   {
+      "URL": "/Media/Stories/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/index.json"
+   },
+   {
+      "URL": "/Media/Stories/script.js",
+      "Visible": false,
+      "Title": "script",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/script.js"
+   },
+   {
+      "URL": "/Media/Stories/style.css",
+      "Visible": false,
+      "Title": "style",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/style.css"
+   }
+]

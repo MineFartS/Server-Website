@@ -1,0 +1,37 @@
+[
+   {
+      "URL": "/Apps/Videos/My Channel/Auth.ini",
+      "Visible": false,
+      "Title": "Auth",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/My Channel/Auth.ini"
+   },
+   {
+      "URL": "/Apps/Videos/My Channel/Modify/",
+      "Visible": true,
+      "Title": "Modify",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/My Channel/Modify/"
+   },
+   {
+      "URL": "/Apps/Videos/My Channel/",
+      "Visible": false,
+      "Title": "My Channel",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Apps/Videos/My Channel/index.html"
+   },
+   {
+      "URL": "/Apps/Videos/My Channel/Upload/",
+      "Visible": true,
+      "Title": "Upload",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/My Channel/Upload/"
+   },
+   {
+      "URL": "/Apps/Videos/My Channel/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Videos/My Channel/index.json"
+   }
+]

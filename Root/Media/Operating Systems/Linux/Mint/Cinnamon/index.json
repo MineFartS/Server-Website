@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/Cinnamon/2025-10-29.iso",
+      "Visible": true,
+      "Title": "2025-10-29",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/Cinnamon/2025-10-29.iso"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/Cinnamon/",
+      "Visible": false,
+      "Title": "Cinnamon",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/Cinnamon/index.html"
+   },
+   {
+      "URL": "/Media/Operating Systems/Linux/Mint/Cinnamon/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/Cinnamon/index.json"
+   }
+]

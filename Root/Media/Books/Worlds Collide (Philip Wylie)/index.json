@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Media/Books/Worlds Collide (Philip Wylie)/1. When Worlds Collide.pdf",
+      "Visible": true,
+      "Title": "1. When Worlds Collide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Worlds Collide (Philip Wylie)/1. When Worlds Collide.pdf"
+   },
+   {
+      "URL": "/Media/Books/Worlds Collide (Philip Wylie)/2. After Worlds Collide.pdf",
+      "Visible": true,
+      "Title": "2. After Worlds Collide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Worlds Collide (Philip Wylie)/2. After Worlds Collide.pdf"
+   },
+   {
+      "URL": "/Media/Books/Worlds Collide (Philip Wylie)/",
+      "Visible": false,
+      "Title": "Worlds Collide (Philip Wylie)",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Books/Worlds Collide (Philip Wylie)/index.html"
+   },
+   {
+      "URL": "/Media/Books/Worlds Collide (Philip Wylie)/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Books/Worlds Collide (Philip Wylie)/index.json"
+   }
+]

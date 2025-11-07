@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Video Memes/",
+      "Visible": false,
+      "Title": "Video Memes",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Video Memes/files/",
+      "Visible": true,
+      "Title": "files",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/files/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Video Memes/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Video Memes/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/type.ini"
+   }
+]

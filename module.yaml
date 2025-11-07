@@ -1,0 +1,14 @@
+
+enabled: true
+
+watch_files: [
+  #'/API/app.py',
+  '/__init__.py'
+]
+
+packages: [
+  "uvicorn",
+  "fastapi",
+  "aiofiles",
+  "yt-dlp"
+]

@@ -1,0 +1,23 @@
+[
+   {
+      "URL": "/.well-known/acme-challenge/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/.well-known/acme-challenge/Hide.ini"
+   },
+   {
+      "URL": "/.well-known/acme-challenge/",
+      "Visible": false,
+      "Title": "acme-challenge",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/.well-known/acme-challenge/index.html"
+   },
+   {
+      "URL": "/.well-known/acme-challenge/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/.well-known/acme-challenge/index.json"
+   }
+]

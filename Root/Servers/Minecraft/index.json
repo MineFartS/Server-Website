@@ -1,0 +1,37 @@
+[
+   {
+      "URL": "/Servers/Minecraft/Creative/",
+      "Visible": true,
+      "Title": "Creative",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/Creative/"
+   },
+   {
+      "URL": "/Servers/Minecraft/",
+      "Visible": false,
+      "Title": "Minecraft",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Servers/Minecraft/index.html"
+   },
+   {
+      "URL": "/Servers/Minecraft/Survival/",
+      "Visible": true,
+      "Title": "Survival",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/Survival/"
+   },
+   {
+      "URL": "/Servers/Minecraft/__template__.html",
+      "Visible": false,
+      "Title": "__template__",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/__template__.html"
+   },
+   {
+      "URL": "/Servers/Minecraft/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Minecraft/index.json"
+   }
+]

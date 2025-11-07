@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Disappointing Affirmations/",
+      "Visible": false,
+      "Title": "Disappointing Affirmations",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Disappointing Affirmations/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Disappointing Affirmations/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Disappointing Affirmations/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Disappointing Affirmations/lines.json",
+      "Visible": false,
+      "Title": "lines",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Disappointing Affirmations/lines.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Disappointing Affirmations/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Disappointing Affirmations/type.ini"
+   }
+]

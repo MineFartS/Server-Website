@@ -1,0 +1,338 @@
+[
+   {
+      "URL": "https://www.7-zip.org/#:~:text=Windows x64 (64-bit)",
+      "Visible": true,
+      "Title": "7-Zip",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/7-Zip.href"
+   },
+   {
+      "URL": "/Media/Programs/Adobe/",
+      "Visible": true,
+      "Title": "Adobe",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Adobe/"
+   },
+   {
+      "URL": "https://www.advancedrenamer.com/download#:~:text=Download for Windows",
+      "Visible": true,
+      "Title": "Advanced Renamer",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Advanced Renamer.href"
+   },
+   {
+      "URL": "https://developer.android.com/studio#:~:text=Download%20Android%20Studio",
+      "Visible": true,
+      "Title": "Android Studio",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Android Studio.href"
+   },
+   {
+      "URL": "https://www.blender.org/download/#:~:text=Download%20Blender",
+      "Visible": true,
+      "Title": "Blender",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Blender.href"
+   },
+   {
+      "URL": "https://certifytheweb.com/home/download",
+      "Visible": true,
+      "Title": "Certify The Web",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Certify The Web.href"
+   },
+   {
+      "URL": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64",
+      "Visible": true,
+      "Title": "Discord",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Discord.href"
+   },
+   {
+      "URL": "https://win.cleverfiles.com/disk-drill-win.exe",
+      "Visible": true,
+      "Title": "Disk Drill",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Disk Drill.href"
+   },
+   {
+      "URL": "/Media/Programs/FileZilla/",
+      "Visible": true,
+      "Title": "FileZilla",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/FileZilla/"
+   },
+   {
+      "URL": "https://www.firefox.com/en-US/thanks/",
+      "Visible": true,
+      "Title": "Firefox",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Firefox.href"
+   },
+   {
+      "URL": "https://freefilesync.org/download.php#:~:text=Windows",
+      "Visible": true,
+      "Title": "FreeFileSync",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/FreeFileSync.href"
+   },
+   {
+      "URL": "https://git-scm.com/install/windows#:~:text=Windows/x64",
+      "Visible": true,
+      "Title": "Git",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Git.href"
+   },
+   {
+      "URL": "https://central.github.com/deployments/desktop/desktop/latest/win32",
+      "Visible": true,
+      "Title": "GitHub Desktop",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/GitHub Desktop.href"
+   },
+   {
+      "URL": "https://handbrake.fr/#:~:text=Download HandBrake",
+      "Visible": true,
+      "Title": "Handbrake",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Handbrake.href"
+   },
+   {
+      "URL": "https://www.irfanview.com/64bit.htm#:~:text=IrfanView - english version",
+      "Visible": true,
+      "Title": "IrfanView",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/IrfanView.href"
+   },
+   {
+      "URL": "https://ltspice.analog.com/software/LTspice64.msi",
+      "Visible": true,
+      "Title": "LTspice",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/LTspice.href"
+   },
+   {
+      "URL": "https://www.libreoffice.org/download/download-libreoffice/#:~:text=Choose,system",
+      "Visible": true,
+      "Title": "LibreOffice",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/LibreOffice.href"
+   },
+   {
+      "URL": "/Media/Programs/MacOS Bootcamp Support/",
+      "Visible": true,
+      "Title": "MacOS Bootcamp Support",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/MacOS Bootcamp Support/"
+   },
+   {
+      "URL": "https://github.com/massgravel/Microsoft-Activation-Scripts/blob/master/README.md#:~:text=For Windows,11",
+      "Visible": true,
+      "Title": "Microsoft Activation Scripts",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Microsoft Activation Scripts.href"
+   },
+   {
+      "URL": "https://launcher.mojang.com/download/MinecraftInstaller.exe",
+      "Visible": true,
+      "Title": "Minecraft",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Minecraft.href"
+   },
+   {
+      "URL": "https://obsproject.com/#:~:text=Windows",
+      "Visible": true,
+      "Title": "OBS",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/OBS.href"
+   },
+   {
+      "URL": "https://ollama.com/download/OllamaSetup.exe",
+      "Visible": true,
+      "Title": "Ollama",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Ollama.href"
+   },
+   {
+      "URL": "https://www.plex.tv/media-server-downloads/?cat=computer&plat=windows#:~:text=Choose Distribution,64-bit",
+      "Visible": true,
+      "Title": "Plex Media Server",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Plex Media Server.href"
+   },
+   {
+      "URL": "https://github.com/microsoft/PowerToys/releases/latest",
+      "Visible": true,
+      "Title": "PowerToys",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/PowerToys.href"
+   },
+   {
+      "URL": "/Media/Programs/",
+      "Visible": false,
+      "Title": "Programs",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Media/Programs/index.html"
+   },
+   {
+      "URL": "https://www.python.org/downloads/windows/#:~:text=Stable Releases",
+      "Visible": true,
+      "Title": "Python",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Python.href"
+   },
+   {
+      "URL": "/Media/Programs/Roblox/",
+      "Visible": true,
+      "Title": "Roblox",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Roblox/"
+   },
+   {
+      "URL": "https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe",
+      "Visible": true,
+      "Title": "Rockstar Games Launcher",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Rockstar Games Launcher.href"
+   },
+   {
+      "URL": "https://rufus.ie/en/#:~:text=Standard,Windows%20x64",
+      "Visible": true,
+      "Title": "Rufus",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Rufus.href"
+   },
+   {
+      "URL": "https://cdn.fastly.steamstatic.com/client/installer/SteamSetup.exe",
+      "Visible": true,
+      "Title": "Steam",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Steam.href"
+   },
+   {
+      "URL": "https://downloads.surfshark.com/windows/latest/SurfsharkSetup.exe",
+      "Visible": true,
+      "Title": "Surfshark",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Surfshark.href"
+   },
+   {
+      "URL": "https://www.codesector.com/files/teracopy.exe",
+      "Visible": true,
+      "Title": "TeraCopy",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/TeraCopy.href"
+   },
+   {
+      "URL": "https://www.torproject.org/download/#:~:text=Download for Windows",
+      "Visible": true,
+      "Title": "Tor",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Tor.href"
+   },
+   {
+      "URL": "https://www.videolan.org/vlc/#:~:text=Download VLC",
+      "Visible": true,
+      "Title": "VLC",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/VLC.href"
+   },
+   {
+      "URL": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64",
+      "Visible": true,
+      "Title": "VS Code",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/VS Code.href"
+   },
+   {
+      "URL": "https://visualstudio.microsoft.com/#:~:text=Download%20Visual%20Studio",
+      "Visible": true,
+      "Title": "Visual Studio",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Visual Studio.href"
+   },
+   {
+      "URL": "https://account.voicemod.net/#/?action=download",
+      "Visible": true,
+      "Title": "Voicemod",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Voicemod.href"
+   },
+   {
+      "URL": "https://winscp.net/eng/download.php#:~:text=Download Winscp",
+      "Visible": true,
+      "Title": "WinSCP",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/WinSCP.href"
+   },
+   {
+      "URL": "https://www.hauppauge.com/pages/support/support_wintv10.html#:~:text=wintv v10 installer",
+      "Visible": true,
+      "Title": "WinTV",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/WinTV.href"
+   },
+   {
+      "URL": "https://www.github.com/ytdl-org/ytdl-nightly/releases/latest/download/youtube-dl.exe",
+      "Visible": true,
+      "Title": "YouTube-DL",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/YouTube-DL.href"
+   },
+   {
+      "URL": "https://zadig.akeo.ie/#:~:text=Download",
+      "Visible": true,
+      "Title": "Zadig",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Zadig.href"
+   },
+   {
+      "URL": "/Media/Programs/Zello (Legacy).exe",
+      "Visible": true,
+      "Title": "Zello (Legacy)",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Zello (Legacy).exe"
+   },
+   {
+      "URL": "https://etcher.balena.io/#download-etcher#:~:text=Windows%20(x86|x64)",
+      "Visible": true,
+      "Title": "balenaEtcher",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/balenaEtcher.href"
+   },
+   {
+      "URL": "https://live.sysinternals.com/disk2vhd64.exe",
+      "Visible": true,
+      "Title": "disk2vhd",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/disk2vhd.href"
+   },
+   {
+      "URL": "https://download.httrack.com/cserv.php3?File=httrack_x64.exe",
+      "Visible": true,
+      "Title": "htTrack",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/htTrack.href"
+   },
+   {
+      "URL": "/Media/Programs/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/index.json"
+   },
+   {
+      "URL": "https://apps.microsoft.com/detail/9pc9mfx9qcxs?hl=en-US&gl=US",
+      "Visible": true,
+      "Title": "je2be",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/je2be.href"
+   },
+   {
+      "URL": "https://sourceforge.net/projects/qbittorrent/files/latest/download",
+      "Visible": true,
+      "Title": "qBitTorrent",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/qBitTorrent.href"
+   }
+]

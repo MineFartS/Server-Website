@@ -1,0 +1,72 @@
+[
+   {
+      "URL": "/_/Account/",
+      "Visible": false,
+      "Title": "Account",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/"
+   },
+   {
+      "URL": "/_/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Hide.ini"
+   },
+   {
+      "URL": "/_/Media/",
+      "Visible": false,
+      "Title": "Media",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Media/"
+   },
+   {
+      "URL": "/_/Search/",
+      "Visible": true,
+      "Title": "Search",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Search/"
+   },
+   {
+      "URL": "/_/background.gif",
+      "Visible": true,
+      "Title": "background",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/background.gif"
+   },
+   {
+      "URL": "/_/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/index.json"
+   },
+   {
+      "URL": "/_/main.css",
+      "Visible": false,
+      "Title": "main",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/main.css"
+   },
+   {
+      "URL": "/_/main.ico",
+      "Visible": true,
+      "Title": "main",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/main.ico"
+   },
+   {
+      "URL": "/_/main.js",
+      "Visible": false,
+      "Title": "main",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/main.js"
+   },
+   {
+      "URL": "/_/main.ttf",
+      "Visible": true,
+      "Title": "main",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/main.ttf"
+   }
+]

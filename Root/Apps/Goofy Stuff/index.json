@@ -1,0 +1,100 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Cursed Images/",
+      "Visible": true,
+      "Title": "Cursed Images",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Cursed Images/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Dad Jokes/",
+      "Visible": true,
+      "Title": "Dad Jokes",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Dad Jokes/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Deep Thoughts/",
+      "Visible": true,
+      "Title": "Deep Thoughts",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Disappointing Affirmations/",
+      "Visible": true,
+      "Title": "Disappointing Affirmations",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Disappointing Affirmations/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Goofy Insults/",
+      "Visible": true,
+      "Title": "Goofy Insults",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Goofy Insults/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/",
+      "Visible": false,
+      "Title": "Goofy Stuff",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Image Memes/",
+      "Visible": true,
+      "Title": "Image Memes",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Rational Nonsense/",
+      "Visible": true,
+      "Title": "Rational Nonsense",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Rational Nonsense/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Riddles/",
+      "Visible": true,
+      "Title": "Riddles",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Riddles/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Video Memes/",
+      "Visible": true,
+      "Title": "Video Memes",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/__template__.html",
+      "Visible": false,
+      "Title": "__template__",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/__template__.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/script.js",
+      "Visible": false,
+      "Title": "script",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/script.js"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/style.css",
+      "Visible": false,
+      "Title": "style",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/style.css"
+   }
+]

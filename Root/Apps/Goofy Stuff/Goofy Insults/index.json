@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Apps/Goofy Stuff/Goofy Insults/",
+      "Visible": false,
+      "Title": "Goofy Insults",
+      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Goofy Insults/index.html"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Goofy Insults/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Goofy Insults/index.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Goofy Insults/lines.json",
+      "Visible": false,
+      "Title": "lines",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Goofy Insults/lines.json"
+   },
+   {
+      "URL": "/Apps/Goofy Stuff/Goofy Insults/type.ini",
+      "Visible": false,
+      "Title": "type",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/Goofy Stuff/Goofy Insults/type.ini"
+   }
+]

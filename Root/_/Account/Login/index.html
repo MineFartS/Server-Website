@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Login</title>
+		
+		<link rel="icon" type="image/x-icon" href="/_/main.ico">
+		<link rel="stylesheet" href="/_/main.css">
+
+	</head>	
+
+	<body>
+
+		<a class="back" id="back" href="">{Back}</a>
+
+		<a class="title" id="title">{Title}</a>
+
+		<input
+			class = "smalloption"
+			type = "text"
+			id = "username"
+			placeholder = "Username"
+		>
+
+		<input
+			class = "smalloption"
+			type = "password"
+			id = "password"
+			placeholder = "Password"
+		>
+
+		<a
+			class = "submit"
+			onclick = "run()"
+		>Log In</a>
+
+		<a
+			class = "smalloption"
+			onclick = "href = `../Create?dest=${parameters.dest}`"
+		>Create Account</button>
+
+		<a
+			class = "smalloption"
+			onclick = "href = `../Reset Password?dest=${parameters.dest}`"
+		>Reset Password</button>
+
+	</body>
+
+	<script type="text/javascript" src="/_/main.js"></script>
+
+	<script>
+
+		e['username'] = document.getElementById('username')
+		e['password'] = document.getElementById('password')
+
+		// Destination URL
+		let dest = parameters['dest']
+
+		// Back URL
+		let back = ParentPathname(dest)
+
+		// Set text of back button to back url
+		e.back.textContent = back
+		
+		// Set url of back button to back url
+		e.back.setAttribute('href', back)
+
+		function run() {
+
+			// Call API with login details
+			let conn = API.call(
+				'/login/check',
+				{
+					'username': e.username.value,
+					'password': e.password.value,
+					'path': dest
+				}
+			)
+
+			// Read Server Response
+			conn.then(t => {
+
+				if (t.Alert) {
+					alert(t.Alert)
+				}
+
+				if (t.Valid) {
+					
+					// Set 'username' cookie
+					document.cookie = `username=${e.username.value}; path=/`
+
+					// Set 'token' cookie
+					document.cookie = `token=${t.Token}; path=/`
+
+					// Redirect to destination
+					window.location.pathname = dest
+
+				}
+
+			})
+
+		}
+
+	</script>
+
+</html>

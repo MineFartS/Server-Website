@@ -1,0 +1,44 @@
+[
+   {
+      "URL": "/_/Account/",
+      "Visible": false,
+      "Title": "Account",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/_/Account/index.html"
+   },
+   {
+      "URL": "/_/Account/Create/",
+      "Visible": false,
+      "Title": "Create",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Create/"
+   },
+   {
+      "URL": "/_/Account/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Hide.ini"
+   },
+   {
+      "URL": "/_/Account/Login/",
+      "Visible": false,
+      "Title": "Login",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Login/"
+   },
+   {
+      "URL": "/_/Account/Reset Password/",
+      "Visible": false,
+      "Title": "Reset Password",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/Reset Password/"
+   },
+   {
+      "URL": "/_/Account/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Account/index.json"
+   }
+]

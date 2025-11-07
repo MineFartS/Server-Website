@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "/Media/Stories/Or Else Monster/6/hide.ini",
+      "Visible": false,
+      "Title": "hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/6/hide.ini"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/6/image.png",
+      "Visible": true,
+      "Title": "image",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/6/image.png"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/6/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/6/index.json"
+   },
+   {
+      "URL": "/Media/Stories/Or Else Monster/6/text.txt",
+      "Visible": true,
+      "Title": "text",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/6/text.txt"
+   }
+]

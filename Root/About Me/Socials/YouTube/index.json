@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "https://www.youtube.com/melanieandhailey",
+      "Visible": true,
+      "Title": "Melanie & Hailey",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/YouTube/Melanie & Hailey.href"
+   },
+   {
+      "URL": "https://www.youtube.com/philandaaron",
+      "Visible": true,
+      "Title": "Mr. Philthy",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/YouTube/Mr. Philthy.href"
+   },
+   {
+      "URL": "/About Me/Socials/YouTube/",
+      "Visible": false,
+      "Title": "YouTube",
+      "SRC": "E:/Website/Root/index.html",
+      "Path": "E:/Website/Root/About Me/Socials/YouTube/index.html"
+   },
+   {
+      "URL": "/About Me/Socials/YouTube/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Socials/YouTube/index.json"
+   }
+]
