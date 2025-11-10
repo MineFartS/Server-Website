@@ -28,13 +28,6 @@
       "Path": "E:/Website/Root/About Me/Projects/Server/Plex.href"
    },
    {
-      "URL": "https://github.com/MineFartS/philh_myftp_biz",
-      "Visible": true,
-      "Title": "Python Package",
-      "SRC": "None",
-      "Path": "E:/Website/Root/About Me/Projects/Server/Python Package.href"
-   },
-   {
       "URL": "/About Me/Projects/Server/",
       "Visible": false,
       "Title": "Server",
@@ -42,11 +35,11 @@
       "Path": "E:/Website/Root/About Me/Projects/Server/index.html"
    },
    {
-      "URL": "https://github.com/MineFartS/Server-Status",
+      "URL": "https://github.com/topics/philh-myftp-biz",
       "Visible": true,
-      "Title": "Status",
+      "Title": "Source",
       "SRC": "None",
-      "Path": "E:/Website/Root/About Me/Projects/Server/Status.href"
+      "Path": "E:/Website/Root/About Me/Projects/Server/Source.href"
    },
    {
       "URL": "/About Me/Projects/Server/index.json",

@@ -1,5 +1,12 @@
 [
    {
+      "URL": "/Apps/YouTube Downloader/Hide.ini",
+      "Visible": false,
+      "Title": "Hide",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Apps/YouTube Downloader/Hide.ini"
+   },
+   {
       "URL": "/Apps/YouTube Downloader/Protect.ini",
       "Visible": false,
       "Title": "Protect",

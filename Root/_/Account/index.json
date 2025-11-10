@@ -1,12 +1,5 @@
 [
    {
-      "URL": "/_/Account/",
-      "Visible": false,
-      "Title": "Account",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/_/Account/index.html"
-   },
-   {
       "URL": "/_/Account/Create/",
       "Visible": false,
       "Title": "Create",

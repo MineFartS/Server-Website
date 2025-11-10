@@ -50,7 +50,7 @@
    },
    {
       "URL": "/Apps/YouTube Downloader/",
-      "Visible": true,
+      "Visible": false,
       "Title": "YouTube Downloader",
       "SRC": "None",
       "Path": "E:/Website/Root/Apps/YouTube Downloader/"

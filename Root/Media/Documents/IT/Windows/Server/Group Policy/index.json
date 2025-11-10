@@ -7,6 +7,13 @@
       "Path": "E:/Website/Root/Media/Documents/IT/Windows/Server/Group Policy/Allow Scripts in Certain Location.pdf"
    },
    {
+      "URL": "/Media/Documents/IT/Windows/Server/Group Policy/Deploy Firefox.pdf",
+      "Visible": true,
+      "Title": "Deploy Firefox",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Documents/IT/Windows/Server/Group Policy/Deploy Firefox.pdf"
+   },
+   {
       "URL": "/Media/Documents/IT/Windows/Server/Group Policy/Enable Network Discovery.pdf",
       "Visible": true,
       "Title": "Enable Network Discovery",
@@ -26,6 +33,13 @@
       "Title": "Map Network Drive",
       "SRC": "None",
       "Path": "E:/Website/Root/Media/Documents/IT/Windows/Server/Group Policy/Map Network Drive.pdf"
+   },
+   {
+      "URL": "/Media/Documents/IT/Windows/Server/Group Policy/Startup Processing.pdf",
+      "Visible": true,
+      "Title": "Startup Processing",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Documents/IT/Windows/Server/Group Policy/Startup Processing.pdf"
    },
    {
       "URL": "/Media/Documents/IT/Windows/Server/Group Policy/index.json",

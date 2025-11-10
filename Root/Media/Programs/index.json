@@ -70,6 +70,13 @@
       "Path": "E:/Website/Root/Media/Programs/Firefox.href"
    },
    {
+      "URL": "https://www.softsea.com/download/Free-ISO-Creator.html",
+      "Visible": true,
+      "Title": "Free ISO Creator",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Free ISO Creator.href"
+   },
+   {
       "URL": "https://freefilesync.org/download.php#:~:text=Windows",
       "Visible": true,
       "Title": "FreeFileSync",
@@ -77,18 +84,11 @@
       "Path": "E:/Website/Root/Media/Programs/FreeFileSync.href"
    },
    {
-      "URL": "https://git-scm.com/install/windows#:~:text=Windows/x64",
+      "URL": "/Media/Programs/Git/",
       "Visible": true,
       "Title": "Git",
       "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/Git.href"
-   },
-   {
-      "URL": "https://central.github.com/deployments/desktop/desktop/latest/win32",
-      "Visible": true,
-      "Title": "GitHub Desktop",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/GitHub Desktop.href"
+      "Path": "E:/Website/Root/Media/Programs/Git/"
    },
    {
       "URL": "https://handbrake.fr/#:~:text=Download HandBrake",

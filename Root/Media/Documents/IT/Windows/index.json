@@ -14,6 +14,13 @@
       "Path": "E:/Website/Root/Media/Documents/IT/Windows/Delete Local Copy of Domain User.pdf"
    },
    {
+      "URL": "/Media/Documents/IT/Windows/Drivers on Installation Media.pdf",
+      "Visible": true,
+      "Title": "Drivers on Installation Media",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Documents/IT/Windows/Drivers on Installation Media.pdf"
+   },
+   {
       "URL": "/Media/Documents/IT/Windows/Environment Variables.pdf",
       "Visible": true,
       "Title": "Environment Variables",
@@ -26,6 +33,13 @@
       "Title": "Server",
       "SRC": "None",
       "Path": "E:/Website/Root/Media/Documents/IT/Windows/Server/"
+   },
+   {
+      "URL": "/Media/Documents/IT/Windows/VBS/",
+      "Visible": true,
+      "Title": "VBS",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Documents/IT/Windows/VBS/"
    },
    {
       "URL": "/Media/Documents/IT/Windows/",

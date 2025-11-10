@@ -1,0 +1,30 @@
+[
+   {
+      "URL": "https://git-scm.com/install/windows#:~:text=Windows/x64",
+      "Visible": true,
+      "Title": "Git",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Git/Git.href"
+   },
+   {
+      "URL": "https://git-lfs.com/#:~:text=Download",
+      "Visible": true,
+      "Title": "Git Large File Storage",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Git/Git Large File Storage.href"
+   },
+   {
+      "URL": "https://central.github.com/deployments/desktop/desktop/latest/win32",
+      "Visible": true,
+      "Title": "GitHub Desktop",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Git/GitHub Desktop.href"
+   },
+   {
+      "URL": "/Media/Programs/Git/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Git/index.json"
+   }
+]

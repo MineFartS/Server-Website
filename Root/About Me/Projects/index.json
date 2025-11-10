@@ -1,5 +1,12 @@
 [
    {
+      "URL": "https://github.com/MineFartS/Connection-Tester",
+      "Visible": true,
+      "Title": "Connection Tester",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Connection Tester.href"
+   },
+   {
       "URL": "https://www.fortnite.com/@minefarts",
       "Visible": true,
       "Title": "Fortnite Maps",
@@ -14,6 +21,13 @@
       "Path": "E:/Website/Root/About Me/Projects/GemShock.href"
    },
    {
+      "URL": "https://gist.github.com/MineFartS",
+      "Visible": true,
+      "Title": "Gists",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Gists.href"
+   },
+   {
       "URL": "https://github.com/MineFartS/JS-Data-Manager",
       "Visible": true,
       "Title": "JS Data Manager",
@@ -26,6 +40,13 @@
       "Title": "Minecraft Maps",
       "SRC": "None",
       "Path": "E:/Website/Root/About Me/Projects/Minecraft Maps.href"
+   },
+   {
+      "URL": "https://github.com/MineFartS/Network-Scanner",
+      "Visible": true,
+      "Title": "Network Scanner",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Network Scanner.href"
    },
    {
       "URL": "https://github.com/MineFartS/noip-renew",
@@ -63,11 +84,18 @@
       "Path": "E:/Website/Root/About Me/Projects/Server/"
    },
    {
-      "URL": "https://github.com/MineFartS/Universal-Terminal",
+      "URL": "https://github.com/topics/universal-terminal",
       "Visible": true,
       "Title": "Universal Terminal",
       "SRC": "None",
       "Path": "E:/Website/Root/About Me/Projects/Universal Terminal.href"
+   },
+   {
+      "URL": "https://github.com/MineFartS/Windows-Automatic-Logon",
+      "Visible": true,
+      "Title": "Windows Automatic Logon",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Windows Automatic Logon.href"
    },
    {
       "URL": "/About Me/Projects/index.json",
