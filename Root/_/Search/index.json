@@ -21,10 +21,24 @@
       "Path": "E:/Website/Root/_/Search/index.json"
    },
    {
+      "URL": "/_/Search/script.js",
+      "Visible": false,
+      "Title": "script",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Search/script.js"
+   },
+   {
       "URL": "/_/Search/search.json",
       "Visible": false,
       "Title": "search",
       "SRC": "None",
       "Path": "E:/Website/Root/_/Search/search.json"
+   },
+   {
+      "URL": "/_/Search/style.css",
+      "Visible": false,
+      "Title": "style",
+      "SRC": "None",
+      "Path": "E:/Website/Root/_/Search/style.css"
    }
 ]

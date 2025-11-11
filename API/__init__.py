@@ -4,7 +4,7 @@ from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
 from fastapi import UploadFile
 
-from philh_myftp_biz.file import temp, archive
+from philh_myftp_biz.file import temp, ZIP
 from http.cookiejar import MozillaCookieJar
 from philh_myftp_biz.web import download
 from browser_cookie3 import firefox
@@ -253,7 +253,7 @@ Ffmpeg = temp(
 """Ffmpeg.exe"""
 
 # Check if 'Ffmpeg.exe' does not exist
-if not Ffmpeg.exists():
+if False:#not Ffmpeg.exists():
 
     # Declare path for 'ffmpeg' zipfile
     zipfile = temp('ffmpeg', 'zip')
@@ -262,11 +262,11 @@ if not Ffmpeg.exists():
     # Download ffmpeg zipfile
     download(
         url = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip',
-        path = str(zipfile)
+        path = zipfile
     )
 
-    # Open zipfile as an 'archive' object
-    zip = archive(zipfile)
+    # Open zipfile as an 'ZIP' object
+    zip = ZIP(zipfile)
 
     # Search for 'ffmpeg.exe' in zipfile contents
     for f in zip.search('ffmpeg.exe'):

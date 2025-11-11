@@ -19,5 +19,19 @@
       "Title": "index",
       "SRC": "None",
       "Path": "E:/Website/Root/Servers/Plex/Download/index.json"
+   },
+   {
+      "URL": "/Servers/Plex/Download/script.js",
+      "Visible": false,
+      "Title": "script",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Plex/Download/script.js"
+   },
+   {
+      "URL": "/Servers/Plex/Download/style.css",
+      "Visible": false,
+      "Title": "style",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Servers/Plex/Download/style.css"
    }
 ]

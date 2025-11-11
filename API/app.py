@@ -21,6 +21,9 @@ app.include_router(router)
 from Login import router
 app.include_router(router)
 
+from Plex import router
+app.include_router(router)
+
 # -------------------------------------------------------------------------------------
 
 @app.get("/temp")
