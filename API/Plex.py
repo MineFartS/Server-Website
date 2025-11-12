@@ -1,5 +1,4 @@
 from philh_myftp_biz.pc import Path, mkdir
-from philh_myftp_biz.web import api
 from fastapi import APIRouter
 from typing import Literal
 
@@ -7,9 +6,6 @@ from typing import Literal
 router = APIRouter(
     prefix = '/Servers/Plex'
 )
-
-#
-omdb = api.omdb()
 
 #
 movies = Path('E:/Plex/Media/Movies/')
