@@ -152,32 +152,26 @@
 // =======================================================
 // AUTHENTICATION:
 
-	// Fetch 'Auth.ini' in the current directory
-	fetch('Auth.ini').then(r => r.text()).then(t => {
+function authorize() {
 
-		// Check if 'Auth.ini' exists
-		if (!t.includes('<title>IIS 10.0 Detailed Error - 404')) {
+	// Repeat every 1 second
+	setInterval(() => {
 
-			// Repeat every 1 second
-			setInterval(() => {
+		// Contact server with authentication details and read response
+		API.auth('/login/auth').then(t => {
 
-				// Contact server with authentication details and read response
-				API.auth('/login/auth').then(t => {
+			// If authentication details are invalid
+			if (!t.Valid) {
 
-					// If authentication details are invalid
-					if (!t.Valid) {
+				// Redirect User to the login page
+				window.location.href = `/_/Account/Login?dest=${path}`
 
-						// Redirect User to the login page
-						window.location.href = `/_/Account/Login?dest=${path}`
+			}
+					
+		})
 
-					}
-							
-				})
+	}, 1000);
 
-			}, 1000);
-
-		}
-
-	})
+}
 
 // =======================================================
