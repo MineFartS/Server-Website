@@ -1,9 +1,16 @@
 
+# Cache
 **/__pycache__/
 
+# HTTPS Certificates
 Certificates/
 
-Root/Servers/FTP/User Web Shares/
+# User Web Shares
+/Root/Servers/FTP/User Web Shares/
+
+# Generated Index Files
+**/index.json
+/Root/_/Search/search.json
 
 # Archives
 *.iso
