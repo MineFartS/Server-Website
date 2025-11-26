@@ -5,5 +5,21 @@ Certificates/
 
 Root/Servers/FTP/User Web Shares/
 
+# Archives
 *.iso
 *.zip
+*.exe
+
+# Videos
+*.mp4
+*.mov
+
+# Images
+*.webp
+*.png
+*.heic
+*.jpeg
+*.jpg
+
+# Misc
+*.psd
