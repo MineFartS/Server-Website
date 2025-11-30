@@ -1,8 +1,7 @@
-from typing import Generator
 from philh_myftp_biz.modules import Module
 from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
-from fastapi import UploadFile
+from typing import Generator
 
 this = Module('E:/Website')
 Users = Module('E:/Users')
@@ -179,60 +178,3 @@ class IndexedItem:
         }
 
 # ================================================================================================================
-
-async def receiveFile(stream: 'UploadFile') -> Path:
-    from philh_myftp_biz.file import temp
-    from aiofiles import open
-
-    path = temp(
-        name = 'UploadedFile',
-        ext = stream.filename[stream.filename.rfind('.')+1:]
-    )   
-
-    contents = await stream.read()
-
-    async with open(str(path), 'wb') as f:
-        await f.write(contents)
-
-    return path
-
-# ================================================================================================================
-
-class User:
-
-    def __init__(self, username:str):
-        
-        self.username = username
-        self.Dir = Path(f'E:/Users/philh/{username}/__AppData__/')
-
-        self.__token = tokenRing.Key(username)
-
-    def checkPass(self, password:str):
-        return Users.run(
-            'CheckPass',
-            '-Username', self.username,
-            '-Password', password
-        ).output('json')
-
-    def setPass(self, password:str):
-        Users.run(
-            'SetPass',
-            '-Username', self.username,
-            '-Password', password
-        )
-
-    def exists(self) -> bool:
-        return Users.run(
-            'Exists',
-            '-Username', self.username
-        ).output('json')
-
-    def checkAuth(self, token:str):
-        return (self.__token.read() == token)
-
-    def resetAuth(self) -> str:
-        from philh_myftp_biz.text import random
-
-        token = random(10)
-        self.__token.save(token)
-        return token
