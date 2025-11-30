@@ -1,34 +1,32 @@
+from starlette.middleware.cors import CORSMiddleware
+from fastapi import FastAPI
 from __init__ import this
-from philh_myftp_biz import run, Args
-from philh_myftp_biz.pc import script_dir
+from uvicorn import run
 
-script_dir(__file__).cd()
-
-args = Args()
-
-if len(args) == 1:
-    workers = args[0]
-else:
-    workers = 1
-
-API = run(
-    args = [
-        'uvicorn',
-        'app:app',
-        '--host', '0.0.0.0',
-        '--workers', workers,
-        '--ssl-certfile', this.file('certificates', 'cert').path,
-        '--ssl-keyfile', this.file('certificates', 'key').path
-    ],
-    terminal = 'pym',
-    autostart = False
+app = FastAPI()
+app.add_middleware(
+    middleware_class = CORSMiddleware,
+    allow_origins = ['*']
 )
 
-if __name__ == '__main__':
+from YouTube_Downloader import router
+app.include_router(router)
 
-    API.start()
+from Bookmark import router
+app.include_router(router)
 
-    """
-    for wf in this.watch():
-        API.restart()
-    """ 
+from Login import router
+app.include_router(router)
+
+from Plex import router
+app.include_router(router)
+
+from other import router
+app.include_router(router)
+
+run(
+    app = app,
+    host = '0.0.0.0',
+    ssl_certfile = this.file('certificates/cert').path,
+    ssl_keyfile = this.file('certificates/key').path
+)
