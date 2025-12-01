@@ -42,6 +42,27 @@
       "Path": "E:/Website/Root/Media/Programs/Certify The Web.href"
    },
    {
+      "URL": "https://chocolatey.org/install#:~:text=Install%20Chocolatey%20for%20Individual%20use:",
+      "Visible": true,
+      "Title": "Chocolatey",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Chocolatey.href"
+   },
+   {
+      "URL": "https://github.com/google/clasp#Install",
+      "Visible": true,
+      "Title": "Clasp",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Clasp.href"
+   },
+   {
+      "URL": "https://www.microsoft.com/en-us/download/details.aspx?id=6812#:~:text=Important!,Download",
+      "Visible": true,
+      "Title": "DirectX SDK",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/DirectX SDK.href"
+   },
+   {
       "URL": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64",
       "Visible": true,
       "Title": "Discord",
@@ -91,6 +112,13 @@
       "Path": "E:/Website/Root/Media/Programs/Git/"
    },
    {
+      "URL": "https://go.dev/dl/#:~:text=microsoft%20windows",
+      "Visible": true,
+      "Title": "Go",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Go.href"
+   },
+   {
       "URL": "https://handbrake.fr/#:~:text=Download HandBrake",
       "Visible": true,
       "Title": "Handbrake",
@@ -103,6 +131,13 @@
       "Title": "IrfanView",
       "SRC": "None",
       "Path": "E:/Website/Root/Media/Programs/IrfanView.href"
+   },
+   {
+      "URL": "https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe",
+      "Visible": true,
+      "Title": "Java",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Java.href"
    },
    {
       "URL": "https://ltspice.analog.com/software/LTspice64.msi",
@@ -126,6 +161,13 @@
       "Path": "E:/Website/Root/Media/Programs/MacOS Bootcamp Support/"
    },
    {
+      "URL": "https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download",
+      "Visible": true,
+      "Title": "Make",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Make.href"
+   },
+   {
       "URL": "https://github.com/massgravel/Microsoft-Activation-Scripts/blob/master/README.md#:~:text=For Windows,11",
       "Visible": true,
       "Title": "Microsoft Activation Scripts",
@@ -138,6 +180,13 @@
       "Title": "Minecraft",
       "SRC": "None",
       "Path": "E:/Website/Root/Media/Programs/Minecraft.href"
+   },
+   {
+      "URL": "https://nodejs.org/en/download#:~:text=Windows%20Installer,)",
+      "Visible": true,
+      "Title": "Node.js",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Node.js.href"
    },
    {
       "URL": "https://obsproject.com/#:~:text=Windows",
@@ -168,6 +217,13 @@
       "Path": "E:/Website/Root/Media/Programs/PowerToys.href"
    },
    {
+      "URL": "https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5#msi",
+      "Visible": true,
+      "Title": "Powershell",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Powershell.href"
+   },
+   {
       "URL": "/Media/Programs/",
       "Visible": false,
       "Title": "Programs",
@@ -194,6 +250,13 @@
       "Title": "Rockstar Games Launcher",
       "SRC": "None",
       "Path": "E:/Website/Root/Media/Programs/Rockstar Games Launcher.href"
+   },
+   {
+      "URL": "https://rubyinstaller.org/downloads/#:~:text=(x64)",
+      "Visible": true,
+      "Title": "Ruby",
+      "SRC": "None",
+      "Path": "E:/Website/Root/Media/Programs/Ruby.href"
    },
    {
       "URL": "https://rufus.ie/en/#:~:text=Standard,Windows%20x64",
