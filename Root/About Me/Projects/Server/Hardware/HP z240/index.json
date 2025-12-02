@@ -7,6 +7,13 @@
       "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/index.html"
    },
    {
+      "URL": "/About Me/Projects/Server/Hardware/HP z240/index.json",
+      "Visible": false,
+      "Title": "index",
+      "SRC": "None",
+      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/index.json"
+   },
+   {
       "URL": "/About Me/Projects/Server/Hardware/HP z240/Manual.pdf",
       "Visible": true,
       "Title": "Manual",
@@ -26,12 +33,5 @@
       "Title": "System Board",
       "SRC": "None",
       "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/System Board.png"
-   },
-   {
-      "URL": "/About Me/Projects/Server/Hardware/HP z240/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/HP z240/index.json"
    }
 ]
