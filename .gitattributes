@@ -1,1 +1,6 @@
+
+# Files by extension
 *.exe,*.mp4,*.webp,*.exe,*.png,*.mov,*.heic,*.jpeg,*.jpg,*.psd filter=lfs diff=lfs merge=lfs -text
+
+# Search Index File
+"/Root/_/Search/search.json" filter=lfs diff=lfs merge=lfs -text
