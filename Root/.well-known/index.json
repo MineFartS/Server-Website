@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/.well-known/",
-      "Visible": false,
-      "Title": ".well-known",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/.well-known/index.html"
-   },
-   {
-      "URL": "/.well-known/acme-challenge/",
-      "Visible": false,
-      "Title": "acme-challenge",
-      "SRC": "None",
-      "Path": "E:/Website/Root/.well-known/acme-challenge/"
-   },
-   {
-      "URL": "/.well-known/hide.ini",
-      "Visible": false,
-      "Title": "hide",
-      "SRC": "None",
-      "Path": "E:/Website/Root/.well-known/hide.ini"
-   },
-   {
-      "URL": "/.well-known/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/.well-known/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:367238b6f91ce4c93187514f6e8860a1a01a067f47a5000e565e23bd8e2475f8
+size 763

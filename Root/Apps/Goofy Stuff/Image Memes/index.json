@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Apps/Goofy Stuff/Image Memes/",
-      "Visible": false,
-      "Title": "Image Memes",
-      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/index.html"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Image Memes/files/",
-      "Visible": true,
-      "Title": "files",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/files/"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Image Memes/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/index.json"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Image Memes/type.ini",
-      "Visible": false,
-      "Title": "type",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Image Memes/type.ini"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee80fcae27193f6e4bd50525dce0218e7b2dcf137183722cf3d850c24f8d7b2b
+size 895

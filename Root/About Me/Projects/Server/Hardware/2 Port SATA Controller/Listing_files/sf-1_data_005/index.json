@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "/About Me/Projects/Server/Hardware/2 Port SATA Controller/Listing_files/sf-1_data_005/a75c74e3-2b38-48cc-8ae5-4edc6280e969.jpeg",
-      "Visible": true,
-      "Title": "a75c74e3-2b38-48cc-8ae5-4edc6280e969",
-      "SRC": "None",
-      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/2 Port SATA Controller/Listing_files/sf-1_data_005/a75c74e3-2b38-48cc-8ae5-4edc6280e969.jpeg"
-   },
-   {
-      "URL": "/About Me/Projects/Server/Hardware/2 Port SATA Controller/Listing_files/sf-1_data_005/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/About Me/Projects/Server/Hardware/2 Port SATA Controller/Listing_files/sf-1_data_005/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:d053f255fd9aa17bef3ce246ad4bd89ebdb0d6b34e5ffb4782502b8b930610fb
+size 751

@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Apps/Goofy Stuff/Deep Thoughts/",
-      "Visible": false,
-      "Title": "Deep Thoughts",
-      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/index.html"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Deep Thoughts/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/index.json"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Deep Thoughts/lines.json",
-      "Visible": false,
-      "Title": "lines",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/lines.json"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Deep Thoughts/type.ini",
-      "Visible": false,
-      "Title": "type",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Deep Thoughts/type.ini"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:3537fd45c59f2c0124a7248bf454e0e17850b58ece0151bd07d42fd5ca4be699
+size 922

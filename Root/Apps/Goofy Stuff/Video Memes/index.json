@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Apps/Goofy Stuff/Video Memes/",
-      "Visible": false,
-      "Title": "Video Memes",
-      "SRC": "E:/Website/Root/Apps/Goofy Stuff/__template__.html",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/index.html"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Video Memes/files/",
-      "Visible": true,
-      "Title": "files",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/files/"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Video Memes/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/index.json"
-   },
-   {
-      "URL": "/Apps/Goofy Stuff/Video Memes/type.ini",
-      "Visible": false,
-      "Title": "type",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/Goofy Stuff/Video Memes/type.ini"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf2b916cfe083a484814db48cd04a739a934e5401489b302cbfdbf5dbb8b0a68
+size 895
