@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/projects/5/",
-      "Visible": false,
-      "Title": "5",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/projects/5/index.html"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/projects/5/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/projects/5/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:09a9896c4185f72384891324befc3d0c2e7e7800a0729ccc0c1d3885235478e7
+size 507

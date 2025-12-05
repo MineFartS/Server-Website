@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Apps/To Do List/Manage/Hide.ini",
-      "Visible": false,
-      "Title": "Hide",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/To Do List/Manage/Hide.ini"
-   },
-   {
-      "URL": "/Apps/To Do List/Manage/",
-      "Visible": false,
-      "Title": "Manage",
-      "SRC": "E:/Website/Root/Apps/To Do List/Manage/index.html",
-      "Path": "E:/Website/Root/Apps/To Do List/Manage/index.html"
-   },
-   {
-      "URL": "/Apps/To Do List/Manage/Protect.ini",
-      "Visible": false,
-      "Title": "Protect",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/To Do List/Manage/Protect.ini"
-   },
-   {
-      "URL": "/Apps/To Do List/Manage/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Apps/To Do List/Manage/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:f205d2c969b770a92065563e359a51df07088e76c30b2a1be7d44aeae053d77b
+size 854

@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "/Media/Documents/IT/Apple/MacOS/Clear NVRAM.pdf",
-      "Visible": true,
-      "Title": "Clear NVRAM",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/IT/Apple/MacOS/Clear NVRAM.pdf"
-   },
-   {
-      "URL": "/Media/Documents/IT/Apple/MacOS/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/IT/Apple/MacOS/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:99b20f27a7b31f0803e1f65e12501b090634dc080b6051288039620ac33d39d3
+size 458

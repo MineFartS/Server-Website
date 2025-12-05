@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "/Media/Documents/IT/Windows/VBS/Parse JSON.pdf",
-      "Visible": true,
-      "Title": "Parse JSON",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/IT/Windows/VBS/Parse JSON.pdf"
-   },
-   {
-      "URL": "/Media/Documents/IT/Windows/VBS/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/IT/Windows/VBS/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7851ce9d79755081398bc6615d82b5c4ece929a0e6c06b0724c7cc455a6cb5b
+size 455

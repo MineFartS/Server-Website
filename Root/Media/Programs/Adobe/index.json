@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Media/Programs/Adobe/",
-      "Visible": false,
-      "Title": "Adobe",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Programs/Adobe/index.html"
-   },
-   {
-      "URL": "/Media/Programs/Adobe/Photoshop.zip",
-      "Visible": true,
-      "Title": "Photoshop",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/Adobe/Photoshop.zip"
-   },
-   {
-      "URL": "/Media/Programs/Adobe/Premiere Pro.zip",
-      "Visible": true,
-      "Title": "Premiere Pro",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/Adobe/Premiere Pro.zip"
-   },
-   {
-      "URL": "/Media/Programs/Adobe/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/Adobe/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0d9e6ff959364a18958ecb302d7f93126e82ca5d06bc5bad0c982155f8c72b2
+size 842

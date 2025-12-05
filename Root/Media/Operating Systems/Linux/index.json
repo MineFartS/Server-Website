@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Media/Operating Systems/Linux/",
-      "Visible": false,
-      "Title": "Linux",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Operating Systems/Linux/index.html"
-   },
-   {
-      "URL": "/Media/Operating Systems/Linux/Mint/",
-      "Visible": true,
-      "Title": "Mint",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Mint/"
-   },
-   {
-      "URL": "/Media/Operating Systems/Linux/Ubuntu/",
-      "Visible": true,
-      "Title": "Ubuntu",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/Linux/Ubuntu/"
-   },
-   {
-      "URL": "/Media/Operating Systems/Linux/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/Linux/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:dcf7a57de8623a32d4683e887f53d1e13434bece9801030075d008590229c8b7
+size 869

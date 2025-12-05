@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/images/Enhanced/",
-      "Visible": true,
-      "Title": "Enhanced",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/Enhanced/"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/images/Original/",
-      "Visible": true,
-      "Title": "Original",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/Original/"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/images/",
-      "Visible": false,
-      "Title": "images",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/index.html"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/images/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/images/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfb18886a62c868783c59344e2069e1da945ed4c3a5346456939224db22d43c4
+size 976

@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/story/Original.docx",
-      "Visible": true,
-      "Title": "Original",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/Original.docx"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/story/Revised.docx",
-      "Visible": true,
-      "Title": "Revised",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/Revised.docx"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/story/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/index.json"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/story/",
-      "Visible": false,
-      "Title": "story",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/story/index.html"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e28b18ad3755ba2933c5236dadb80eec3596b6ce666a0ccaacfebcb35ab5633
+size 980

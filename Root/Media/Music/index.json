@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Media/Music/Birthday/",
-      "Visible": true,
-      "Title": "Birthday",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Music/Birthday/"
-   },
-   {
-      "URL": "/Media/Music/Christmas Trap/",
-      "Visible": true,
-      "Title": "Christmas Trap",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Music/Christmas Trap/"
-   },
-   {
-      "URL": "/Media/Music/",
-      "Visible": false,
-      "Title": "Music",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Music/index.html"
-   },
-   {
-      "URL": "/Media/Music/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Music/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:9016b06059f3ec9e43f47aeb5a85490afd786931ab5ce63bb283126a0deeaafd
+size 761

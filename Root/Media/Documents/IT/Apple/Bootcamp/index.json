@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "/Media/Documents/IT/Apple/Bootcamp/Black Screen.pdf",
-      "Visible": true,
-      "Title": "Black Screen",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/IT/Apple/Bootcamp/Black Screen.pdf"
-   },
-   {
-      "URL": "/Media/Documents/IT/Apple/Bootcamp/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/IT/Apple/Bootcamp/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:661d31ee06a2fff7a5fcb284ffbc679c1fa7091cb66746ac0f1f039ba90fef18
+size 473

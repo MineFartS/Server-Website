@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "https://filezilla-project.org/download.php?type=client#:~:text=(64bit%20x86)",
-      "Visible": true,
-      "Title": "Client",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/FileZilla/Client.href"
-   },
-   {
-      "URL": "/Media/Programs/FileZilla/",
-      "Visible": false,
-      "Title": "FileZilla",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Programs/FileZilla/index.html"
-   },
-   {
-      "URL": "https://filezilla-project.org/download.php?type=server#:~:text=(64bit x86)",
-      "Visible": true,
-      "Title": "Server",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/FileZilla/Server.href"
-   },
-   {
-      "URL": "/Media/Programs/FileZilla/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Programs/FileZilla/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6839192ebff60de6995fe1c970d832b5a833608ec3413a084d54164e1911613
+size 931

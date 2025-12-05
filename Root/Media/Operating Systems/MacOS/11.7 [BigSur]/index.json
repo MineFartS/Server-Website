@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "https://archive.org/download/macos_iso/BigSur_11.7.1.iso",
-      "Visible": true,
-      "Title": "ISO",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/11.7 [BigSur]/ISO.href"
-   },
-   {
-      "URL": "/Media/Operating Systems/MacOS/11.7 [BigSur]/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/11.7 [BigSur]/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:07b2f0dbb607ac4a6b53916b1e7ec98c5d39ed230bbcc1b02d8065b94a503bfc
+size 491

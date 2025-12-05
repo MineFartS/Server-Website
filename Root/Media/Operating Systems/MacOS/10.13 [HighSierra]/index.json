@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "https://archive.org/download/macos_iso/HighSierra_10.13.6.iso",
-      "Visible": true,
-      "Title": "ISO",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.13 [HighSierra]/ISO.href"
-   },
-   {
-      "URL": "/Media/Operating Systems/MacOS/10.13 [HighSierra]/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/10.13 [HighSierra]/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ad492be1fc6011156be6c449a6e010c48fdc9b49f8f792b06e7b73557dd439f
+size 511

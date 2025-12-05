@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Media/Documents/Xbox/Custom Minecraft Servers.pdf",
-      "Visible": true,
-      "Title": "Custom Minecraft Servers",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/Xbox/Custom Minecraft Servers.pdf"
-   },
-   {
-      "URL": "/Media/Documents/Xbox/Reset DNS.pdf",
-      "Visible": true,
-      "Title": "Reset DNS",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/Xbox/Reset DNS.pdf"
-   },
-   {
-      "URL": "/Media/Documents/Xbox/",
-      "Visible": false,
-      "Title": "Xbox",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Documents/Xbox/index.html"
-   },
-   {
-      "URL": "/Media/Documents/Xbox/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Documents/Xbox/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:945ac2de2cbafc76375359658e72874f2abf36030912c0f3f5356f18be1fb613
+size 877

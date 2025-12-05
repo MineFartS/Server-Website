@@ -1,16 +1,3 @@
-[
-   {
-      "URL": "https://archive.org/download/macos_iso/Ventura_13.0.1.iso",
-      "Visible": true,
-      "Title": "ISO",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/13.0 [Ventura]/ISO.href"
-   },
-   {
-      "URL": "/Media/Operating Systems/MacOS/13.0 [Ventura]/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Operating Systems/MacOS/13.0 [Ventura]/index.json"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:e95a5f240e7d260d547fb6c2086726fe4b181faf279cee5d30c744abb55226dd
+size 495

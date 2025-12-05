@@ -1,30 +1,3 @@
-[
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/projects/2/",
-      "Visible": false,
-      "Title": "2",
-      "SRC": "E:/Website/Root/index.html",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/projects/2/index.html"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/projects/2/fallover-man-hi.png",
-      "Visible": true,
-      "Title": "fallover-man-hi",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/projects/2/fallover-man-hi.png"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/projects/2/index.json",
-      "Visible": false,
-      "Title": "index",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/projects/2/index.json"
-   },
-   {
-      "URL": "/Media/Stories/Or Else Monster/old/projects/2/v1.psd",
-      "Visible": true,
-      "Title": "v1",
-      "SRC": "None",
-      "Path": "E:/Website/Root/Media/Stories/Or Else Monster/old/projects/2/v1.psd"
-   }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:6723fc331bb56bb07d7de52175e8a585371cb68a10a0a4210372676b12d30042
+size 1018
