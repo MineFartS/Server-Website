@@ -1,13 +1,6 @@
-from philh_myftp_biz.pc import Task, cls
-from __init__ import PIDstore
+from __init__ import task
 
-pid: int = PIDstore.read()
-
-cls()
-
-if pid:
-
-    task = Task(pid)
+if task:
 
     if task.exists():
         print('true')
