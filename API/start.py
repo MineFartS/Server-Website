@@ -1,7 +1,9 @@
 from starlette.middleware.cors import CORSMiddleware
+from philh_myftp_biz.modules import Module
 from fastapi import FastAPI
-from __init__ import this
 from uvicorn import run
+
+this = Module('E:/Website')
 
 app = FastAPI()
 app.add_middleware(
@@ -9,19 +11,19 @@ app.add_middleware(
     allow_origins = ['*']
 )
 
-from YouTube_Downloader import router
+from Routers.YouTube_Downloader import router
 app.include_router(router)
 
-from Bookmark import router
+from Routers.Bookmark import router
 app.include_router(router)
 
-from Login import router
+from Routers.Login import router
 app.include_router(router)
 
-from Plex import router
+from Routers.Plex import router
 app.include_router(router)
 
-from other import router
+from Routers.other import router
 app.include_router(router)
 
 run(
