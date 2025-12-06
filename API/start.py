@@ -1,9 +1,8 @@
 from starlette.middleware.cors import CORSMiddleware
-from philh_myftp_biz.modules import Module
+from __init__ import PIDstore, this
 from fastapi import FastAPI
 from uvicorn import run
-
-this = Module('E:/Website')
+from os import getpid
 
 app = FastAPI()
 app.add_middleware(
@@ -26,6 +25,10 @@ app.include_router(router)
 from Routers.other import router
 app.include_router(router)
 
+# Store the pid of this execution
+PIDstore.save(getpid())
+
+# Start the api via uvicorn
 run(
     app = app,
     host = '0.0.0.0',
