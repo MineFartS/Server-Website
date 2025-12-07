@@ -1,4 +1,7 @@
-from __init__ import root, IndexRegistry
+from __init__ import root, IndexRegistry, PIDstore
+from os import getpid
+
+PIDstore.save(getpid())
 
 registries: list[IndexRegistry] = []
 

@@ -1,4 +1,5 @@
 from philh_myftp_biz.modules import Module
+from philh_myftp_biz.file import TXT
 from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
 from typing import Generator
@@ -9,6 +10,8 @@ Users = Module('E:/Users')
 root = this.dir.child('Root')
 
 tokenRing = Ring('AuthTokens')
+
+PIDstore = TXT(this.dir.child('/Indexer/__pycache__/PID.txt'))
 
 # ================================================================================================================
 
