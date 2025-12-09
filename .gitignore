@@ -9,7 +9,7 @@ Certificates/
 /Root/Servers/FTP/User Web Shares/
 
 # Generated Index Files
-/Root/**/index.json
+**/index.json
 /Root/_/Search/search.json
 
 # Archives
