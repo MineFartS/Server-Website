@@ -1,6 +1,8 @@
 
-$filePath = "E:\Website\API\__pycache__\PID.txt"
+$filePath = "$PSScriptRoot\__pycache__\PID.json"
 
-$pyPID = Get-Content -Path $filePath -Raw
+$PIDs = (Get-Content -Path $filePath -Raw | ConvertFrom-Json)
 
-Stop-Process -Id $pyPID -Force
+$PIDS | ForEach-Object {
+    Stop-Process -Id $_
+}

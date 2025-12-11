@@ -1,13 +1,20 @@
 
-$filePath = "E:\Website\API\__pycache__\PID.txt"
+$filePath = "$PSScriptRoot\__pycache__\PID.json"
 
-$pyPID = Get-Content -Path $filePath -Raw
+$PIDs = (Get-Content -Path $filePath -Raw | ConvertFrom-Json)
 
-$process = Get-Process `
-    -Id $pyPID `
-    -ErrorAction SilentlyContinue
+$processes = $PIDS | ForEach-Object {
+    
+    try {
+        Get-Process -Id $_ -ErrorAction SilentlyContinue
+    } catch {
+        Write-Host 'false'
+        exit
+    }
 
-if ($process) {
+}
+
+if ($processes.Length -gt 0) {
     Write-Host 'true'
 } else {
     Write-Host 'false'

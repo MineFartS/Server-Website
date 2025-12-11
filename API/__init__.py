@@ -1,7 +1,8 @@
-from philh_myftp_biz.file import temp, ZIP, TXT
+from philh_myftp_biz.file import temp, ZIP, JSON
 from http.cookiejar import MozillaCookieJar
 from philh_myftp_biz.modules import Module
 from philh_myftp_biz.web import download
+from philh_myftp_biz.array import List
 from browser_cookie3 import firefox
 from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
@@ -16,7 +17,7 @@ root = this.dir.child('Root')
 
 tokenRing = Ring('AuthTokens')
 
-PIDstore = TXT(this.dir.child('/API/__pycache__/PID.txt'))
+PIDstore: List[int] = List(JSON(this.dir.child('/API/__pycache__/PID.json')))
 
 # ================================================================================================================
 

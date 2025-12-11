@@ -1,37 +1,41 @@
-from starlette.middleware.cors import CORSMiddleware
 from __init__ import PIDstore, this
-from fastapi import FastAPI
-from uvicorn import run
+from philh_myftp_biz import run
 from os import getpid
 
-app = FastAPI()
-app.add_middleware(
-    middleware_class = CORSMiddleware,
-    allow_origins = ['*']
-)
-
-from Routers.YouTube_Downloader import router
-app.include_router(router)
-
-from Routers.Bookmark import router
-app.include_router(router)
-
-from Routers.Login import router
-app.include_router(router)
-
-from Routers.Plex import router
-app.include_router(router)
-
-from Routers.other import router
-app.include_router(router)
+# Clear the PID store
+PIDstore.save([])
 
 # Store the pid of this execution
-PIDstore.save(getpid())
+PIDstore += getpid()
 
-# Start the api via uvicorn
-run(
-    app = app,
-    host = '0.0.0.0',
-    ssl_certfile = this.file('certificates/cert').path,
-    ssl_keyfile = this.file('certificates/key').path
+#
+p = run(
+    args = [
+        'uvicorn', 'app:app',
+        '--host', '0.0.0.0',
+        '--ssl-certfile', this.file('certificates/cert'),
+        '--ssl-keyfile', this.file('certificates/key'),
+        '--workers', 2
+    ],
+    dir = this.dir.child('/API/'),
+    terminal = 'pym'
 )
+
+while True:
+
+    for line in p.stdcomb.split('\n'):
+
+        if '[' in line:
+
+            try:
+
+                pid = int(line.split('[')[1].split(']')[0])
+
+                if pid not in PIDstore:
+
+                    print(f'{pid=}')
+
+                    PIDstore += pid
+
+            except ValueError:
+                pass
