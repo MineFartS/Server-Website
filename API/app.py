@@ -7,17 +7,20 @@ app.add_middleware(
     allow_origins = ['*']
 )
 
-from Routers.YouTube_Downloader import router
+from Routers.Apps.YouTube_Downloader import router
 app.include_router(router)
 
-from Routers.Bookmark import router
+from Routers.Apps.Bookmark import router
 app.include_router(router)
 
 from Routers.Login import router
 app.include_router(router)
 
-from Routers.Plex import router
+from Routers.Servers.Plex import router
 app.include_router(router)
 
 from Routers.other import router
+app.include_router(router)
+
+from Routers.Servers.Virtual_Machines import router
 app.include_router(router)
