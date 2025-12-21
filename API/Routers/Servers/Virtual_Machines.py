@@ -1,7 +1,7 @@
 from philh_myftp_biz.modules import Module
-from fastapi import APIRouter
 from fastapi.responses import FileResponse
 from philh_myftp_biz.file import temp
+from fastapi import APIRouter
 
 # Declare FastAPI router
 router = APIRouter(
@@ -22,7 +22,7 @@ negotiate security layer:i:0
 @router.get('/connectRDP')
 async def read_item(
     name: str
-):
+) -> FileResponse:
 
     id = VM.cap('ID', f'User-{name}')
 
@@ -41,3 +41,24 @@ async def read_item(
         filename = f'{name}.rdp',
         media_type = 'application/octet-stream'
     )
+
+@router.get('/start')
+async def read_item(
+    name: str
+) -> None:
+    # Start the virtual machine
+    VM.run('start', f'User-{name}')
+
+@router.get('/stop')
+async def read_item(
+    name: str
+) -> None:
+    # Stop the virtual machine
+    VM.run('stop', f'User-{name}')
+
+@router.get('/status')
+async def read_item(
+    name: str
+) -> bool:
+    # Get the power status of the virtual machine
+    return VM.cap('status', f'User-{name}')
