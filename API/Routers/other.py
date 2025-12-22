@@ -1,4 +1,5 @@
 from fastapi.responses import FileResponse
+from philh_myftp_biz.pc import Path
 from fastapi import APIRouter
 
 # Declare FastAPI router
@@ -15,7 +16,6 @@ async def read_item(
     f: File Name
     d: Download
     """
-    from philh_myftp_biz.pc import Path
     
     # Get path of the file
     path = Path('E:/__temp__').child(f)

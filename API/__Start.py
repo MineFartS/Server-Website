@@ -1,10 +1,23 @@
-from __init__ import PIDstore, this
 from philh_myftp_biz import run
 from os import getpid
 
+try:
+    import Website_API
+
+except ModuleNotFoundError:
+    from subprocess import run
+    from sys import executable
+    
+    run(
+        args = [executable, '-m', 'pip', 'install', '.'],
+        cwd = 'E:/Website/API/Package/'
+    )
+
+finally:
+    from Website_API import PIDstore, this
+
 # Clear the PID store
 PIDstore.save([])
-
 # Store the pid of this execution
 PIDstore += getpid()
 

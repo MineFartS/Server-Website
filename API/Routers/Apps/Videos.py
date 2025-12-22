@@ -1,7 +1,8 @@
-from typing import Literal
-from fastapi import APIRouter, UploadFile
 from fastapi.responses import RedirectResponse
-from __init__ import User
+from fastapi import APIRouter, UploadFile
+from Website_API import User, receiveFile, root
+from philh_myftp_biz.pc import Path
+from typing import Literal
 
 router = APIRouter(
     prefix = '/Apps/Videos'
@@ -11,15 +12,15 @@ detailsHint = dict[Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader'
 
 def VideoDetails(
     id: str
-):# -> detailsHint:
+):
     """
     Get a philh_myftp_biz.json.new object with the video details
     """
-    from philh_myftp_biz.json import new
-    from philh_myftp_biz.file import json
+    from philh_myftp_biz.json import Dict
+    from philh_myftp_biz.file import JSON
     from philh_myftp_biz.pc import Path
 
-    return new(json(
+    return Dict(JSON(
         path = Path(f'E:/Website/Resources/Apps/Videos/files/{id}')
     ))
 
@@ -38,7 +39,6 @@ async def upload(
 
     Thumbnail will be automatically generated if not given
     """
-    from __init__ import receiveFile
     from philh_myftp_biz.text import random
     from philh_myftp_biz.time import now
 
@@ -77,9 +77,7 @@ async def read_item(
 
     If Username and Auth Token are valid, then the user's private videos will be included
     """
-    from philh_myftp_biz.pc import Path
-    from __init__ import root
-
+    
     if username:
         user = User(username)
         show_private = user.checkAuth(token)
@@ -115,7 +113,6 @@ async def read_item() -> list[str]:
     """
     List all Channels
     """
-    from __init__ import root
 
     channels = []
 
@@ -174,7 +171,6 @@ async def upload(
     """
     Modify an existing Video
     """
-    from __init__ import receiveFile
 
     user = User(username)
 

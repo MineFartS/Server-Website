@@ -1,28 +1,37 @@
 from fastapi import APIRouter
+from Website_API import User
 from typing import Literal
-from __init__ import User
 
 router = APIRouter(
     prefix = '/login'
 )
 
 @router.get("/change")
-async def read_item(username:str, oldpassword:str, newpassword:str) -> None:
+async def read_item(
+    username: str,
+    oldpassword: str,
+    newpassword: str
+) -> None:
     """
-    Change the Active Directory Pasword of a user
-    """    
+    Change the Active Directory Password of a user
+    """   
+
     user = User(username)
 
     if user.checkPass(oldpassword):
         user.setPass(newpassword)
 
 @router.get("/create")
-async def read_item(username:str, password:str) -> None | str:
+async def read_item(
+    username: str,
+    password: str
+) -> None | str:
     """
     Create an Active Directory User
 
     Returns an auth token
     """
+
     user = User(username)
 
     if not user.exists():
@@ -32,12 +41,12 @@ async def read_item(username:str, password:str) -> None | str:
 @router.get("/check")
 async def read_item(
     username: str,
-    password: str,
-    path: str
+    password: str
 ) -> dict[Literal['Valid', 'Alert', 'Token'], str|bool|None]:
     """
     Check if a User's Password is correct
     """
+    
     user = User(username)
 
     response = {
@@ -69,4 +78,7 @@ async def read_item(
     """
     Check if a User's Auth Token is valid 
     """
-    return User(username).checkAuth(token)
+
+    user = User(username)
+
+    return user.checkAuth(token)

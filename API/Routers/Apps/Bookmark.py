@@ -1,25 +1,30 @@
 from fastapi import APIRouter
+from Website_API import User
 from typing import Literal
-from __init__ import User
 
 router = APIRouter(
     prefix = '/App/Bookmark'
 )
 
-def BookmarkData(user:User) -> dict[Literal['Top', 'Bottom'], str]:
+def BookmarkData(
+    user: User
+) -> dict[Literal['Top', 'Bottom'], str]:
     """
     Get a philh_myftp_biz.file.json object with the User's data file
     """
-    from philh_myftp_biz.file import json
-    from philh_myftp_biz.json import new
+    from philh_myftp_biz.file import JSON
+    from philh_myftp_biz.json import Dict
 
-    return new(json(
+    return Dict(JSON(
         path = user.Dir.child('BookmarkApp.json'),
         default = {'Top':'', 'Bottom':''}
     ))
 
 @router.get("/Apps/Bookmark/read")
-async def read_item(username:str, token:str) -> None | dict[Literal['Top', 'Bottom'], str]:
+async def read_item(
+    username: str,
+    token: str
+) -> None | dict[Literal['Top', 'Bottom'], str]:
     """
     Read User Bookmark Data
     """
@@ -33,7 +38,12 @@ async def read_item(username:str, token:str) -> None | dict[Literal['Top', 'Bott
         return data.read()
      
 @router.get("/Apps/Bookmark/write")
-async def read_item(username:str, token:str, Top:str, Bottom:str) -> None:
+async def read_item(
+    username: str,
+    token: str,
+    Top: str,
+    Bottom: str
+) -> None:
     """
     Write User Bookmark Data
     """
