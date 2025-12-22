@@ -4,7 +4,7 @@ from typing import Literal
 
 # Declare FastAPI router
 router = APIRouter(
-    prefix = '/Servers/Plex'
+    prefix = '/Server/Plex'
 )
 
 #

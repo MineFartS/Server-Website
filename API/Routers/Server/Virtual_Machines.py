@@ -2,10 +2,11 @@ from philh_myftp_biz.modules import Module
 from fastapi.responses import FileResponse
 from philh_myftp_biz.file import temp
 from fastapi import APIRouter
+from Website_API import User
 
 # Declare FastAPI router
 router = APIRouter(
-    prefix = '/Servers/Virtual Machines'
+    prefix = '/Server/Virtual Machines'
 )
 
 # Virtual Machine Module

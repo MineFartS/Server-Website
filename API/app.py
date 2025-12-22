@@ -16,11 +16,11 @@ app.include_router(router)
 from Routers.Login import router
 app.include_router(router)
 
-from Routers.Servers.Plex import router
+from Routers.Server.Plex import router
 app.include_router(router)
 
 from Routers.other import router
 app.include_router(router)
 
-from Routers.Servers.Virtual_Machines import router
+from Routers.Server.Virtual_Machines import router
 app.include_router(router)

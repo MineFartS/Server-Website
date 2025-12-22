@@ -9,7 +9,7 @@ function openPage() {
     
     } else {
 
-        window.location.href = `${API.url}/Servers/Virtual Machines/connectRDP?name=${e.username.value}`
+        window.location.href = `${API.url}/Server/Virtual Machines/connectRDP?name=${e.username.value}`
 
     }
 
