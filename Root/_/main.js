@@ -152,10 +152,7 @@
 // =======================================================
 // AUTHENTICATION:
 
-function authorize() {
-
-	// Repeat every 1 second
-	setInterval(() => {
+	function authorize() {
 
 		// Contact server with authentication details and read response
 		API.auth('/login/auth').then(t => {
@@ -167,11 +164,9 @@ function authorize() {
 				window.location.href = `/_/Account/Login?dest=${path}`
 
 			}
-					
+
 		})
 
-	}, 1000);
-
-}
+	}
 
 // =======================================================

@@ -19,14 +19,11 @@ function run() {
 
         if (t.Valid) {
             
-            // Set 'username' cookie
-            document.cookie = `username=${e.username.value}; path=/`
-
-            // Set 'token' cookie
-            document.cookie = `token=${t.Token}; path=/`
+            // Set 'username' and 'token' cookies
+            document.cookie = `username=${e.username.value}; token=${t.Token}; path=/`
 
             // Redirect to destination
-            window.location.pathname = dest
+            window.location.href = dest
 
         }
 
