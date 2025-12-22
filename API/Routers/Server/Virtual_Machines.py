@@ -96,21 +96,36 @@ async def read_item(
 
 @router.get('/start')
 async def read_item(
-    name: str
+    name: str,
+    username: str,
+    token: str
 ) -> None:
-    # Start the virtual machine
-    VM.run('start', f'User-{name}')
+    
+    user = User(username)
+
+    if user.checkAuth(token):
+
+        # Start the virtual machine
+        VM.run('start', f'User-{name}')
 
 @router.get('/stop')
 async def read_item(
-    name: str
+    name: str,
+    username: str,
+    token: str
 ) -> None:
-    # Stop the virtual machine
-    VM.run('stop', f'User-{name}')
+    
+    user = User(username)
+
+    if user.checkAuth(token):
+    
+        # Stop the virtual machine
+        VM.run('stop', f'User-{name}')
 
 @router.get('/status')
 async def read_item(
     name: str
 ) -> bool:
+    
     # Get the power status of the virtual machine
     return VM.cap('status', f'User-{name}')
