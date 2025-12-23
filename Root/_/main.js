@@ -157,6 +157,10 @@
 		// Contact server with authentication details and read response
 		API.auth('/login/auth').then(t => {
 
+			if (t.Alert) {
+				alert(t.Alert)
+			}
+
 			// If authentication details are invalid
 			if (!t.Valid) {
 

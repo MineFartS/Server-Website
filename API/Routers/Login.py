@@ -6,6 +6,12 @@ router = APIRouter(
     prefix = '/login'
 )
 
+response: dict[Literal['Valid', 'Alert', 'Token'], str|bool|None] = {
+    'Valid': False,
+    'Alert': None,
+    'Token': None
+}
+
 @router.get("/change")
 async def read_item(
     username: str,
@@ -42,43 +48,53 @@ async def read_item(
 async def read_item(
     username: str,
     password: str
-) -> dict[Literal['Valid', 'Alert', 'Token'], str|bool|None]:
+):
     """
     Check if a User's Password is correct
     """
     
     user = User(username)
 
-    response = {
-        'Valid': False,
-        'Alert': None,
-        'Token': None
-    }
+    r = response.copy()
 
     # Check if user exists
     if not user.exists():
-        response['Alert'] = 'Username not found'
+        r['Alert'] = 'Username not found'
 
     # Check if password is correct
     elif user.checkPass(password):
-        response['Valid'] = True
-        response['Token'] = user.resetAuth()
+        r['Valid'] = True
+        r['Token'] = user.resetAuth()
 
     # Check if password is incorrect
     else:
-        response['Alert'] = 'Password is incorrect'
+        r['Alert'] = 'Password is incorrect'
  
-    return response
+    return r
     
 @router.get("/auth")
 async def read_item(
     username: str,
     token: str
-) -> bool:
+):
     """
     Check if a User's Auth Token is valid 
     """
 
     user = User(username)
 
-    return user.checkAuth(token)
+    r = response.copy()
+
+    # Check if user exists
+    if not user.exists():
+        r['Alert'] = 'This page requires you to login'
+
+    # Check if token is correct
+    elif user.checkAuth(token):
+        r['Valid'] = True
+
+    # Check if token is incorrect
+    else:
+        r['Alert'] = 'Credentials Expired'
+ 
+    return r
