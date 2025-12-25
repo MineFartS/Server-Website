@@ -2,11 +2,13 @@
 e['options'] = document.getElementById('options')
 e['Search'] = document.getElementById('Search')
 
+// ============================================================================================
+
 function getItem(Type, Title, Year) {
 
     let call = API.call(
 
-        url = '/Servers/Plex/download',
+        url = '/Server/Plex/download',
 
         params = {
             'Type': Type,
@@ -19,6 +21,8 @@ function getItem(Type, Title, Year) {
     call.then(t => alert(t))
 
 }
+
+// ============================================================================================
 
 let lterm = ''
 
@@ -67,3 +71,5 @@ setInterval(() => {
     }
 
 })
+
+// ============================================================================================
