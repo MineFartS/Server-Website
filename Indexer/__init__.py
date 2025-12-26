@@ -1,4 +1,6 @@
 from philh_myftp_biz.modules import Module
+from philh_myftp_biz.array import List
+from philh_myftp_biz.file import JSON
 from philh_myftp_biz.file import TXT
 from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
@@ -20,9 +22,6 @@ class IndexRegistry:
     def __init__(self,
         dir: Path
     ):
-        from philh_myftp_biz.array import List
-        from philh_myftp_biz.file import JSON
-
         self.dir = dir
         self.__items: list[IndexedItem] = List(JSON(dir.child('index.json'), []))
         self.__search = List(JSON(Path('E:/Website/Root/_/Search/search.json'), []))

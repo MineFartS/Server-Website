@@ -1,5 +1,5 @@
+from philh_myftp_biz.programs import COOKIES, FFMPEG
 from typing import Literal, TYPE_CHECKING
-from Website_API import Ffmpeg, Cookies
 from philh_myftp_biz.file import temp
 from fastapi import APIRouter
 from yt_dlp import YoutubeDL
@@ -13,8 +13,8 @@ router = APIRouter(
 )
 
 ydl_args = {
-    'ffmpeg_location': str(Ffmpeg), # 'Ffmpeg.exe' path
-    'cookies': str(Cookies) # 'cookies.txt' path
+    'ffmpeg_location': str(FFMPEG()), # 'Ffmpeg.exe' path
+    'cookies': str(COOKIES()) # 'cookies.txt' path
 }
 """Base Arguements for YoutubeDL"""
 
