@@ -1,7 +1,6 @@
-from philh_myftp_biz.file import temp, JSON
 from philh_myftp_biz.modules import Module
 from philh_myftp_biz.text import random
-from philh_myftp_biz.array import List
+from philh_myftp_biz.file import temp
 from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
 from fastapi import UploadFile
@@ -15,8 +14,6 @@ Users = Module('E:/Users')
 root = this.dir.child('Root')
 
 tokenRing = Ring('AuthTokens')
-
-PIDstore: List[int] = List(JSON(this.dir.child('/API/__pycache__/PID.json')))
 
 # ================================================================================================================
 

@@ -1,4 +1,6 @@
 from philh_myftp_biz.process import Start
+from philh_myftp_biz.file import JSON
+from philh_myftp_biz.array import List
 from os import getpid
 
 try:
@@ -14,12 +16,19 @@ except ModuleNotFoundError:
     )
 
 finally:
-    from Website_API import PIDstore, this
+    from Website_API import this
 
-    # Clear the PID store
-    PIDstore.save([])
-    # Store the pid of this execution
-    PIDstore += getpid()
+#===========================================================
+
+PIDstore: List[int] = List(JSON(this.dir.child('/API/__pycache__/PID.json')))
+
+# Clear the PID store
+PIDstore.save([])
+
+# Store the pid of this execution
+PIDstore += getpid()
+
+#===========================================================
 
 #
 p = Start(
@@ -52,3 +61,5 @@ while True:
 
             except ValueError:
                 pass
+
+#===========================================================
