@@ -36,8 +36,7 @@ p = Start(
         'uvicorn', 'app:app',
         '--host', '0.0.0.0',
         '--ssl-certfile', this.file('certificates/cert'),
-        '--ssl-keyfile', this.file('certificates/key'),
-        '--workers', 2
+        '--ssl-keyfile', this.file('certificates/key')
     ],
     dir = this.dir.child('/API/'),
     terminal = 'pym'
