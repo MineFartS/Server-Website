@@ -1,33 +1,32 @@
 from philh_myftp_biz.programs import COOKIES, FFMPEG
-from typing import Literal, TYPE_CHECKING
+from fastapi.responses import FileResponse
 from philh_myftp_biz.file import temp
 from fastapi import APIRouter
 from yt_dlp import YoutubeDL
-
-if TYPE_CHECKING:
-    from philh_myftp_biz.pc import Path
+from requests import get
 
 # Declare FastAPI router
 router = APIRouter(
     prefix = '/Apps/YouTube Downloader'
 )
 
-ydl_args = {
+#
+YTDLargs = lambda id, ext: {
     'ffmpeg_location': str(FFMPEG()), # 'Ffmpeg.exe' path
-    'cookies': str(COOKIES()) # 'cookies.txt' path
+    'cookies': str(COOKIES()), # 'cookies.txt' path
+    'output': str(temp('yt-download', ext, id))
 }
-"""Base Arguements for YoutubeDL"""
 
-def Video(url:str) -> 'Path':
-        
-    #
-    args = ydl_args.copy()
+@router.get('/video')
+async def read_item(
+    url: str
+):
 
     #
-    path = temp(
-        name = 'yt-download',
-        ext = 'mp4'
-    )
+    args = YTDLargs('mp4')
+
+    #
+    name = args['output'].split('/')[-1]
 
     # Set format to 'video'
     args['format'] = 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
@@ -35,25 +34,22 @@ def Video(url:str) -> 'Path':
     # Set ext to 'mp4'
     args['merge_output_format'] = 'mp4'
 
-    # Set output path
-    args['outtmpl'] = str(path)
-
     #
     YoutubeDL(args).download([url])
 
-    return path
-
-
-def Audio(url:str) -> 'Path':
-        
     #
-    args = ydl_args.copy()
+    return name
+
+@router.get('/audio')
+async def read_item(
+    url: str
+):
+    
+    #
+    args = YTDLargs('mp3')
 
     #
-    path = temp(
-        name = 'yt-download',
-        ext = 'mp3'
-    )
+    name = args['output'].split('/')[-1]
 
     # Set format to 'audio'
     args['format'] = 'bestaudio/best'
@@ -65,60 +61,43 @@ def Audio(url:str) -> 'Path':
         'preferredquality': '192', # 192 kbps
     }]
 
-    # Set output path
-    args['outtmpl'] = str(path)
-
     #
     YoutubeDL(args).download([url])
 
-    return path
-
-
-def Thumbnail(url:str) -> 'Path':
-        
     #
-    args = ydl_args.copy()
+    return name
 
-    #
-    path = temp(
-        name = 'yt-download',
-        ext = 'png'
-    )
-
-    # TODO
-
-    # Set output path
-    args['outtmpl'] = str(path)
-
-    #
-    YoutubeDL(args).download([url])
-
-    return path
-
-
-@router.get('/get')
+@router.get('/thumbnail')
 async def read_item(
-    url: str,
-    format: Literal['video', 'audio', 'thumbnail']
-) -> dict[Literal['url', 'name'], str]:
-    """
-    Download a YouTube Video
-    """
+    url: str
+):
 
-    # Check if selected format is 'video'
-    if format == 'video':
-        path = Video(url)
+    #
+    tempfile = temp('yt-download', 'jpg')
+
+    #
+    templURL = f"https://img.youtube.com/vi/{url.split('=')[1]}/" + "{}.jpg"
+
+    #
+    r = get(templURL.format('maxresdefault'))
     
-    # Check if selected format is 'audio'
-    elif format == 'audio':
-        path = Audio(url)
-
-    # Check if selected format is 'thumbnail'
-    elif format == 'thumbnail':
-        path = Thumbnail(url)
+    # If the maxresdefault does not exist
+    if r.status_code != 200:
+        r = get(templURL.format('hqdefault'))
+    
+    #
+    with tempfile.open('wb') as f:
+        f.write(r.content)
 
     # Return url and name
-    return {
-        'url': f'/temp?d=true&f={path.seg()}', # Video Path (for API)
-        'name': f'YouTube Download.{path.ext()}' # Name to Download with 
-    }
+    return tempfile.seg()
+
+@router.get('/file')
+async def read_item(
+    name: str
+):
+    # Return File
+    return FileResponse(
+        path = f'E:/__temp__/{name}',
+        filename = name
+    )

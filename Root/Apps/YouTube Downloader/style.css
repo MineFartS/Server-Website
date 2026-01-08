@@ -47,6 +47,7 @@ input[type="submit"] {
     font-size: x-large;
     width: 10vw;
     margin-bottom: 3%;
+    cursor: pointer;
 }
 
 label {
@@ -59,7 +60,10 @@ body{
     padding: 0;
 }
 
-.loader{
+/*========================================================================================*/
+/* Loading Animation */
+
+.loader {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -68,8 +72,7 @@ body{
     align-items: center;
 }
 
-/* Creating the dots */
-span{
+span {
     height: 25px;
     width: 25px;
     margin-right: 10px;
@@ -78,8 +81,7 @@ span{
     border: 2px solid black;
     animation: loading 1s linear infinite;
 }
- 
-/* Creating the loading animation*/
+
 @keyframes loading {
     
     0%{
@@ -100,18 +102,20 @@ span{
 
 }
 
-span:nth-child(1){
+span:nth-child(1) {
     animation-delay: 0.1s;
 }
-span:nth-child(2){
+span:nth-child(2) {
     animation-delay: 0.2s;
 }
-span:nth-child(3){
+span:nth-child(3) {
     animation-delay: 0.3s;
 }
-span:nth-child(4){
+span:nth-child(4) {
     animation-delay: 0.4s;
 }
-span:nth-child(5){
+span:nth-child(5) {
     animation-delay: 0.5s;
 }
+
+/*========================================================================================*/
