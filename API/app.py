@@ -19,8 +19,5 @@ app.include_router(router)
 from Routers.Server.Plex import router
 app.include_router(router)
 
-from Routers.other import router
-app.include_router(router)
-
 from Routers.Server.Virtual_Machines import router
 app.include_router(router)
