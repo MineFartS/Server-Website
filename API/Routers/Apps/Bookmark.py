@@ -1,30 +1,29 @@
 from fastapi import APIRouter
 from Website_API import User
-from typing import Literal
+from philh_myftp_biz.file import JSON
+from philh_myftp_biz.array import List
 
 router = APIRouter(
-    prefix = '/App/Bookmark'
+    prefix = '/Apps/Bookmark'
 )
 
-def BookmarkData(
+def UserData(
     user: User
-) -> dict[Literal['Top', 'Bottom'], str]:
+):
     """
     Get a philh_myftp_biz.file.json object with the User's data file
     """
-    from philh_myftp_biz.file import JSON
-    from philh_myftp_biz.json import Dict
 
-    return Dict(JSON(
-        path = user.Dir.child('BookmarkApp.json'),
-        default = {'Top':'', 'Bottom':''}
+    return List(JSON(
+        path = user.Dir.child('Apps__Bookmark.json'),
+        default = ['Type Here', 'Type Here']
     ))
 
-@router.get("/Apps/Bookmark/read")
+@router.get("/read")
 async def read_item(
     username: str,
     token: str
-) -> None | dict[Literal['Top', 'Bottom'], str]:
+) -> None | dict[str, str]:
     """
     Read User Bookmark Data
     """
@@ -33,11 +32,14 @@ async def read_item(
 
     if user.checkAuth(token):
         
-        data = BookmarkData(user)
+        data = UserData(user).read()
 
-        return data.read()
+        return {
+            'Top': data[0],
+            'Bottom': data[1]
+        }
      
-@router.get("/Apps/Bookmark/write")
+@router.get("/save")
 async def read_item(
     username: str,
     token: str,
@@ -52,7 +54,6 @@ async def read_item(
 
     if user.checkAuth(token):
         
-        data = BookmarkData(user)
+        data = UserData(user)
 
-        data['Top'] = Top
-        data['Bottom'] = Bottom
+        data = [Top, Bottom]
