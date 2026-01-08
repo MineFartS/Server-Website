@@ -6,6 +6,10 @@ e['Search'] = document.getElementById('Search')
 
 function getItem(Type, Title, Year) {
 
+    Title = Title.replace('&', 'and')
+    Title = Title.replace(':', '')
+    Title = encodeURIComponent(Title)
+
     let call = API.call(
 
         url = '/Server/Plex/download',
@@ -50,15 +54,16 @@ setInterval(() => {
                     
                     // Insert element with item details
                     e.options.insertAdjacentHTML('beforeend', `
-                        <a 
-                            class = "option"
+                        <img 
+                            src     = "${i.Poster}"
+                            title   = "${i.Title} (${i.Year})"
+                            width   = 300
                             onclick = "getItem('${i.Type}', '${i.Title}', ${i.Year})"
-                        >${i.Title} (${i.Year})</a>
+                            onerror = "this.remove()"
+                        >
                     `)
                     
                 }
-
-                e.options.insertAdjacentHTML('afterbegin', `<h2>${e.options.children.length} results</h2>`)
 
             } else {
             
@@ -70,6 +75,6 @@ setInterval(() => {
 
     }
 
-})
+}, 100)
 
 // ============================================================================================
