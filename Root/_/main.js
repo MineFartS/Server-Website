@@ -50,10 +50,14 @@
 
 		'url': `${protocol}://${domain}:8000`,
 
-		'call': (url, params={}) => {
+		'call': (
+			url,
+			params = {},
+			timeout = undefined
+		) => {
 
 			// Declare the base url for the request
-			url = API.url + url
+			url = (API.url + url)
 
 			// Check if any params are given
 			if (Object.keys(params).length > 1) {
@@ -68,12 +72,27 @@
 				
 			}
 
+			let f
+
+			if (timeout) {
+				f = fetch(
+					url,
+					{signal: AbortSignal.timeout(timeout * 1000)}
+				)
+			} else {
+				f = fetch(url)
+			}
+
 			// Return a promise object with json formatting
-			return fetch(url).then(r => r.json())
+			return f.then(r => r.json())
 
 		},
 
-		'auth': (url, params={}) => {
+		'auth': (
+			url,
+			params = {},
+			timeout = undefined
+		) => {
 
 			// Add Username to the params
 			params['username'] = cookies['username']
@@ -82,7 +101,7 @@
 			params['token'] = cookies['token']
 
 			// Return API.call function with updated params
-			return API.call(url, params)
+			return API.call(url, params, timeout)
 
 		}
 

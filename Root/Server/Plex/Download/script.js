@@ -7,7 +7,7 @@ e['search'] = document.getElementById('Search')
 function getItem(Type, Title, Year) {
 
     // Save the current html of the search results
-    let oldHTML = e.options.innerHTML
+    window.oldHTML = e.options.innerHTML
 
     //
     e.search.setAttribute('readonly', 'true')
@@ -38,23 +38,30 @@ function getItem(Type, Title, Year) {
             'Type': Type,
             'Title': Title,
             'Year': Year
-        }
+        },
+
+        timeout = 5
         
     )
 
-    // Handle the API response
-    call.then(t => {
-        
-        // Show an alert with the response message
-        alert(t)
+    // Handle a Failed API response
+    call.catch(responseHandler)
 
-        // Restore the saved search results html
-        e.options.innerHTML = oldHTML
+    // Handle a Successful API response
+    call.then(responseHandler)
 
-        //
-        e.search.removeAttribute('readonly')
+}
+
+function responseHandler(t) {
     
-    })
+    // Show an alert with the response message
+    alert(t)
+
+    // Restore the saved search results html
+    e.options.innerHTML = oldHTML
+
+    // Allow the search box to be modified
+    e.search.removeAttribute('readonly')
 
 }
 
