@@ -1,7 +1,19 @@
+from philh_myftp_biz.terminal import ParsedArgs
 from philh_myftp_biz.process import Start
-from philh_myftp_biz.file import JSON
 from philh_myftp_biz.array import List
+from philh_myftp_biz.file import JSON
 from os import getpid
+
+#===========================================================
+
+args = ParsedArgs()
+args.Arg(
+    name = 'workers',
+    default = 2
+)
+
+#===========================================================
+# Install API Package
 
 try:
     import Website_API
@@ -19,6 +31,7 @@ finally:
     from Website_API import this
 
 #===========================================================
+# PID Store
 
 PIDstore: List[int] = List(JSON(this.dir.child('/API/__pycache__/PID.json')))
 
@@ -32,17 +45,24 @@ PIDstore += getpid()
 
 #
 p = Start(
+
     args = [
         'uvicorn', 'app:app',
         '--host', '0.0.0.0',
         '--ssl-certfile', this.file('certificates/cert'),
-        '--ssl-keyfile', this.file('certificates/key')
+        '--ssl-keyfile', this.file('certificates/key'),
+        '--workers', args['workers']
     ],
+
     dir = this.dir.child('/API/'),
+    
     terminal = 'pym'
+
 )
 
-while True:
+while len(PIDstore) <= (args['workers'] + 1):
+
+    print('Searching for PIDs ...')
 
     for line in p.stdcomb.split('\n'):
 
@@ -60,5 +80,7 @@ while True:
 
             except ValueError:
                 pass
+
+p.wait()
 
 #===========================================================
