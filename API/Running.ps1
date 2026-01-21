@@ -1,8 +1,5 @@
-$filePath = "$PSScriptRoot\__pycache__\PID.json"
 
-$PIDs = (Get-Content -Path $filePath -Raw | ConvertFrom-Json)
-
-$processes = $PIDS | ForEach-Object {
+$processes = Get-Content -Path "$PSScriptRoot\__pycache__\PID.json" -Raw | ConvertFrom-Json | ForEach-Object {
     
     try {
         Get-Process -Id $_ -ErrorAction SilentlyContinue

@@ -1,8 +1,4 @@
 
-$filePath = "$PSScriptRoot\__pycache__\PID.json"
-
-$PIDs = (Get-Content -Path $filePath -Raw | ConvertFrom-Json)
-
-$PIDS | ForEach-Object {
+Get-Content -Path "$PSScriptRoot\__pycache__\PID.json" -Raw | ConvertFrom-Json | ForEach-Object {
     Stop-Process -Id $_ -Force
 }
