@@ -150,19 +150,19 @@ class IndexedItem:
                 pass
 
     def Update(self):
+        from re import sub
         
         src = self.SRC()
 
         if src:
 
-            code: str = src.open().read()
+            mcode = sub(
+                pattern = '<title>.*<\\/title>', 
+                repl    = f'<title>{self.Title()}</title>', 
+                string  = src.open().read()
+            )
             
-            code = \
-                code[:code.find('<title>')] + \
-                f'<title>{self.Title()}</title>' + \
-                code[code.find('</title>')+8:]
-            
-            self.path.open('w').write(code)
+            self.path.open('w').write(mcode)
 
     def filter(self, term:str=None):
         if term:
