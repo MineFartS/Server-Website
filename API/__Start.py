@@ -1,4 +1,4 @@
-from philh_myftp_biz.terminal import ParsedArgs
+from philh_myftp_biz.terminal import ParsedArgs, Log
 from philh_myftp_biz.process import Start
 from philh_myftp_biz.array import List
 from philh_myftp_biz.file import JSON
@@ -41,16 +41,26 @@ PIDstore.save([])
 # Store the pid of this execution
 PIDstore += getpid()
 
-#===========================================================
+max_pids = (args['workers'] + 1)
 
-#
+#===========================================================
+# SSL Certificate
+
+ssl_cert = this.file('certificates/cert')
+ssl_key = this.file('certificates/key')
+
+Log.VERB(f'SSL Certificate: {str(ssl_cert)=} | {str(ssl_key)=}')
+
+#===========================================================
+# Uvicorn
+
 p = Start(
 
     args = [
         'uvicorn', 'app:app',
         '--host', '0.0.0.0',
-        '--ssl-certfile', this.file('certificates/cert'),
-        '--ssl-keyfile', this.file('certificates/key'),
+        '--ssl-certfile', ssl_cert,
+        '--ssl-keyfile', ssl_key,
         '--workers', args['workers']
     ],
 
@@ -60,9 +70,12 @@ p = Start(
 
 )
 
-while len(PIDstore) <= (args['workers'] + 1):
+#===========================================================
+# Discover PIDs
 
-    print('Searching for PIDs ...')
+Log.INFO('Discovering PIDs')
+
+while len(PIDstore) <= max_pids:
 
     for line in p.stdcomb.split('\n'):
 
@@ -74,13 +87,15 @@ while len(PIDstore) <= (args['workers'] + 1):
 
                 if pid not in PIDstore:
 
-                    print(f'{pid=}')
+                    Log.VERB(f'Discovered PID: {pid=}')
 
                     PIDstore += pid
 
             except ValueError:
                 pass
 
-p.wait()
+Log.INFO(f'PIDs Discovered: {PIDstore.read()=}')
 
 #===========================================================
+
+p.wait()
