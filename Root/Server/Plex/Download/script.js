@@ -40,7 +40,7 @@ function getItem(Type, Title, Year) {
             'Year': Year
         },
 
-        timeout = 5
+        timeout = 15
         
     )
 
