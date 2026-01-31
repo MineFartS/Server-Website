@@ -92,8 +92,8 @@ class IndexedItem:
         elif self.path.seg().startswith('__'):
             return False
         
-        # Check if file has ext: ('ini', 'config', 'ds_store', 'json', 'js')
-        elif self.path.ext() in ['ini', 'config', 'ds_store', 'json', 'js', 'css']:
+        # Check if file has a certain extension
+        elif self.path.ext() in ['ini', 'config', 'ds_store', 'json', 'js', 'py', 'css']:
             return False
         
         # Check if filename is 'index.html'
