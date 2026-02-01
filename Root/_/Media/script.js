@@ -1,21 +1,21 @@
 	
 e['content'] = document.getElementById('content')
 
-document.title = 'Test Title'
-
-fetch('MimeTable.json').then(r => r.json()).then(MimeTable => {
+fetch('/_/Media/MimeTable.json').then(r => r.json()).then(MimeTable => {
 
     //============================================================================================
 
     window.media = {}
+
+    let URL = decodeURIComponent(document.location.pathname)
     
-    media['url'] = parameters.file + '?raw=true'
+    media['url'] = URL + '?raw=true'
 
-    media['back'] = parameters.file.substring(0, parameters.file.lastIndexOf('/')+1)
+    media['back'] = URL.substring(0, URL.lastIndexOf('/')+1)
 
-    media['name'] = parameters.file.substring(parameters.file.lastIndexOf('/')+1)
+    media['name'] = URL.substring(URL.lastIndexOf('/')+1)
 
-    media['ext'] = parameters.file.substring(parameters.file.lastIndexOf('.')+1).toLowerCase()
+    media['ext'] = URL.substring(URL.lastIndexOf('.')+1).toLowerCase()
 
     media['mime'] = MimeTable[media.ext]
 
@@ -26,7 +26,8 @@ fetch('MimeTable.json').then(r => r.json()).then(MimeTable => {
     e.back.textContent = media.back
     e.back.setAttribute('href', media.back)
 
-    e.title.textContent = media.name
+    document.title = media.name
+    e.title.textContent = media.name.substring(0, media.name.lastIndexOf('.'))
 
     //============================================================================================
 
