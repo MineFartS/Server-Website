@@ -49,7 +49,7 @@ max_pids = (args['workers'] + 1)
 ssl_cert = this.file('certificates/cert')
 ssl_key = this.file('certificates/key')
 
-Log.VERB(f'SSL Certificate: {str(ssl_cert)=} | {str(ssl_key)=}')
+Log.VERB(f'SSL Certificate: {ssl_cert=} | {ssl_key=}')
 
 #===========================================================
 # Uvicorn
@@ -94,7 +94,7 @@ while len(PIDstore) <= max_pids:
             except ValueError:
                 pass
 
-Log.INFO(f'PIDs Discovered: {PIDstore.read()=}')
+Log.INFO(f'PIDs Discovered: {PIDstore.read()}')
 
 #===========================================================
 
