@@ -40,8 +40,8 @@ fetch('type.ini').then(r => r.text()).then(t => {
 				// Check if item is visible
 				if (i.Visible) {
 
-                    // Append the item to the 'lines' arrag
-                    lines.push(i.URL)
+                    // Append the item to the 'lines' array
+                    lines.push(i.URL + '?raw=true')
 
                 }
 
