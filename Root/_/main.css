@@ -8,7 +8,7 @@
     }
 
     html {
-        background-image: url('/_/background.gif');
+        background-image: url('/_/background.gif?raw=true');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
