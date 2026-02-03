@@ -38,9 +38,7 @@ function getItem(Type, Title, Year) {
             'Type': Type,
             'Title': Title,
             'Year': Year
-        },
-
-        timeout = 15
+        }
         
     )
 
@@ -104,7 +102,7 @@ setInterval(() => {
                         <img 
                             src     = "${i.Poster}"
                             title   = "${i.Title} (${i.Year})"
-                            onclick = "getItem('${i.Type}', '${i.Title}', ${i.Year})"
+                            onclick = "getItem('${i.Type}', \`${i.Title}\`, ${i.Year})"
                             onerror = "this.remove()"
                         >
                     `)
