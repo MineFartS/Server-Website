@@ -61,9 +61,8 @@ function setPage(x) {
     })
 
     //
-    e.image.setAttribute('src', url+'image.png')
+    e.image.setAttribute('src', url+'image.png?raw=true')
 
     e.pageNum.textContent = `${page}/${pages.length}`
-    
-    
+
 }
