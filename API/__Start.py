@@ -33,7 +33,7 @@ finally:
 #===========================================================
 # PID Store
 
-PIDstore: List[int] = List(JSON(this.dir.child('/API/__pycache__/PID.json')))
+PIDstore: List[int] = List(JSON(this.child('/API/__pycache__/PID.json')))
 
 # Clear the PID store
 PIDstore.save([])
@@ -64,7 +64,7 @@ p = Start(
         '--workers', args['workers']
     ],
 
-    dir = this.dir.child('/API/'),
+    dir = this.child('/API/'),
     
     terminal = 'pym'
 

@@ -9,11 +9,11 @@ from typing import Generator
 this = Module('E:/Website')
 Users = Module('E:/Users')
 
-root = this.dir.child('Root')
+root = this.child('Root')
 
 tokenRing = Ring('AuthTokens')
 
-PIDstore = TXT(this.dir.child('/Indexer/__pycache__/PID.txt'))
+PIDstore = TXT(this.child('/Indexer/__pycache__/PID.txt'))
 
 # ================================================================================================================
 

@@ -11,7 +11,7 @@ from aiofiles import open
 this = Module('E:/Website')
 Users = Module('E:/Users')
 
-root = this.dir.child('Root')
+root = this.child('Root')
 
 tokenRing = Ring('AuthTokens')
 
