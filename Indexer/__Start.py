@@ -1,45 +1,44 @@
-from __init__ import root, IndexRegistry, PIDstore
-from os import getpid
+from IndexTypes import IndexRegistry, IndexEntry, Search
+from philh_myftp_biz.terminal import Log
+from __init__ import root
 from re import sub
 
-PIDstore.save(getpid())
-
-mediaEXTs: list[str] = []
-
-registries: list[IndexRegistry] = []
-
 # ==========================================================
+# BUILD REGISTRIES
 
-# Append the root registry
-registries += [IndexRegistry(root)]
+# Clear the search registry
+Search.save([])
 
-# Iter through all subfolders of root
+# Iter through all descendants of root
 for p in root.descendants():
     
+    # If the path is a directory 
     if p.isdir():
-        # Append the folder as a registry
-        registries += [IndexRegistry(p)]
-    
-    elif p.type() in ['image', 'video', 'audio']:
-        
-        if p.ext() not in mediaEXTs:
-            mediaEXTs  += [p.ext()]
 
-# Iter through the registries
-for r in registries:
+        registry = IndexRegistry(p)
 
-    # Iter through all items in the registry
-    for i in r.items():
-        
-        # Update the registry item
-        i.Update()
+        Log.INFO(f'Building Registry: {registry}')
 
-    print('Building Registry:', r.dir)
+        # Clear the directory registry
+        registry.save([])
 
-    # Build the registry
-    r.build()
+        # Iter through all items in the registry
+        for child in registry.children():
+
+            entry = IndexEntry(child)
+            
+            Log.VERB(f'Adding Entry: {entry}')
+
+            # Append the entry to the directory registry
+            registry += entry.JSON
+
+            # Append the entry to the search registry
+            Search += entry.JSON
+
+exit()
 
 # ==========================================================
+#
 
 config = root.child('web.config')
 
