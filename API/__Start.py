@@ -18,7 +18,7 @@ args.Arg(
 try:
     import Website_API
 
-except ModuleNotFoundError:
+except:
     from subprocess import run
     from sys import executable
     
