@@ -88,10 +88,10 @@ async def read_item(
 
     files = root.child('/Apps/Videos/files')
     
-    for p in Path(files).children():
-        if p.isdir():
+    for p in Path(files).children:
+        if p.is_dir:
 
-            details = VideoDetails(p.name())
+            details = VideoDetails(p.name)
             
             if details['Visibility'] == 'Public':
                 visible = True
@@ -118,10 +118,10 @@ async def read_item() -> list[str]:
 
     dir = root.child('/Apps/Videos/files')
     
-    for p in dir.children():
-        if p.isdir():
+    for p in dir.children:
+        if p.is_dir:
             
-            details = VideoDetails(p.name())
+            details = VideoDetails(p.name)
             
             if not details['Uploader'] in channels:
                 channels += [details['Uploader']]
@@ -156,7 +156,7 @@ async def upload(
     Delete a video
     """
     
-    VideoDetails(id).var.path.parent().delete()
+    VideoDetails(id).var.path.parent.delete()
 
 @router.post('/Apps/Videos/Modify')
 async def upload(

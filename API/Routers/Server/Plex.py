@@ -28,7 +28,7 @@ async def read_item(
         dir = shows.child(f'/{name}/')
 
         # If the folder already exists
-        if dir.exists():
+        if dir.exists:
             
             # Return alert message
             return 'Show already exists'
@@ -46,10 +46,10 @@ async def read_item(
     elif Type == 'movie':
 
         # Iter through all movie files
-        for p in movies.children():
+        for p in movies.children:
             
             # If the file has the same name as the movie
-            if p.name() == name:
+            if p.name == name:
                 
                 # Return alert message
                 return 'Movie already exists'
@@ -58,7 +58,7 @@ async def read_item(
         todo = movies.child(f'/{name}.todo')
 
         # If the placeholder file exists
-        if todo.exists():
+        if todo.exists:
             
             # Return alert message
             return 'Movie is already in the download queue'

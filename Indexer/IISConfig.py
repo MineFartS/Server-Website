@@ -9,13 +9,13 @@ config = root.child('web.config')
 rules: dict[str, str] = {}
 
 # Iter through all descendants of root
-for p in root.descendants():
+for p in root.descendants:
 
     # If the path is a media file
-    if p.type() in ['image', 'video', 'audio']:
+    if p.type in ['image', 'video', 'audio']:
 
         # Get the file extension
-        ext = p.ext().lower()
+        ext = p.ext.lower()
 
         if ext not in rules:
 

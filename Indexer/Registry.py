@@ -6,10 +6,10 @@ from __init__ import root
 Search.save([])
 
 # Iter through all descendants of root
-for p in root.descendants():
+for p in root.descendants:
     
     # If the path is a directory 
-    if p.isdir():
+    if p.is_dir:
 
         registry = IndexRegistry(p)
 
@@ -19,7 +19,7 @@ for p in root.descendants():
         registry.save([])
 
         # Iter through all items in the registry
-        for child in registry.children():
+        for child in registry.children:
 
             entry = IndexEntry(child)
             

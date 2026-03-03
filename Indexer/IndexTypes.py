@@ -30,10 +30,10 @@ class IndexEntry(Path):
         
         super().__init__(path)
 
-        if self.isdir():
+        if self.is_dir:
             self.dir = self.path
         else:
-            self.dir = self.parent()
+            self.dir = self.parent
 
         self.JSON = {
             'URL': self.URL(),
@@ -49,7 +49,7 @@ class IndexEntry(Path):
         url = str(self).replace('E:/Website/Root', '', 1)
 
         # Check if file is '.href'
-        if self.ext() == 'href':
+        if self.ext == 'href':
             # Return text contents of file
             return str(self.open().read()).strip()
         
@@ -65,16 +65,16 @@ class IndexEntry(Path):
     def Visible(self) -> bool:
 
         # Check if is directory
-        if self.isdir():
+        if self.is_dir:
             # Return True unless 'hide.ini' exists inside the directory
-            return (not self.child('Hide.ini').exists())
+            return (not self.child('Hide.ini').exists)
 
         # Check if filename starts with '__'
         elif self.seg().startswith('__'):
             return False
         
         # Check if file has a certain extension
-        elif self.ext() in ['ini', 'config', 'ds_store', 'json', 'js', 'py', 'css', 'gitignore']:
+        elif self.ext in ['ini', 'config', 'ds_store', 'json', 'js', 'py', 'css', 'gitignore']:
             return False
         
         # Check if filename is 'index.html'
@@ -87,9 +87,9 @@ class IndexEntry(Path):
     def Title(self) -> str:
 
         # Check if is dir
-        if self.isdir():
+        if self.is_dir:
             # Return Name of Dir
-            return self.name()
+            return self.name
 
         # Check if filename is 'index.html'
         elif self.seg() == 'index.html':
@@ -100,25 +100,25 @@ class IndexEntry(Path):
 
             else:
                 # Return Name of parent directory
-                return self.parent().name()
+                return self.parent.name
 
         else:
             # Return Name of file
-            return self.name()
+            return self.name
 
     def SRC(self) -> str|None:
 
-        if self.isdir():
+        if self.is_dir:
             return None
         
         elif self.seg() == 'index.html':
 
-            template = self.parent().sibling('__template__.html')
+            template = self.parent.sibling('__template__.html')
         
-            if self.dir.child('Protect.ini').exists():
+            if self.dir.child('Protect.ini').exists:
                 src = self
 
-            elif template.exists():
+            elif template.exists:
                 src = template
 
             else:

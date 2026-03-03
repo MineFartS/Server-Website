@@ -40,7 +40,7 @@ async def read_item(
 
     user = User(username)
 
-    if not user.exists():
+    if not user.exists:
         user.setPass(password)
         return user.resetAuth()
     
@@ -58,7 +58,7 @@ async def read_item(
     r = response.copy()
 
     # Check if user exists
-    if not user.exists():
+    if not user.exists:
         r['Alert'] = 'Username not found'
 
     # Check if password is correct
@@ -86,7 +86,7 @@ async def read_item(
     r = response.copy()
 
     # Check if user exists
-    if not user.exists():
+    if not user.exists:
         r['Alert'] = 'This page requires you to login'
 
     # Check if token is correct
