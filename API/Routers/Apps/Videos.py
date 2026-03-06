@@ -1,15 +1,36 @@
 from fastapi.responses import RedirectResponse
 from fastapi import APIRouter, UploadFile
-from Website_API import User, receiveFile, root
+from ... import User, receiveFile, root
 from philh_myftp_biz.pc import Path
 from typing import Literal
+from philh_myftp_biz.json import Dict
+from philh_myftp_biz.file import JSON
 
 router = APIRouter(
     prefix = '/Apps/Videos'
 )
 
-detailsHint = dict[Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader', 'Views', 'Visibility']]
+# TODO
 
+detailsHint = dict[str, Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader', 'Views', 'Visibility']]
+"""
+class Video(Path, Dict):
+
+    def __init__(self,
+        id: str
+    ) -> None:
+        
+        Path.__init__(self, f'E:/Website/Resources/Apps/Videos/files/{id}')
+
+        json = JSON(self.child('')
+    )
+
+        Dict.__init__(self, 
+                      
+                      )
+
+            return Dict(J)
+"""
 def VideoDetails(
     id: str
 ):
@@ -25,7 +46,7 @@ def VideoDetails(
     ))
 
 @router.post('/Apps/Videos/Upload')
-async def upload(
+async def upload( # pyright: ignore[reportRedeclaration]
     username: str,
     token: str,
     Title: str,
@@ -68,7 +89,7 @@ async def upload(
         return f"https://philh.myftp.biz/Apps/Videos/Player?id={id}"
 
 @router.get('/Apps/Videos/List')
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     username: str = None,
     token: str = None
 ) -> list[dict]:
@@ -109,7 +130,7 @@ async def read_item(
     )
 
 @router.get('/Apps/Videos/Channels')
-async def read_item() -> list[str]:
+async def read_item() -> list[str]: # pyright: ignore[reportRedeclaration]
     """
     List all Channels
     """
@@ -147,7 +168,7 @@ async def read_item(
     return details
 
 @router.get('/Apps/Videos/Delete')
-async def upload(
+async def upload( # pyright: ignore[reportRedeclaration]
     id: str,
     username: str,
     auth: str
