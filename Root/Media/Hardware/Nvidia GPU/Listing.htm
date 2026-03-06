@@ -2090,7 +2090,7 @@ $Nav.declare('img.pixel', 'https://m.media-amazon.com/images/G/01/x-locale/commo
     }
     const isValidType = function (value) {
         // Prevents accessing empty key-value and internal methods(prototypes) of storage
-        // TODO: Log metrics for invalid access;
+
         return value && value.constructor == String;
     }
     return {
@@ -2106,7 +2106,7 @@ $Nav.declare('img.pixel', 'https://m.media-amazon.com/images/G/01/x-locale/commo
                 var currentTime = new Date();
                 cache.setItem(CACHE_EXPIRY, new Date(currentTime.getTime() + 5 * 60000))
             }
-            // TODO: Log length of old and new cache values when logMetrics is true
+
             cache.setItem(key, value);
         },
         updateCacheAndEwcContainer: function (cacheKey, newEwcContent) {

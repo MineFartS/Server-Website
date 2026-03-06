@@ -7,7 +7,6 @@ try {
             return;
         /** Generic Utility **/
         (function (WlpInjectable) {
-            // TODO - Replace it with underscore library later
             var q = 0;
             var utility = {
                 isFunction: function (fn) {

@@ -2588,7 +2588,6 @@ $Nav.declare('img.pixel', 'https://m.media-amazon.com/images/G/01/x-locale/commo
     }
     const isValidType = function (value) {
         // Prevents accessing empty key-value and internal methods(prototypes) of storage
-        // TODO: Log metrics for invalid access;
         return value && value.constructor == String;
     }
     return {
@@ -2604,7 +2603,6 @@ $Nav.declare('img.pixel', 'https://m.media-amazon.com/images/G/01/x-locale/commo
                 var currentTime = new Date();
                 cache.setItem(CACHE_EXPIRY, new Date(currentTime.getTime() + 5 * 60000))
             }
-            // TODO: Log length of old and new cache values when logMetrics is true
             cache.setItem(key, value);
         },
         updateCacheAndEwcContainer: function (cacheKey, newEwcContent) {
@@ -4962,12 +4960,7 @@ sell your information to others.       <a data-csa-c-content-id="desktop-dynamic
                                       <div id="giftingODF_feature_div" class="celwidget" data-feature-name="giftingODF" data-csa-c-type="widget" data-csa-c-content-id="giftingODF" data-csa-c-slot-id="giftingODF_feature_div" data-csa-c-asin="B07PRRQ41J" data-csa-c-is-in-initial-active-row="false" data-csa-c-id="z9ok5-pr74aj-b8i3if-3upsha" data-cel-widget="giftingODF_feature_div">
                                                              </div>
                                       <div id="makoPreRegistration" class="celwidget" data-feature-name="makoPreRegistration" data-csa-c-type="widget" data-csa-c-content-id="makoPreRegistration" data-csa-c-slot-id="makoPreRegistration" data-csa-c-asin="B07PRRQ41J" data-csa-c-is-in-initial-active-row="false" data-csa-c-id="el27id-1bjqj2-2pqh72-9uux9l" data-cel-widget="makoPreRegistration">
-                            <!--
-TODO:
-We use the invitePlatform's view model to make the account linking checkbox Invite/EMWR aware.
-Ideally we would be checking invite status from the view model factory but AAPI does not have an invite subresource
-Tracking in CXE-5905
--->
+
  <!-- Save preRegistration show status into a JSTL variable to override for invite ASINs that a customer does not have an invite for -->
                            </div>
                                       <div id="accessoryUpsellAmabot_feature_div" class="celwidget" data-feature-name="accessoryUpsellAmabot" data-csa-c-type="widget" data-csa-c-content-id="accessoryUpsellAmabot" data-csa-c-slot-id="accessoryUpsellAmabot_feature_div" data-csa-c-asin="B07PRRQ41J" data-csa-c-is-in-initial-active-row="false" data-csa-c-id="jpcytx-e6vn4c-is3rew-oqt6xh" data-cel-widget="accessoryUpsellAmabot_feature_div">
