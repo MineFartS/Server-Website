@@ -1,39 +1,14 @@
 from philh_myftp_biz.terminal import ParsedArgs, Log
 from philh_myftp_biz.process import Start
-from philh_myftp_biz.array import List
-from philh_myftp_biz.file import JSON
+from __init__ import this, PIDstore
 from os import getpid
 
 #===========================================================
 
 args = ParsedArgs()
-args.Arg(
-    name = 'workers',
-    default = 2
-)
-
-#===========================================================
-# Install API Package
-
-try:
-    import Website_API
-
-except:
-    from subprocess import run
-    from sys import executable
-    
-    run(
-        args = [executable, '-m', 'pip', 'install', '.'],
-        cwd = 'E:/Website/API/Package/'
-    )
-
-finally:
-    from Website_API import this
 
 #===========================================================
 # PID Store
-
-PIDstore: List[int] = List(JSON(this.child('/API/__pycache__/PID.json')))
 
 # Clear the PID store
 PIDstore.save([])
@@ -49,25 +24,20 @@ max_pids = (args['workers'] + 1)
 ssl_cert = this.file('certificates/cert')
 ssl_key = this.file('certificates/key')
 
-Log.VERB(f'SSL Certificate: {ssl_cert=} | {ssl_key=}')
+Log.VERB(f'SSL Certificate:\n{ssl_cert=}\n{ssl_key=}')
 
 #===========================================================
 # Uvicorn
 
 p = Start(
-
     args = [
         'uvicorn', 'app:app',
         '--host', '0.0.0.0',
         '--ssl-certfile', ssl_cert,
-        '--ssl-keyfile', ssl_key,
-        '--workers', args['workers']
+        '--ssl-keyfile', ssl_key
     ],
-
-    dir = this.child('/API/'),
-    
+    dir = this.child('/API/'),    
     terminal = 'pym'
-
 )
 
 #===========================================================

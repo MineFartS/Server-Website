@@ -1,6 +1,7 @@
 from philh_myftp_biz.modules import Module
 from philh_myftp_biz.text import random
-from philh_myftp_biz.file import temp
+from philh_myftp_biz.file import JSON, temp
+from philh_myftp_biz.array import List
 from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
 from fastapi import UploadFile
@@ -15,6 +16,8 @@ root = this.child('Root')
 
 tokenRing = Ring('AuthTokens')
 
+PIDstore: List[int] = List(JSON(this.child('/API/__pycache__/PID.json')))
+
 # ================================================================================================================
 
 async def receiveFile(stream: 'UploadFile') -> Path:
@@ -22,7 +25,7 @@ async def receiveFile(stream: 'UploadFile') -> Path:
     path = temp(
         name = 'UploadedFile',
         ext = stream.filename[stream.filename.rfind('.')+1:]
-    )   
+    )
 
     contents = await stream.read()
 
@@ -60,7 +63,7 @@ class User:
         return Users.run(
             'Exists',
             '-Username', self.username
-        ).output('json')
+        ).output('json') # pyright: ignore[reportReturnType]
 
     def checkAuth(self, token:str):
         return (self.__token.read() == token)

@@ -1,23 +1,27 @@
 from starlette.middleware.cors import CORSMiddleware
+from philh_myftp_biz.terminal import Log
+from importlib import import_module
 from fastapi import FastAPI
+from __init__ import this
 
 app = FastAPI()
+
 app.add_middleware(
     middleware_class = CORSMiddleware,
     allow_origins = ['*']
 )
 
-from Routers.Apps.YouTube_Downloader import router
-app.include_router(router)
+for file in this.child('/API/Routers/').descendants:
 
-from Routers.Apps.Bookmark import router
-app.include_router(router)
+    if (file.ext == 'py') and (file.name != '__init__'):
 
-from Routers.Login import router
-app.include_router(router)
+        imp: str = file.path
+        imp = imp.split('/API/')[1]
+        imp = imp.split('.')[0]
+        imp = imp.replace('/', '.')
 
-from Routers.Server.Plex import router
-app.include_router(router)
+        Log.INFO(f'Installing Router: {imp}')
 
-from Routers.Server.Virtual_Machines import router
-app.include_router(router)
+        app.include_router(
+            router = import_module(imp).router
+        )
