@@ -1,4 +1,4 @@
-from philh_myftp_biz.pc import Path, mkdir
+from philh_myftp_biz.pc import Path
 from fastapi import APIRouter
 from typing import Literal
 
@@ -37,7 +37,7 @@ async def read_item(
         else:
             
             # Create the folder
-            mkdir(dir)
+            dir.mkdir()
             
             # Return alert message
             return 'Show has been added to the download queue'

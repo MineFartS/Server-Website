@@ -59,6 +59,7 @@ class User:
             '-Password', password
         )
 
+    @property
     def exists(self) -> bool:
         return Users.run(
             'Exists',

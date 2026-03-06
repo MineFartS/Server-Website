@@ -2,7 +2,7 @@ from philh_myftp_biz.modules import Module
 from fastapi.responses import FileResponse
 from philh_myftp_biz.file import temp
 from fastapi import APIRouter
-from Website_API import User
+from ... import User
 
 # Declare FastAPI router
 router = APIRouter(
@@ -72,7 +72,7 @@ enablerdsaadauth:i:0
 """
 
 @router.get('/connectRDP')
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     name: str
 ) -> FileResponse:
 
@@ -95,7 +95,7 @@ async def read_item(
     )
 
 @router.get('/start')
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     name: str,
     username: str,
     token: str
@@ -109,7 +109,7 @@ async def read_item(
         VM.run('start', f'User-{name}')
 
 @router.get('/stop')
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     name: str,
     username: str,
     token: str
@@ -128,4 +128,4 @@ async def read_item(
 ) -> bool:
     
     # Get the power status of the virtual machine
-    return VM.cap('status', f'User-{name}')
+    return VM.cap('status', f'User-{name}') # pyright: ignore[reportReturnType]

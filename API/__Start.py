@@ -1,6 +1,9 @@
 from philh_myftp_biz.terminal import ParsedArgs, Log
-from philh_myftp_biz.process import Start
-from __init__ import this, PIDstore
+from starlette.middleware.cors import CORSMiddleware
+from importlib import import_module
+from . import this, PIDstore
+from fastapi import FastAPI
+from uvicorn import run
 from os import getpid
 
 #===========================================================
@@ -16,56 +19,38 @@ PIDstore.save([])
 # Store the pid of this execution
 PIDstore += getpid()
 
-max_pids = (args['workers'] + 1)
-
 #===========================================================
-# SSL Certificate
+# APP
 
-ssl_cert = this.file('certificates/cert')
-ssl_key = this.file('certificates/key')
+app = FastAPI()
 
-Log.VERB(f'SSL Certificate:\n{ssl_cert=}\n{ssl_key=}')
-
-#===========================================================
-# Uvicorn
-
-p = Start(
-    args = [
-        'uvicorn', 'app:app',
-        '--host', '0.0.0.0',
-        '--ssl-certfile', ssl_cert,
-        '--ssl-keyfile', ssl_key
-    ],
-    dir = this.child('/API/'),    
-    terminal = 'pym'
+app.add_middleware(
+    middleware_class = CORSMiddleware,
+    allow_origins = ['*']
 )
 
-#===========================================================
-# Discover PIDs
+for file in this.child('/API/Routers/').descendants:
 
-Log.INFO('Discovering PIDs')
+    if (file.ext == 'py') and (file.name != '__init__'):
 
-while len(PIDstore) <= max_pids:
+        imp: str = file.path
+        imp = imp.split('/API/')[1]
+        imp = imp.split('.')[0]
+        imp = imp.replace('/', '.')
+        imp = '..' + imp
 
-    for line in p.stdcomb.split('\n'):
+        Log.INFO(f'Installing Router: {imp}')
 
-        if '[' in line:
-
-            try:
-
-                pid = int(line.split('[')[1].split(']')[0])
-
-                if pid not in PIDstore:
-
-                    Log.VERB(f'Discovered PID: {pid=}')
-
-                    PIDstore += pid
-
-            except ValueError:
-                pass
-
-Log.INFO(f'PIDs Discovered: {PIDstore.read()}')
+        app.include_router(
+            router = import_module(imp, __name__).router
+        )
 
 #===========================================================
+# RUN
 
-p.wait()
+run(
+    app = app,
+    host = '0.0.0.0',
+    ssl_certfile = this.file('certificates/cert').path,
+    ssl_keyfile = this.file('certificates/key').path
+)

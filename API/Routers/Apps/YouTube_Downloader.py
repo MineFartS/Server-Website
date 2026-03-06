@@ -18,7 +18,7 @@ YTDLargs = lambda id, ext: {
 }
 
 @router.get('/video')
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     url: str
 ):
 
@@ -41,7 +41,7 @@ async def read_item(
     return name
 
 @router.get('/audio')
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     url: str
 ):
     
@@ -68,7 +68,7 @@ async def read_item(
     return name
 
 @router.get('/thumbnail')
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     url: str
 ):
 

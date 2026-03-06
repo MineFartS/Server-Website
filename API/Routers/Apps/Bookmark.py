@@ -1,7 +1,7 @@
-from fastapi import APIRouter
-from Website_API import User
-from philh_myftp_biz.file import JSON
 from philh_myftp_biz.array import List
+from philh_myftp_biz.file import JSON
+from fastapi import APIRouter
+from ... import User
 
 router = APIRouter(
     prefix = '/Apps/Bookmark'
@@ -20,7 +20,7 @@ def UserData(
     ))
 
 @router.get("/read")
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
     token: str
 ) -> None | dict[str, str]:
@@ -56,4 +56,4 @@ async def read_item(
         
         data = UserData(user)
 
-        data = [Top, Bottom]
+        data.save([Top, Bottom])

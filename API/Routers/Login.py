@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from Website_API import User
+from .. import User
 from typing import Literal
 
 router = APIRouter(
@@ -13,7 +13,7 @@ response: dict[Literal['Valid', 'Alert', 'Token'], str|bool|None] = {
 }
 
 @router.get("/change")
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
     oldpassword: str,
     newpassword: str
@@ -28,7 +28,7 @@ async def read_item(
         user.setPass(newpassword)
 
 @router.get("/create")
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
     password: str
 ) -> None | str:
@@ -45,7 +45,7 @@ async def read_item(
         return user.resetAuth()
     
 @router.get("/check")
-async def read_item(
+async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
     password: str
 ):
