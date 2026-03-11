@@ -1,6 +1,5 @@
 from philh_myftp_biz.terminal import ParsedArgs, Log
 from starlette.middleware.cors import CORSMiddleware
-from philh_myftp_biz.terminal import main_module
 from importlib import import_module
 from . import this, PIDstore
 from fastapi import FastAPI
@@ -44,7 +43,7 @@ for file in this.child('/API/Routers/').descendants:
 
         module = import_module(
             name = imp, 
-            package = main_module().__name__
+            package = __package__
         )
 
         app.include_router(module.router)
