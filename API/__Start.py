@@ -1,10 +1,19 @@
 from philh_myftp_biz.terminal import ParsedArgs, Log
 from starlette.middleware.cors import CORSMiddleware
+from philh_myftp_biz.web import FirewallException
 from importlib import import_module
+from philh_myftp_biz.pc import Path
 from . import this, PIDstore
 from fastapi import FastAPI
 from uvicorn import run
+from sys import prefix
 from os import getpid
+
+#===========================================================
+
+fe = FirewallException('Uvicorn')
+
+fe.set(Path(prefix + '\\Scripts\\uvicorn.exe'))
 
 #===========================================================
 
