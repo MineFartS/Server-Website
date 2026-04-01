@@ -1,4 +1,4 @@
-from philh_myftp_biz.terminal import ParsedArgs, Log
+from philh_myftp_biz.terminal import Log
 from starlette.middleware.cors import CORSMiddleware
 from philh_myftp_biz.web import FirewallException
 from importlib import import_module
@@ -9,60 +9,47 @@ from uvicorn import run
 from sys import prefix
 from os import getpid
 
-#===========================================================
+if __name__ == '__main__':
 
-fe = FirewallException('Uvicorn')
+    fe = FirewallException('Uvicorn')
 
-fe.set(Path(prefix + '\\Scripts\\uvicorn.exe'))
+    fe.set(Path(prefix + '\\Scripts\\uvicorn.exe'))
 
-#===========================================================
+    PIDstore.save([getpid()])
 
-args = ParsedArgs()
+    run(
+        app = 'API.__Start:app',
+        host = '0.0.0.0',
+        port = 8000,
+#        workers = 2,
+        ssl_certfile = this.file('certificates/cert').path,
+        ssl_keyfile = this.file('certificates/key').path
+    )
 
-#===========================================================
-# PID Store
+elif __name__ == 'API.__Start':
 
-# Clear the PID store
-PIDstore.save([])
+    app = FastAPI()
 
-# Store the pid of this execution
-PIDstore += getpid()
+    app.add_middleware(
+        middleware_class = CORSMiddleware,
+        allow_origins = ['*']
+    )
 
-#===========================================================
-# APP
+    for file in this.child('/API/Routers/').descendants:
 
-app = FastAPI()
+        if (file.ext == 'py') and (file.name != '__init__'):
 
-app.add_middleware(
-    middleware_class = CORSMiddleware,
-    allow_origins = ['*']
-)
+            imp: str = file.path
+            imp = imp.split('/API/')[1]
+            imp = imp.split('.')[0]
+            imp = imp.replace('/', '.')
+            imp = '.' + imp
 
-for file in this.child('/API/Routers/').descendants:
+            Log.INFO(f'Installing Router: {imp}')
 
-    if (file.ext == 'py') and (file.name != '__init__'):
+            module = import_module(
+                name = imp, 
+                package = __package__
+            )
 
-        imp: str = file.path
-        imp = imp.split('/API/')[1]
-        imp = imp.split('.')[0]
-        imp = imp.replace('/', '.')
-        imp = '.' + imp
-
-        Log.INFO(f'Installing Router: {imp}')
-
-        module = import_module(
-            name = imp, 
-            package = __package__
-        )
-
-        app.include_router(module.router)
-
-#===========================================================
-# RUN
-
-run(
-    app = app,
-    host = '0.0.0.0',
-    ssl_certfile = this.file('certificates/cert').path,
-    ssl_keyfile = this.file('certificates/key').path
-)
+            app.include_router(module.router)
