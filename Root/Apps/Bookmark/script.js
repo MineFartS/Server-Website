@@ -2,27 +2,27 @@
 authorize()
 
 e['Top'] = document.getElementById("top")
-e['Bottom'] = document.getElementById("bottom")
+e['Bot'] = document.getElementById("bottom")
 
 const data = {
     
     'save': () => {
         API.auth(
-            '/Apps/Bookmark/write',
+            '/Apps/Bookmark/save',
             {
                 'Top': e.Top.value,
-                'Bottom': e.Bottom.value
+                'Bot': e.Bot.value
             }
         )
     },
     
     'read': () => {
-        return API.auth('/Apps/Bookmark/read')
+        API.auth('/Apps/Bookmark/read').then(t => {
+            e.Top.value = t.Top
+            e.Bot.value = t.Bot
+        })
     }
 
 }
 
-data.read().then(t => {
-    e.Top.value = t.Top
-    e.Bottom.value = t.Bottom
-})
+data.read()
