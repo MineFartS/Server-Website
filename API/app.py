@@ -32,10 +32,17 @@ class CustomMiddleware(BaseHTTPMiddleware):
         request: Request, 
         status: str
     ) -> None:
+        
+        params = parse_qs(request.url.query)
+
+        for name in params:
+            if 'password' in name:
+                params[name] = '***'
+
         Log.INFO(f"""
  HOST  = {request.client.host}
  PATH  = {request.url.path}
-PARAMS = {parse_qs(request.url.query)}
+PARAMS = {params}
 METHOD = {request.method}
 STATUS = {status}
 """)
