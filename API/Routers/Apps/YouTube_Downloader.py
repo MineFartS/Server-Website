@@ -1,5 +1,6 @@
 from philh_myftp_biz.programs import COOKIES, FFMPEG
 from fastapi.responses import FileResponse
+from philh_myftp_biz.db import MimeType
 from philh_myftp_biz.file import temp
 from fastapi import APIRouter
 from yt_dlp import YoutubeDL
@@ -10,93 +11,110 @@ router = APIRouter(
     prefix = '/Apps/YouTube Downloader'
 )
 
-#
-YTDLargs = lambda id, ext: {
-    'ffmpeg_location': str(FFMPEG()), # 'Ffmpeg.exe' path
-    'cookies': str(COOKIES()), # 'cookies.txt' path
-    'output': str(temp('yt-download', ext, id))
-}
+class DownloadItem:
+
+    def __init__(self, 
+        ext: str, 
+        id: str
+    ) -> None:
+        
+        #==========================
+
+        self.ext:  str = ext
+        self.id:   str = id
+        self.type: str = MimeType.Ext(ext)
+        
+        #==========================
+
+        self.outfile = temp('yt-download', ext, id)
+        self.seg = self.outfile.seg()
+
+        #==========================
+
+        self.watch_url = f'https://www.youtube.com/watch?v={id}'
+
+        #==========================
+            
+        self.ytdl_args = {}
+
+        self.ytdl_args['ffmpeg_location'] = str(FFMPEG())
+
+        self.ytdl_args['cookies'] = str(COOKIES())
+
+        self.ytdl_args['output'] = str(self.outfile)
+
+        #==========================
+
+    @property
+    def thumb_url(self) -> str:
+
+        _url = f"https://img.youtube.com/vi/{id}/{{}}.jpg"
+        
+        maxres = _url.format('maxresdefault')
+        hq     = _url.format('hqdefault')
+    
+        if get(maxres).status_code == 200:
+            return maxres
+        else:
+            return hq
+
+    def download(self) -> None:
+
+        if self.type in ['video', 'audio']:
+
+            YoutubeDL(self.ytdl_args).download([self.watch_url])
+
+        elif self.type in ['image']:
+
+            content: bytes = get(self.thumb_url).content
+
+            self.output.open('wb').write(content)
 
 @router.get('/video')
-async def read_item( # pyright: ignore[reportRedeclaration]
-    url: str
-):
+async def read_item(id:str) -> str:
 
-    #
-    args = YTDLargs('mp4')
-
-    #
-    name = args['output'].split('/')[-1]
+    dwnld = DownloadItem('mp4', id)
 
     # Set format to 'video'
-    args['format'] = 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+    dwnld.ytdl_args['format'] = 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
 
     # Set ext to 'mp4'
-    args['merge_output_format'] = 'mp4'
+    dwnld.ytdl_args['merge_output_format'] = 'mp4'
 
-    #
-    YoutubeDL(args).download([url])
+    dwnld.download()
 
-    #
-    return name
+    return dwnld.seg
 
 @router.get('/audio')
-async def read_item( # pyright: ignore[reportRedeclaration]
-    url: str
-):
+async def read_item(id:str) -> str:
     
-    #
-    args = YTDLargs('mp3')
-
-    #
-    name = args['output'].split('/')[-1]
+    dwnld = DownloadItem('mp3', id)
 
     # Set format to 'audio'
-    args['format'] = 'bestaudio/best'
+    dwnld.ytdl_args['format'] = 'bestaudio/best'
 
     # Declare Post Processors
-    args['postprocessors'] = [{
+    dwnld.ytdl_args['postprocessors'] = [{
         'key': 'FFmpegExtractAudio', # Audio Only
         'preferredcodec': 'mp3', # mp3 codec
         'preferredquality': '192', # 192 kbps
     }]
 
-    #
-    YoutubeDL(args).download([url])
+    dwnld.download()
 
-    #
-    return name
+    return dwnld.seg
 
 @router.get('/thumbnail')
-async def read_item( # pyright: ignore[reportRedeclaration]
-    url: str
-):
-
-    #
-    tempfile = temp('yt-download', 'jpg')
-
-    #
-    templURL = f"https://img.youtube.com/vi/{url.split('=')[1]}/" + "{}.jpg"
-
-    #
-    r = get(templURL.format('maxresdefault'))
+async def read_item(id:str) -> str:
     
-    # If the maxresdefault does not exist
-    if r.status_code != 200:
-        r = get(templURL.format('hqdefault'))
+    dwnld = DownloadItem('jpg', id)
     
-    #
-    with tempfile.open('wb') as f:
-        f.write(r.content)
+    dwnld.download()
 
-    # Return url and name
-    return tempfile.seg()
+    return dwnld.seg
 
 @router.get('/file')
-async def read_item(
-    name: str
-):
-    # Return File
+async def read_item(name:str):
     return FileResponse(
         path = f'E:/__temp__/{name}',
         filename = name

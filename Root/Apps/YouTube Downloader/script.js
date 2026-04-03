@@ -19,10 +19,10 @@ function download(event) {
 	if (match) {
 
 		// Get the formatted URL of youtube video
-		let url = `https://www.youtube.com/watch?v=${match[1]}`
+		let id, format;
 
-		// Get the selected format
-		let format = e.format.value
+        id = match[1]
+		format = e.format.value
 
 		// Remove the 'form' element
 		e.form.remove()
@@ -43,7 +43,7 @@ function download(event) {
 		e['loader'] = document.getElementsByClassName('loader')[0]
 
 		// Call API
-		API.call(`/Apps/YouTube Downloader/${format}?url=${url}`).then(t => {
+		API.call(`/Apps/YouTube Downloader/${format}`, {'id':id}).then(t => {
 
 			// Remove 'loading' element
 			e.loader.remove()
