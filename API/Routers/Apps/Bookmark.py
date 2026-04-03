@@ -15,20 +15,12 @@ class BookmarkData(Dict[str]):
 
         super().__init__(_json)
 
-    def __getitem__(self, x:int) -> str:
-
-        value = super().__getitem__(x)
-
-        if value:
-            return value
-        else:
-            return 'Type Here' 
-
 @router.get("/read")
-async def read_item( # pyright: ignore[reportRedeclaration]
+async def read_item(
     username: str,
-    token: str
-) -> None | dict[str, str]:
+    token: str,
+    x: str
+) -> str: # pyright: ignore[reportReturnType]
     """Read User Bookmark Data"""
     
     user = User(username)
@@ -37,17 +29,17 @@ async def read_item( # pyright: ignore[reportRedeclaration]
 
         data = BookmarkData(user)
 
-        return {
-            'Top': data[0],
-            'Bot': data[1]
-        } # pyright: ignore[reportReturnType]
+        if data[x] is None:
+            return ''
+        else:
+            return data[x] # pyright: ignore[reportReturnType]
      
 @router.get("/save")
 async def read_item(
     username: str,
     token: str,
-    Top: str,
-    Bot: str
+    x: str,
+    value: str
 ) -> None:
     """Write User Bookmark Data"""
     
@@ -57,5 +49,4 @@ async def read_item(
         
         data = BookmarkData(user)
 
-        data[0] = Top
-        data[1] = Bot
+        data[x] = value

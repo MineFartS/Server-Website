@@ -1,28 +1,28 @@
 
 authorize()
 
-e['Top'] = document.getElementById("top")
-e['Bot'] = document.getElementById("bottom")
+data = {
 
-const data = {
-    
-    'save': () => {
+    'read': (e) => {
+
+        API.auth('/Apps/Bookmark/read', {x:e.id})
+            .then(t => e.value = t)
+
+    },
+
+    'save': (e) => {
+
         API.auth(
             '/Apps/Bookmark/save',
             {
-                'Top': e.Top.value,
-                'Bot': e.Bot.value
+                'x': e.id,
+                'value': e.value
             }
         )
-    },
-    
-    'read': () => {
-        API.auth('/Apps/Bookmark/read').then(t => {
-            e.Top.value = t.Top
-            e.Bot.value = t.Bot
-        })
+
     }
 
 }
 
-data.read()
+// Load data for all elements
+document.querySelectorAll('input[type="text"]').forEach((e) => data.read(e));
