@@ -4,7 +4,8 @@ from philh_myftp_biz.db import MimeType
 from philh_myftp_biz.file import temp
 from fastapi import APIRouter
 from yt_dlp import YoutubeDL
-from requests import get
+from requests import get, head
+from philh_myftp_biz.pc import temp_dir
 
 # Declare FastAPI router
 router = APIRouter(
@@ -26,7 +27,8 @@ class DownloadItem:
         
         #==========================
 
-        self.outfile = temp('yt-download', ext, id)
+        self.outfile = temp('yt-download', ext, id)       
+
         self.seg = self.outfile.seg()
 
         #==========================
@@ -41,22 +43,29 @@ class DownloadItem:
 
         self.ytdl_args['cookies'] = str(COOKIES())
 
-        self.ytdl_args['output'] = str(self.outfile)
+        self.ytdl_args['outtmpl'] = str(self.outfile)
 
         #==========================
 
     @property
-    def thumb_url(self) -> str:
-
-        _url = f"https://img.youtube.com/vi/{id}/{{}}.jpg"
+    def thumb_url(self) -> None|str:
         
-        maxres = _url.format('maxresdefault')
-        hq     = _url.format('hqdefault')
+        reslist = [
+            'maxresdefault',
+            'hqdefault',
+            "sddefault",
+            "default"
+        ]
+
+        for res in reslist:
+
+            url = f"https://img.youtube.com/vi/{self.id}/{res}.jpg"
+
+            r = head(url, allow_redirects=True)
     
-        if get(maxres).status_code == 200:
-            return maxres
-        else:
-            return hq
+            if r.status_code < 400:
+
+                return url
 
     def download(self) -> None:
 
@@ -68,7 +77,7 @@ class DownloadItem:
 
             content: bytes = get(self.thumb_url).content
 
-            self.output.open('wb').write(content)
+            self.outfile.open('wb').write(content)
 
 @router.get('/video')
 async def read_item(id:str) -> str:
@@ -102,7 +111,7 @@ async def read_item(id:str) -> str:
 
     dwnld.download()
 
-    return dwnld.seg
+    return dwnld.seg + '.mp3'
 
 @router.get('/thumbnail')
 async def read_item(id:str) -> str:
