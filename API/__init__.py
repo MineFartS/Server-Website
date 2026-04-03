@@ -20,19 +20,23 @@ PIDstore: List[int] = List(JSON(this.child('/API/__pycache__/PID.json')))
 
 # ================================================================================================================
 
-async def receiveFile(stream: 'UploadFile') -> Path:
+async def receiveFile(
+    stream: 'UploadFile',
+    dst: None|Path = None
+) -> Path:
 
-    path = temp(
-        name = 'UploadedFile',
-        ext = stream.filename[stream.filename.rfind('.')+1:]
-    )
+    if dst is None:
+        dst = temp(
+            name = 'UploadedFile',
+            ext = stream.filename[stream.filename.rfind('.')+1:]
+        )
 
     contents = await stream.read()
 
-    async with open(str(path), 'wb') as f:
+    async with dst.open('wb') as f:
         await f.write(contents)
 
-    return path
+    return dst
 
 # ================================================================================================================
 
