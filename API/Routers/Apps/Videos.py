@@ -1,52 +1,41 @@
 from fastapi.responses import RedirectResponse
 from fastapi import APIRouter, UploadFile
 from ... import User, receiveFile, root
-from philh_myftp_biz.pc import Path
-from typing import Literal
 from philh_myftp_biz.json import Dict
 from philh_myftp_biz.file import JSON
+from philh_myftp_biz.pc import Path
 
 router = APIRouter(
     prefix = '/Apps/Videos'
 )
 
-# TODO
+#detailsHint = dict[str, Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader', 'Views', 'Visibility']]
 
-detailsHint = dict[str, Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader', 'Views', 'Visibility']]
-"""
-class Video(Path, Dict):
+class Video(Dict):
 
     def __init__(self,
         id: str
     ) -> None:
         
-        Path.__init__(self, f'E:/Website/Resources/Apps/Videos/files/{id}')
+        #==================================================================
+        
+        self.dir = Path(f'E:/Website/Root/Apps/Videos/files/{id}')
 
-        json = JSON(self.child('')
-    )
+        self.videoP = self.dir.child('video.mp4')
 
-        Dict.__init__(self, 
-                      
-                      )
+        self.thumbP = self.dir.child('thumb.jpg')
 
-            return Dict(J)
-"""
-def VideoDetails(
-    id: str
-):
-    """
-    Get a philh_myftp_biz.json.new object with the video details
-    """
-    from philh_myftp_biz.json import Dict
-    from philh_myftp_biz.file import JSON
-    from philh_myftp_biz.pc import Path
+        #==================================================================
+        
+        _json = JSON(self.child('video.json'))
+        super.__init__(_json)
 
-    return Dict(JSON(
-        path = Path(f'E:/Website/Resources/Apps/Videos/files/{id}')
-    ))
+        self['id'] = id
+
+        #==================================================================
 
 @router.post('/Apps/Videos/Upload')
-async def upload( # pyright: ignore[reportRedeclaration]
+async def upload( 
     username: str,
     token: str,
     Title: str,
@@ -67,18 +56,16 @@ async def upload( # pyright: ignore[reportRedeclaration]
 
     if user.checkAuth(token):
 
-        id = random(10)
+        vid = Video(random(10))
 
-        vid = VideoDetails(id)
-
-        receiveFile(Video).move()
+        await receiveFile(Video, vid.videoP)
         
         if len(Thumbnail.filename) > 0:
-            Thumbnail = receiveFile(Thumbnail)
+            await receiveFile(Thumbnail, vid.thumbP)
         else:
+            # TODO Generate Thumbnail
             Thumbnail = None
 
-        vid["id"] = id,
         vid["Title"] = Title,
         vid["Description"] = Description,
         vid["Timestamp"] = now().unix,
@@ -89,9 +76,9 @@ async def upload( # pyright: ignore[reportRedeclaration]
         return f"https://philh.myftp.biz/Apps/Videos/Player?id={id}"
 
 @router.get('/Apps/Videos/List')
-async def read_item( # pyright: ignore[reportRedeclaration]
-    username: str = None,
-    token: str = None
+async def read_item( 
+    username: None|str = None,
+    token: None|str = None
 ) -> list[dict]:
     """
     List All Videos
@@ -106,34 +93,30 @@ async def read_item( # pyright: ignore[reportRedeclaration]
         show_private = False
 
     items = []
-
-    files = root.child('/Apps/Videos/files')
     
-    for p in Path(files).children:
+    for p in root.child('/Apps/Videos/files/').children:
+
         if p.is_dir:
 
-            details = VideoDetails(p.name)
+            vid = Video(p.name)
             
-            if details['Visibility'] == 'Public':
+            if vid['Visibility'] == 'Public':
                 visible = True
+            
             elif show_private:
-                visible = (details['Uploader'] == username)
+                visible = (vid['Uploader'] == username)
+            
             else:
                 visible = False
 
             if visible:
-                items.append(details.read())
+                items += [vid['id']]
 
-    return sorted(
-        iterable = items,
-        key = lambda x: x['Timestamp']
-    )
+    return items
 
 @router.get('/Apps/Videos/Channels')
-async def read_item() -> list[str]: # pyright: ignore[reportRedeclaration]
-    """
-    List all Channels
-    """
+async def read_item() -> list[str]: 
+    """List all Channels"""
 
     channels = []
 
@@ -142,68 +125,71 @@ async def read_item() -> list[str]: # pyright: ignore[reportRedeclaration]
     for p in dir.children:
         if p.is_dir:
             
-            details = VideoDetails(p.name)
+            vid = Video(p.name)
             
-            if not details['Uploader'] in channels:
-                channels += [details['Uploader']]
+            if not vid['Uploader'] in channels:
+                
+                channels += [vid['Uploader']]
 
-    return sorted(channels)
+    return channels
 
 @router.get('/Apps/Videos/View')
 async def read_item(
-    id: str,
-    c: bool = True
-) -> detailsHint:
+    ID: str,
+    count: bool = True
+) -> str:
     """
     Get the details of a video
 
     If c, then add 1 view
     """
 
-    details = VideoDetails(id)
+    vid = Video(ID)
 
-    if c:
-        details['Views'] += 1
+    if count:
+        vid['Views'] += 1
 
-    return details
+    return vid['id'] # pyright: ignore[reportReturnType]
 
 @router.get('/Apps/Videos/Delete')
-async def upload( # pyright: ignore[reportRedeclaration]
-    id: str,
+async def upload( 
+    ID: str,
     username: str,
     auth: str
 ) -> None:
-    """
-    Delete a video
-    """
-    
-    VideoDetails(id).var.path.parent.delete()
+    """Delete a video"""
+
+    user = User(username)
+
+    if user.checkAuth(auth):
+
+        vid = Video(ID)
+
+        vid.dir.delete()
 
 @router.post('/Apps/Videos/Modify')
 async def upload(
+    ID: str,
     username: str,
     token: str,
     Title: str,
     Description: str,
     Visibility: str,
-    Thumbnail: UploadFile,
-    ID: str
+    Thumbnail: UploadFile
 ) -> None | RedirectResponse:
-    """
-    Modify an existing Video
-    """
+    """Modify an existing Video"""
 
     user = User(username)
 
     if user.checkAuth(token):
 
-        details = VideoDetails(ID)
+        vid = Video(ID)
 
         if len(Thumbnail.filename) > 0:
-            receiveFile(Thumbnail).move()
+            await receiveFile(Thumbnail, vid.thumbP)
 
-        details['Title'] = Title
-        details['Description'] = Description
-        details['Visibility'] = Visibility
+        vid['Title'] = Title
+        vid['Description'] = Description
+        vid['Visibility'] = Visibility
 
         return RedirectResponse(f"https://philh.myftp.biz/Apps/Videos/Player?id={id}")
