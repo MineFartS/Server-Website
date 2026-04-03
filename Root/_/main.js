@@ -56,35 +56,22 @@
 			timeout = undefined
 		) => {
 
+            let args = [];
+
 			// Declare the base url for the request
-			url = (API.url + url)
+			args[0] = (API.url + url);
 
-			// Check if any params are given
-			if (Object.keys(params).length > 1) {
-
-				// Add all of the params to the url
-				for (key in params) {
-					url += `&${key}=${params[key]}`
-				}
-
-				// Fix the initial '&'
-				url = url.replace('&', '?')
-				
-			}
-
-			let f
+            if (Object.keys(params).length > 0) {
+                args[0] += '?';
+                args[0] += new URLSearchParams(params).toString();
+            }
 
 			if (timeout) {
-				f = fetch(
-					url,
-					{signal: AbortSignal.timeout(timeout * 1000)}
-				)
-			} else {
-				f = fetch(url)
+                args[1] = {signal: AbortSignal.timeout(timeout * 1000)};
 			}
 
 			// Return a promise object with json formatting
-			return f.then(r => r.json())
+			return fetch(...args).then(r => r.json())
 
 		},
 
