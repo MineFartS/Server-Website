@@ -1,31 +1,53 @@
 from starlette.middleware.cors import CORSMiddleware
 from philh_myftp_biz.web import FirewallException
+from philh_myftp_biz.process import Start
 from philh_myftp_biz.terminal import Log
 from importlib import import_module
 from philh_myftp_biz import VERBOSE
 from . import this, PIDstore
 from fastapi import FastAPI
-from uvicorn import run
 from os import getpid
 
-if __name__ == '__main__':
+if __name__ == '__main__':#================================================================================================
+
+    #===========================================================
+    # Firewall
 
     fe = FirewallException('Uvicorn')
     fe.set(8000)
 
-    PIDstore.save([getpid()])
+    #===========================================================
+    # Uvicorn
 
-    run(
-        app = 'API.__Start:app',
-        host = '0.0.0.0',
-        port = 8000,
-        workers = (None if VERBOSE else 2),
-        ssl_certfile = this.file('certificates/cert').path,
-        ssl_keyfile = this.file('certificates/key').path,
-        log_level = ("debug" if VERBOSE else None)
+    p = Start(
+
+        args = [
+            'uvicorn', 'API.__Start:app',
+            '--host', '0.0.0.0',
+            '--ssl-certfile', this.file('certificates/cert'),
+            '--ssl-keyfile', this.file('certificates/key'),
+            *([] if VERBOSE else ['--workers', 2])
+        ],
+
+        dir = this,
+        
+        terminal = 'pym'
+
     )
 
-elif __name__ == 'API.__Start':
+    PIDstore.save(list(p._task.PIDs))
+
+    p.wait()
+
+    #===========================================================
+
+elif __name__ == 'API.__Start':#================================================================================================
+
+    #===========================================================
+
+    PIDstore += getpid()
+
+    #===========================================================
 
     app = FastAPI()
 
@@ -33,6 +55,8 @@ elif __name__ == 'API.__Start':
         middleware_class = CORSMiddleware,
         allow_origins = ['*']
     )
+
+    #===========================================================
 
     for file in this.child('/API/Routers/').descendants:
 
@@ -52,3 +76,5 @@ elif __name__ == 'API.__Start':
             )
 
             app.include_router(module.router)
+
+    #===========================================================
