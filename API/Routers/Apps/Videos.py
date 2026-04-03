@@ -9,6 +9,8 @@ router = APIRouter(
     prefix = '/Apps/Videos'
 )
 
+'''
+
 #detailsHint = dict[str, Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader', 'Views', 'Visibility']]
 
 class Video(Dict):
@@ -193,3 +195,4 @@ async def upload(
         vid['Visibility'] = Visibility
 
         return RedirectResponse(f"https://philh.myftp.biz/Apps/Videos/Player?id={id}")
+'''
