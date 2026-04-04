@@ -1,6 +1,7 @@
 
 # Cache
 **/__pycache__/
+**/__pylogs__/
 
 # HTTPS Certificates
 Certificates/
