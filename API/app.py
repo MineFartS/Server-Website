@@ -39,27 +39,26 @@ class CustomMiddleware(BaseHTTPMiddleware):
 
     async def _log(self,
         logger: Callable,
-        request: Request, 
         status: str
     ) -> None:
         
         # GET: Parse URL params
-        params = parse_qs(request.url.query)
+        params = parse_qs(self._request.url.query)
 
         # POST: Read Form params
-        #if len(params) == 0:
-            #params = dict(await request.form())
-
+        if len(params) == 0:
+            ...#params = dict(await self._request.form())
+        
         # Hide Sensitive info
         for name in params:
             if contains.any(name, ['password', 'token']):
                 params[name] = '***'
 
         logger(f"""
- HOST  = {request.client.host}
- PATH  = {request.url.path}
+ HOST  = {self._request.client.host}
+ PATH  = {self._request.url.path}
 PARAMS = {params}
-METHOD = {request.method}
+METHOD = {self._request.method}
 STATUS = {status}
 """)
     
@@ -67,8 +66,10 @@ STATUS = {status}
         request: Request, 
         call_next # pyright: ignore[reportMissingParameterType]
     ):
+        
+        self._request = request
 
-        await self._log(Log.VERB, request, '...')
+        await self._log(Log.VERB, '...')
 
         # Process the request
         response = await call_next(request)
@@ -78,7 +79,7 @@ STATUS = {status}
         response.headers["Access-Control-Allow-Methods"] = "*"
         response.headers["Access-Control-Allow-Headers"] = "*"
 
-        await self._log(Log.INFO, request, response.status_code)
+        await self._log(Log.INFO, response.status_code)
 
         return response
     
