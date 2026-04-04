@@ -6,34 +6,17 @@
 		<title>Videos</title>
 		
 		<link rel="icon" type="image/x-icon" href="/_/main.ico">
-		<link rel="stylesheet" href="/_/main.css">
+        <link rel="stylesheet" href="/_/main.css">
 
 	</head>	
 
 	<body>
 
-		<a class="back" id="back" href="..">{Back}</a>
+		<a class="back" id="back" href=".">{Back}</a>
 
 		<a class="title" id="title">{Title}</a>
 
-		<form action="/upload-endpoint" method="POST" enctype="multipart/form-data">
-        
-            <label>Video</label> <br>
-            <input 
-                type = "file"
-                name = "Video" 
-                accept = "video/*"
-                required
-            >
-
-            <div class="rendered-form">
-    <div class="formbuilder-file form-group field-file-1775326407615">
-        <label for="file-1775326407615" class="formbuilder-file-label">File Upload</label>
-        <input type="file" class="form-control" name="file-1775326407615" access="false" multiple="false" id="file-1775326407615">
-    </div>
-</div>
-
-            <hr>
+		<form method="POST" enctype="multipart/form-data">
 
             <label>Thumbnail</label> <br>
             <input 
