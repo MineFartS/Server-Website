@@ -47,8 +47,8 @@ class CustomMiddleware(BaseHTTPMiddleware):
         params = parse_qs(request.url.query)
 
         # POST: Read Form params
-        if len(params) == 0:
-            params = dict(await request.form())
+        #if len(params) == 0:
+            #params = dict(await request.form())
 
         # Hide Sensitive info
         for name in params:

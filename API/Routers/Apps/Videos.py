@@ -9,7 +9,7 @@ router = APIRouter(
     prefix = '/Apps/Videos'
 )
 
-class Video(Dict):
+class VideoObj(Dict):
 
     def __init__(self,
         id: str
@@ -17,7 +17,7 @@ class Video(Dict):
         
         #==================================================================
         
-        self.dir = Path(f'E:/Website/Root/Apps/Videos/files/{id}')
+        self.dir = Path(f'E:/Website/Root/Apps/Videos/files/{id}/')
 
         self.url = f"https://philh.myftp.biz/Apps/Videos/Player?id={id}"
 
@@ -27,8 +27,8 @@ class Video(Dict):
 
         #==================================================================
         
-        _json = JSON(self.child('video.json'))
-        super.__init__(_json)
+        _json = JSON(self.dir.child('video.json'))
+        super().__init__(_json)
 
         self['id'] = id
 
@@ -55,7 +55,7 @@ async def upload(
 
     if user.checkAuth(token):
 
-        vid = Video(random(10))
+        vid = VideoObj(random(10))
 
         await receiveFile(Video, vid.videoP)
         
@@ -97,7 +97,7 @@ async def read_item(
 
         if p.is_dir:
 
-            vid = Video(p.name)
+            vid = VideoObj(p.name)
             
             if vid['Visibility'] == 'Public':
                 visible = True
@@ -124,7 +124,7 @@ async def read_item(
     If c, then add 1 view
     """
 
-    vid = Video(ID)
+    vid = VideoObj(ID)
 
     if count:
         vid['Views'] += 1
