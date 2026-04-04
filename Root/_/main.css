@@ -8,12 +8,7 @@
     }
 
     html {
-        background-image: url('/_/background.gif?raw=true');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed; /* Keeps the background fixed when scrolling */
-        image-rendering: optimizeSpeed;
+        background-color: lightblue;
         margin: 2vh 4vw;
     }
 
