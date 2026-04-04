@@ -1,5 +1,6 @@
 from starlette.middleware.base import BaseHTTPMiddleware
 from fastapi.responses import FileResponse
+from philh_myftp_biz.text import contains
 from philh_myftp_biz.terminal import Log
 from fastapi import FastAPI, Request
 from importlib import import_module
@@ -43,7 +44,7 @@ class CustomMiddleware(BaseHTTPMiddleware):
         params = parse_qs(request.url.query)
 
         for name in params:
-            if 'password' in name:
+            if contains.any(name, ['password', 'token']):
                 params[name] = '***'
 
         Log.INFO(f"""
