@@ -5,6 +5,7 @@ from philh_myftp_biz.terminal import Log
 from fastapi import FastAPI, Request
 from importlib import import_module
 from urllib.parse import parse_qs
+from typing import Callable
 from . import this
 
 app = FastAPI()
@@ -36,18 +37,25 @@ for file in this.child('/API/Routers/').descendants:
 
 class CustomMiddleware(BaseHTTPMiddleware):
 
-    def _log(self,
+    async def _log(self,
+        logger: Callable,
         request: Request, 
         status: str
     ) -> None:
         
+        # GET: Parse URL params
         params = parse_qs(request.url.query)
 
+        # POST: Read Form params
+        if len(params) == 0:
+            params = dict(await request.form())
+
+        # Hide Sensitive info
         for name in params:
             if contains.any(name, ['password', 'token']):
                 params[name] = '***'
 
-        Log.INFO(f"""
+        logger(f"""
  HOST  = {request.client.host}
  PATH  = {request.url.path}
 PARAMS = {params}
@@ -60,7 +68,7 @@ STATUS = {status}
         call_next # pyright: ignore[reportMissingParameterType]
     ):
 
-        self._log(request, '...')
+        await self._log(Log.VERB, request, '...')
 
         # Process the request
         response = await call_next(request)
@@ -70,7 +78,7 @@ STATUS = {status}
         response.headers["Access-Control-Allow-Methods"] = "*"
         response.headers["Access-Control-Allow-Headers"] = "*"
 
-        self._log(request, response.status_code)
+        await self._log(Log.INFO, request, response.status_code)
 
         return response
     

@@ -21,11 +21,7 @@ PIDstore: List[int] = List(JSON(this.child('/API/__pycache__/PID.json')))
 
 # ================================================================================================================
 
-class FormType:
-
-    import builtins
-
-    str = Annotated[builtins.str, Form()]
+FormStr = Annotated[str, Form()]
 
 async def receiveFile(
     stream: 'UploadFile',
@@ -40,7 +36,7 @@ async def receiveFile(
 
     contents = await stream.read()
 
-    async with dst.open('wb') as f:
+    async with open(dst.path, 'wb') as f:
         await f.write(contents)
 
     return dst

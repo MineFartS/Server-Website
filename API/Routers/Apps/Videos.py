@@ -1,4 +1,4 @@
-from ... import User, receiveFile, root, FormType
+from ... import User, receiveFile, root, FormStr
 from fastapi.responses import RedirectResponse
 from fastapi import APIRouter, UploadFile
 from philh_myftp_biz.json import Dict
@@ -36,12 +36,12 @@ class Video(Dict):
 
 @router.post('/Upload')
 async def upload( 
-    username: FormType.str,
-    token: FormType.str,
-    Title: FormType.str,
+    username: FormStr,
+    token: FormStr,
+    Title: FormStr,
     Video: UploadFile,
     Thumbnail: UploadFile,
-    Description: FormType.str = '',
+    Description: FormStr = '',
 ):
     """
     Upload a video
