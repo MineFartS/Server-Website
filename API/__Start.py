@@ -15,5 +15,5 @@ run(
     workers = (None if VERBOSE else 2),
     ssl_certfile = this.file('certificates/cert').path,
     ssl_keyfile = this.file('certificates/key').path,
-    log_level = "error"
+    log_level = "critical"
 )

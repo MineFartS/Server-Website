@@ -65,6 +65,12 @@ STATUS = {status}
         self._log(request, response.status_code)
 
         return response
+    
+    async def __call__(self, *args, **kwargs): # pyright: ignore[reportMissingParameterType]
+        try:
+            await super().__call__(*args, **kwargs)
+        except Exception as e:
+            Log.FAIL(str(e))
 
 Log.VERB('Installing Middleware')
 app.add_middleware(CustomMiddleware)
