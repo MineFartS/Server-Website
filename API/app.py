@@ -1,4 +1,5 @@
 from starlette.middleware.base import BaseHTTPMiddleware
+from fastapi.responses import FileResponse
 from philh_myftp_biz.terminal import Log
 from fastapi import FastAPI, Request
 from importlib import import_module
@@ -6,6 +7,9 @@ from urllib.parse import parse_qs
 from . import this
 
 app = FastAPI()
+
+#=====================================================================
+# ROUTERS
 
 for file in this.child('/API/Routers/').descendants:
 
@@ -25,6 +29,9 @@ for file in this.child('/API/Routers/').descendants:
         )
 
         app.include_router(module.router)
+
+#=====================================================================
+# MIDDLEWARE
 
 class CustomMiddleware(BaseHTTPMiddleware):
 
@@ -73,6 +80,21 @@ STATUS = {status}
             Log.FAIL(str(e))
 
 Log.VERB('Installing Middleware')
+
 app.add_middleware(CustomMiddleware)
+
+#=====================================================================
+# FAVICON
+
+Log.VERB('Installing Favicon')
+
+@app.get('/favicon.ico', include_in_schema=False)
+async def favicon():
+    
+    path = this.child('/Root/_/main.ico')
+    
+    return FileResponse(path.path)
+
+#=====================================================================
 
 Log.INFO('Uvicorn Service Started')
