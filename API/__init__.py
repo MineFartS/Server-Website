@@ -1,11 +1,12 @@
+from philh_myftp_biz.file import JSON, temp
 from philh_myftp_biz.modules import Module
 from philh_myftp_biz.text import random
-from philh_myftp_biz.file import JSON, temp
 from philh_myftp_biz.array import List
+from fastapi import UploadFile, Form
 from philh_myftp_biz.pc import Path
 from philh_myftp_biz.db import Ring
-from fastapi import UploadFile
 from aiofiles import open
+from typing import Annotated
 
 # ================================================================================================================
 
@@ -19,6 +20,12 @@ tokenRing = Ring('AuthTokens')
 PIDstore: List[int] = List(JSON(this.child('/API/__pycache__/PID.json')))
 
 # ================================================================================================================
+
+class FormType:
+
+    import builtins
+
+    str = Annotated[builtins.str, Form()]
 
 async def receiveFile(
     stream: 'UploadFile',
