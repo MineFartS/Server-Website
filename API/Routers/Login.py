@@ -1,61 +1,79 @@
+from typing import Literal, Callable
 from fastapi import APIRouter
 from .. import User
-from typing import Literal
 
 router = APIRouter(
     prefix = '/login'
 )
 
-response: dict[Literal['Valid', 'Alert', 'Token'], str|bool|None] = {
+responseT = dict[Literal['Valid', 'Alert', 'Token'], str|bool|None]
+
+response: Callable[[], responseT] = {
     'Valid': False,
     'Alert': None,
     'Token': None
-}
+}.copy
 
 @router.get("/change")
 async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
     oldpassword: str,
     newpassword: str
-) -> None:
-    """
-    Change the Active Directory Password of a user
-    """   
+) -> responseT:
+    """Change the Active Directory Password of a user"""   
+
+    r = response()
 
     user = User(username)
 
     if user.checkPass(oldpassword):
+
         user.setPass(newpassword)
+
+        r['Valid'] = True
+        r['Alert'] = "Password has been reset"
+        r['Token'] = user.resetAuth()
+
+    else:
+
+        r['Alert'] = "Existing Password Incorrect"
+
+    return r
 
 @router.get("/create")
 async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
     password: str
-) -> None | str:
-    """
-    Create an Active Directory User
+) -> responseT:
+    """Create an Active Directory User"""
 
-    Returns an auth token
-    """
+    r = response()
 
     user = User(username)
 
-    if not user.exists:
+    if user.exists:
+        r['Alert'] = "User already exists"
+
+    else:
+
+        r['Valid'] = True
+        r['Alert'] = ""
+        r['Token'] = user.resetAuth()
+        
         user.setPass(password)
-        return user.resetAuth()
+        
+    return r
     
 @router.get("/check")
 async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
     password: str
-):
-    """
-    Check if a User's Password is correct
-    """
+) -> responseT:
+    """Check if a User's Password is correct"""
     
     user = User(username)
 
-    r = response.copy()
+    r = response()
 
     # Check if user exists
     if not user.exists:
@@ -76,14 +94,12 @@ async def read_item( # pyright: ignore[reportRedeclaration]
 async def read_item(
     username: str,
     token: str
-):
-    """
-    Check if a User's Auth Token is valid 
-    """
+) -> responseT:
+    """Check if a User's Auth Token is valid """
 
     user = User(username)
 
-    r = response.copy()
+    r = response()
 
     # Check if user exists
     if not user.exists:
