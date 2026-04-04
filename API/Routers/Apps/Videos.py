@@ -9,8 +9,6 @@ router = APIRouter(
     prefix = '/Apps/Videos'
 )
 
-'''
-
 #detailsHint = dict[str, Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader', 'Views', 'Visibility']]
 
 class Video(Dict):
@@ -22,6 +20,8 @@ class Video(Dict):
         #==================================================================
         
         self.dir = Path(f'E:/Website/Root/Apps/Videos/files/{id}')
+
+        self.url = f"https://philh.myftp.biz/Apps/Videos/Player?id={id}"
 
         self.videoP = self.dir.child('video.mp4')
 
@@ -75,7 +75,7 @@ async def upload(
         vid["Views"] = 0
         vid["Visibility"] = Visibility
     
-        return f"https://philh.myftp.biz/Apps/Videos/Player?id={id}"
+        return RedirectResponse(vid.url)
 
 @router.get('/Apps/Videos/List')
 async def read_item( 
@@ -116,25 +116,6 @@ async def read_item(
 
     return items
 
-@router.get('/Apps/Videos/Channels')
-async def read_item() -> list[str]: 
-    """List all Channels"""
-
-    channels = []
-
-    dir = root.child('/Apps/Videos/files')
-    
-    for p in dir.children:
-        if p.is_dir:
-            
-            vid = Video(p.name)
-            
-            if not vid['Uploader'] in channels:
-                
-                channels += [vid['Uploader']]
-
-    return channels
-
 @router.get('/Apps/Videos/View')
 async def read_item(
     ID: str,
@@ -152,47 +133,3 @@ async def read_item(
         vid['Views'] += 1
 
     return vid['id'] # pyright: ignore[reportReturnType]
-
-@router.get('/Apps/Videos/Delete')
-async def upload( 
-    ID: str,
-    username: str,
-    auth: str
-) -> None:
-    """Delete a video"""
-
-    user = User(username)
-
-    if user.checkAuth(auth):
-
-        vid = Video(ID)
-
-        vid.dir.delete()
-
-@router.post('/Apps/Videos/Modify')
-async def upload(
-    ID: str,
-    username: str,
-    token: str,
-    Title: str,
-    Description: str,
-    Visibility: str,
-    Thumbnail: UploadFile
-) -> None | RedirectResponse:
-    """Modify an existing Video"""
-
-    user = User(username)
-
-    if user.checkAuth(token):
-
-        vid = Video(ID)
-
-        if len(Thumbnail.filename) > 0:
-            await receiveFile(Thumbnail, vid.thumbP)
-
-        vid['Title'] = Title
-        vid['Description'] = Description
-        vid['Visibility'] = Visibility
-
-        return RedirectResponse(f"https://philh.myftp.biz/Apps/Videos/Player?id={id}")
-'''
