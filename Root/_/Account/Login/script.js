@@ -1,10 +1,13 @@
 
-let wrap = new APIwrapper('check')
+e['newpass'] = document.getElementById('newpassword')
+
+let wrap = new APIwrapper('change')
 
 function run() {
 
     wrap.run({
-        'password': e.password.value
+        'oldpassword': e.password.value,
+        'newpassword': e.newpass.value
     })
 
 }
