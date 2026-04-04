@@ -52,6 +52,16 @@
 
 	<script type="text/javascript" src="/_/Account/script.js"></script>
 
-	<script type="text/javascript" src="script.js"></script>
+    <script>
+
+        e['newpassword'] = document.getElementById('newpassword');
+
+        let wrap = new APIwrapper('change');
+
+        run = () => wrap.run({
+            'newpassword': e.newpassword.value
+        })
+        
+    </script>
 
 </html>

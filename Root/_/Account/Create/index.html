@@ -36,7 +36,7 @@
 
 		<a
 			class = "submit"
-			onclick = "run()"
+			onclick = "wrap.run()"
 		>Create</a>
 
 	</body>
@@ -45,6 +45,8 @@
 
 	<script type="text/javascript" src="/_/Account/script.js"></script>
 
-	<script type="text/javascript" src="script.js"></script>
+	<script>
+        let wrap = new APIwrapper('create');
+    </script>
 
 </html>

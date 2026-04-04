@@ -36,7 +36,7 @@
 
 		<a
 			class = "submit"
-			onclick = "run()"
+			onclick = "wrap.run()"
 		>Log In</a>
 
 		<a
@@ -55,6 +55,8 @@
 
 	<script type="text/javascript" src="/_/Account/script.js"></script>
 
-	<script type="text/javascript" src="script.js"></script>
+    <script>
+        let wrap = new APIwrapper('check');
+    </script>
 
 </html>

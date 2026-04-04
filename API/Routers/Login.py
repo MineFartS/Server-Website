@@ -17,7 +17,7 @@ response: Callable[[], responseT] = {
 @router.get("/change")
 async def read_item( # pyright: ignore[reportRedeclaration]
     username: str,
-    oldpassword: str,
+    password: str,
     newpassword: str
 ) -> responseT:
     """Change the Active Directory Password of a user"""   
@@ -26,7 +26,7 @@ async def read_item( # pyright: ignore[reportRedeclaration]
 
     user = User(username)
 
-    if user.checkPass(oldpassword):
+    if user.checkPass(password):
 
         user.setPass(newpassword)
 

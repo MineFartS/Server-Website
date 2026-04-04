@@ -14,9 +14,10 @@ const APIwrapper = class {
         this.url = `/login/${url}/`
     }
 
-    run(params) {
+    run(params={}) {
 
         params['username'] = e.username.value;
+        params['password'] = e.password.value;
             
         let conn = API.call(this.url, params)
 
