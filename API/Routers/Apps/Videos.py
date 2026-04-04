@@ -34,7 +34,7 @@ class Video(Dict):
 
         #==================================================================
 
-@router.post('/Apps/Videos/Upload')
+@router.post('/Upload')
 async def upload( 
     username: str,
     token: str,
@@ -74,7 +74,7 @@ async def upload(
     
         return RedirectResponse(vid.url)
 
-@router.get('/Apps/Videos/List')
+@router.get('/List')
 async def read_item( 
     username: None|str = None,
     token: None|str = None
@@ -113,7 +113,7 @@ async def read_item(
 
     return items
 
-@router.get('/Apps/Videos/View')
+@router.get('/View')
 async def read_item(
     ID: str,
     count: bool = True
