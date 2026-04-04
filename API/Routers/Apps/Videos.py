@@ -9,8 +9,6 @@ router = APIRouter(
     prefix = '/Apps/Videos'
 )
 
-#detailsHint = dict[str, Literal['ID', 'Title', 'Description', 'Timestamp', 'Uploader', 'Views', 'Visibility']]
-
 class Video(Dict):
 
     def __init__(self,
@@ -42,7 +40,6 @@ async def upload(
     token: str,
     Title: str,
     Description: str,
-    Visibility: str,
     Video: UploadFile,
     Thumbnail: UploadFile
 ):
@@ -63,6 +60,7 @@ async def upload(
         await receiveFile(Video, vid.videoP)
         
         if len(Thumbnail.filename) > 0:
+            # TODO handle invalid image formats
             await receiveFile(Thumbnail, vid.thumbP)
         else:
             # TODO Generate Thumbnail
@@ -73,7 +71,6 @@ async def upload(
         vid["Timestamp"] = now().unix,
         vid["Uploader"] = username,
         vid["Views"] = 0
-        vid["Visibility"] = Visibility
     
         return RedirectResponse(vid.url)
 

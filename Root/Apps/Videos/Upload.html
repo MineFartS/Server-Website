@@ -10,6 +10,14 @@
 
 	</head>	
 
+    <style>
+
+        hr {
+            width: 100%
+        }
+
+    </style>
+
 	<body>
 
 		<a class="back" id="back" href=".">{Back}</a>
@@ -18,14 +26,64 @@
 
 		<form method="POST" enctype="multipart/form-data">
 
-            <label>Thumbnail</label> <br>
             <input 
+                class = "hide"
+                type = "text" 
+                name = "username"
+            >
+
+            <input 
+                class = "hide"
+                type = "text" 
+                name = "token"
+            >
+
+            <hr>
+
+            <label>Title*</label>
+            <br>
+            <input 
+                class = "form"
+                type = "text" 
+                name = "Title" 
+                required
+            >
+
+            <hr> 
+            <label>Description</label>
+            <br>
+            <input
+                class = "form"
+                type = "text" 
+                name = "Description"
+            >
+
+            <hr>
+
+            <label>Video*</label>
+            <br>
+            <input 
+                class = "form"
+                type = "file" 
+                name = "Video" 
+                accept = "video/*"
+            >
+
+            <hr>
+
+            <label>Thumbnail</label>
+            <br>
+            <input 
+                class = "form"
                 type = "file" 
                 name = "Thumbnail" 
                 accept = "image/*"
             >
+
+            <hr>
             
             <input 
+                class = "form"
                 type = "submit" 
                 value = "Upload"
             >
@@ -39,11 +97,13 @@
     <script>
 
         e['form'] = document.forms[0];
+        e['username'] = document.getElementsByName('username')[0];
+        e['token'] = document.getElementsByName('token')[0];
 
         e.form.action = `${api.URL}/Apps/Videos/Upload`;
 
-
-
+        e.username.value = cookies.username
+        e.token.value = cookies.token
 
     </script>
 

@@ -104,20 +104,24 @@
 
 input.form {
 
-            font-size: xx-large;
-        padding: .4em 0.25em;
-        width: 60vw;
-        margin-bottom: 3%;
+    font-size: xx-large;
+    padding: .4em 0.25em;
+    width: 60vw;
+    margin-bottom: 3%;
 
-        font-size: large;
-        padding: .4em .25em;
-        width: 30vw;
-        margin-bottom: 3%;
+    font-size: large;
+    padding: .4em .25em;
+    width: 30vw;
+    margin-bottom: 3%;
 
-        border: 2px solid black;
-        border-radius: 5px;
-        display: block;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: block;
 
+}
+
+input.hide {
+    display: none;
 }
 
 /* ==================================================== */
