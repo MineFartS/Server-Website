@@ -10,6 +10,8 @@ router = APIRouter(
     prefix = '/Server/Users'
 )
 
+link_line = '<a href="{}">{}</a> <br>'.format
+
 @router.get("/open")
 async def _(
     username: str, 
@@ -19,25 +21,33 @@ async def _(
     url = apiURL.child('open')
 
     url.params = {
-        'username': username,
-        'path': path
+        'username': username
     }
 
-    if url.params['path'][-1] != '/':
-        url.params['path'] += '/'
-    
     _path = Users.child(f'/philh/{username}/Website{path}')
+
+    if path[-1] != '/':
+        path += '/'
 
     if _path.is_dir:
 
-        _html = f"<html> <body> <h1>{username}/Website/{path}</h1>"
+        _html = f"<html> <body> <h1>{username}/Website{path}</h1>".replace('//', '/')
+
+        if path == '/':
+
+            _html += link_line("https://philh.myftp.biz/Server/Users/Share/", '...')
+
+        else:
+
+            url.params['path'] = path[:path[:-1].rfind('/')+1]
+
+            _html += link_line(url, '...')
 
         for child in _path.children:
 
-            _url = url.copy()
-            _url.params[path] += child.name
+            url.params['path'] = path + child.seg()
 
-            _html += f'<a href="{_url}">{child.name}</a> <br>'
+            _html += link_line(url, child.seg())
 
         _html += "</body></html>"
 
