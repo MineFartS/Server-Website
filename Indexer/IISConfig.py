@@ -1,5 +1,5 @@
 from philh_myftp_biz.terminal import Log
-from __init__ import root
+from . import root
 from re import sub
 
 # IIS Config File

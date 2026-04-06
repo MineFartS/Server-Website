@@ -1,6 +1,9 @@
 
+# Run Junctions.py
+from . import Junctions # pyright: ignore[reportUnusedImport]
+
 # Run Registry.py
-import Registry
+from . import Registry # pyright: ignore[reportUnusedImport]
 
 # Run IISConfig.py
-import IISConfig
+from . import IISConfig # pyright: ignore[reportUnusedImport]

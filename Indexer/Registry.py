@@ -1,6 +1,6 @@
 from IndexTypes import IndexRegistry, IndexEntry, Search
 from philh_myftp_biz.terminal import Log
-from __init__ import root
+from . import root
 
 # Clear the search registry
 Search.save([])
