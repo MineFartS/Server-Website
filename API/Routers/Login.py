@@ -60,7 +60,7 @@ async def read_item( # pyright: ignore[reportRedeclaration]
         r['Alert'] = ""
         r['Token'] = user.resetAuth()
         
-        user.setPass(password)
+        user.create(password)
         
     return r
     

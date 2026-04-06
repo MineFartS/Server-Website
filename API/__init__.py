@@ -58,6 +58,13 @@ class User:
             '-Username', self.username,
             '-Password', password
         ).output('json')
+    
+    def create(self, password:str):
+        Users.run(
+            'Create',
+            '-Username', self.username,
+            '-Password', password
+        )
 
     def setPass(self, password:str):
         Users.run(
