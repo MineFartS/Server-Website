@@ -86,8 +86,8 @@ STATUS = {status}
     async def __call__(self, *args, **kwargs): # pyright: ignore[reportMissingParameterType]
         try:
             await super().__call__(*args, **kwargs)
-        except Exception as e:
-            Log.FAIL(str(e))
+        except:
+            Log.FAIL('', exc_info=True)
 
 Log.VERB('Installing Middleware')
 
