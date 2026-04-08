@@ -5,4 +5,4 @@ Set Shell = WScript.CreateObject("WScript.Shell")
 Shell.CurrentDirectory = "E:\Website"
 
 ' Run the command
-Shell.run "python -m API.__Start.py", 0, 0
+Shell.run "python -m API", 0, 0
