@@ -1,6 +1,5 @@
 from philh_myftp_biz.web import FirewallException
 from philh_myftp_biz.terminal import Log
-from philh_myftp_biz import VERBOSE
 from importlib import import_module
 from . import this, PIDstore
 from fastapi import FastAPI
@@ -51,8 +50,9 @@ for file in this.child('/API/Routers/').descendants:
 Log.INFO('Uvicorn Service Started')
 
 app.run(
-    workers = (1 if VERBOSE else 2),
     ssl_certfile = this.file('certificates/cert'),
     ssl_keyfile = this.file('certificates/key'),
     log_level = "critical"
 )
+
+#=======================================================================
