@@ -24,7 +24,7 @@ app.set_favicon(this.child('/Root/_/main.ico'))
 
 for file in this.child('/API/Routers/').descendants:
 
-    if (file.ext == 'py') and (file.name != '__init__'):
+    if file.ext == 'py':
 
         imp: str = file.path
         imp = imp.split('/API/')[1]
@@ -32,14 +32,19 @@ for file in this.child('/API/Routers/').descendants:
         imp = imp.replace('/', '.')
         imp = '.' + imp
 
-        Log.VERB(f'Installing Router: {imp}')
+        try:
 
-        module = import_module(
-            name = imp, 
-            package = __package__
-        )
+            module = import_module(
+                name = imp, 
+                package = __package__
+            )
 
-        app.include_router(module.router)
+            app.include_router(module.router)
+
+            Log.VERB(f'Installed Router: {imp}')
+
+        except AttributeError:
+            pass
 
 #=======================================================================
 
