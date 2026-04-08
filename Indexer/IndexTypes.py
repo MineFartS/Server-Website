@@ -1,7 +1,7 @@
 from philh_myftp_biz.array import List
 from philh_myftp_biz.file import JSON
 from philh_myftp_biz.pc import Path
-from __init__ import root
+from . import root
 
 Search = List(JSON(
     path = root.child('/_/Search/search.json'), 

@@ -1,4 +1,4 @@
-from IndexTypes import IndexRegistry, IndexEntry, Search
+from .IndexTypes import IndexRegistry, IndexEntry, Search
 from philh_myftp_biz.terminal import Log
 from . import root
 
