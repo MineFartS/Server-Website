@@ -1,8 +1,10 @@
 from fastapi.responses import FileResponse
-from philh_myftp_biz.pc import Path
 from fastapi import APIRouter
 from . import list as _list
 from typing import Literal
+
+from philh_myftp_biz.pc import Path, loc
+from philh_myftp_biz.web import URL
 
 systems = 'Windows', 'MacOS', 'Linux'
 
@@ -33,7 +35,13 @@ def _(
 
     program = getattr(_list, name)
 
-    tfile: Path = getattr(program, os) ()
+    os_data = getattr(program, os) ()
 
-    return FileResponse(tfile.path)
+    name: str = os_data.name
+    url: URL = os_data.url
 
+    tempfile = loc.temp.child(name)
+
+    url.cache(tempfile)
+
+    return FileResponse(tempfile.path)

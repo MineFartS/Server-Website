@@ -1,10 +1,9 @@
-from . import cache
+from philh_myftp_biz.web import URL
 
 class Blender:
 
-    def Windows():
-        return cache(
-            url  = 'https://mirrors.iu13.net/blender/release/Blender3.6/blender-3.6.23-windows-x64.msi',
-            name = 'blender.msi'
-        )
+    class Windows:
+
+        url  = URL('https://mirrors.iu13.net/blender/release/Blender3.6/blender-3.6.23-windows-x64.msi')
+        name = 'blender.msi'
 
