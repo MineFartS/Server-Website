@@ -185,7 +185,7 @@ const OS = (() => {
   
     let platform = (window.navigator?.userAgentData?.platform || window.navigator.platform);
   
-    if (['macOS', 'Macintosh', 'MacIntel'].includes(platform)) return 'macOS';
+    if (['macOS', 'Macintosh', 'MacIntel'].includes(platform)) return 'MacOS';
 
     if (['Win32', 'Win64', 'Windows'].includes(platform)) return 'Windows';
 
@@ -194,6 +194,5 @@ const OS = (() => {
     return undefined;
 
 }) ()
-
 
 // =======================================================

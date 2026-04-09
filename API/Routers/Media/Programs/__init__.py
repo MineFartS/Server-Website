@@ -13,7 +13,7 @@ router = APIRouter(
 
 @router.get('/list')
 def _(
-    os: Literal[*systems] # pyright: ignore[reportInvalidTypeForm]
+    os: Literal[*systems]
 ) -> list[str]:
     
     programs: list[str] = []
@@ -29,7 +29,7 @@ def _(
 @router.get('/get')
 def _(
     name: str,
-    os: Literal[*systems] # pyright: ignore[reportInvalidTypeForm]
+    os: Literal[*systems]
 ):
 
     program = getattr(items, name)
