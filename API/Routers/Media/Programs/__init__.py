@@ -18,7 +18,7 @@ def _(
     
     programs: list[str] = []
     
-    for name, obj in vars(items):
+    for name, obj in vars(items).items():
 
         if hasattr(obj, os):
 
@@ -34,13 +34,15 @@ def _(
 
     program = getattr(items, name)
 
-    os_data = getattr(program, os) ()
+    data = getattr(program, os) ()
 
-    name: str = os_data.name
-    url: URL = os_data.url
+    name: str = data.name
+    url:  URL = data.url
 
     tempfile = loc.temp.child(name)
-
     url.cache(tempfile)
 
-    return FileResponse(tempfile.path)
+    return FileResponse(
+        path = tempfile.path,
+        filename = name
+    )
