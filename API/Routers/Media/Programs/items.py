@@ -12,6 +12,10 @@ class Disk_Drill:
         url = URL("https://win.cleverfiles.com/disk-drill-win.exe")
         ext = "exe"
 
+    class MacOS:
+        url = URL("https://dl.cleverfiles.com/diskdrill.dmg")
+        ext = 'dmg'
+
 class disk2vhd:
     
     class Windows:
@@ -23,6 +27,10 @@ class Github_Desktop:
     class Windows:
         url = URL("https://central.github.com/deployments/desktop/desktop/latest/win32")
         ext = "exe"
+
+    class MacOS:
+        url = URL("https://central.github.com/deployments/desktop/desktop/latest/darwin")
+        ext = 'zip'
 
 class htTrack:
 
@@ -47,7 +55,6 @@ class Make:
     class Windows:
         url = URL("https://gigenet.dl.sourceforge.net/project/gnuwin32/make/3.81/make-3.81.exe?viasf=1")
         ext = "exe"
-
 
 class Remove_MS_Edge:
 
