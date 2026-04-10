@@ -22,7 +22,7 @@ def _(
 
             programs += [name]
 
-    return programs
+    return sorted(programs)
 
 @router.get('/get')
 def _(
