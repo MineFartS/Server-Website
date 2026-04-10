@@ -39,7 +39,7 @@ def _(
 
     name = program.__name__.replace('_', ' ')
     ext: str = data.ext
-    url:  URL = data.url
+    url = URL(data.url)
 
     tempfile = temp(name, ext, 0)
     url.cache(tempfile)
