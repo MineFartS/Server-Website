@@ -1,5 +1,6 @@
 from fastapi.responses import FileResponse
-from philh_myftp_biz.pc import Path, loc
+from philh_myftp_biz.file import temp
+from philh_myftp_biz.pc import Path
 from philh_myftp_biz.web import URL
 from fastapi import APIRouter
 from typing import Literal
@@ -36,13 +37,14 @@ def _(
 
     data = getattr(program, os) ()
 
-    name: str = data.name
+    name = program.__name__
+    ext: str = data.ext
     url:  URL = data.url
 
-    tempfile = loc.temp.child(name)
+    tempfile = temp(name, ext, 0)
     url.cache(tempfile)
 
     return FileResponse(
         path = tempfile.path,
-        filename = name
+        filename = f'{name}.{ext}'
     )
