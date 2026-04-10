@@ -130,13 +130,123 @@ class Android_Studio:
         
         @property
         def url(self):
-            
             with Driver() as d:
 
                 d.open('https://developer.android.com/studio')
 
                 d.element('xpath', '/html/body/section/section/main/devsite-content/article/div[2]/section[1]/div/div/div/div[2]/div/div/p[2]/button')[0].click()
 
-                url = d.element('id', 'agree-button__studio_win_notools_exe_download')[0].href
+                return d.element('id', 'agree-button__studio_win_notools_exe_download')[0].href
 
-            return url
+class Balena_Etcher:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+
+                d.open('https://etcher.balena.io/#download-etcher')
+
+                return d.element('class', 'download-link-wrapper')[0].children[0].href
+
+class Git:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+
+                d.open('https://git-scm.com/install/windows#:~:text=Windows/x64')
+
+                return d.element('xpath', '/html/body/div[2]/div/div[2]/div/div/div[2]/p[2]/strong/a')[0].href
+
+class HandBrake:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+                
+                d.open('https://handbrake.fr/downloads.php')
+
+                return d.element('xpath', '/html/body/section/div[2]/a[1]')[0].href
+
+class Plex_Media_Server:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+
+                d.open('https://www.plex.tv/media-server-downloads/?cat=computer&plat=windows')
+
+                return d.element('class', 'release-link')[0].href
+
+class Rufus:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+
+                d.open('https://rufus.ie/en/')
+
+                return d.element('xpath', '/html/body/div[2]/section[5]/table[1]/tbody/tr[2]/td[1]/a')[0].href
+
+class WinTV_10:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+
+                d.open('https://www.hauppauge.com/pages/support/support_wintv10.html')
+
+                return d.element('xpath', '/html/body/main/article/section/div/div/div[1]/div/div[2]/p[1]/a[1]')[0].href
+
+class VLC:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+
+                d.open('https://www.videolan.org/vlc/')
+
+                return d.element('xpath', '/html/body/div[1]/div[2]/section/div/div[2]/div[4]/div[1]/ul/li[2]/a')[0].href
+
+class Zadig:
+
+    class Windows:
+
+        ext = 'exe'
+
+        @property
+        def url(self):
+            with Driver() as d:
+
+                d.open('https://zadig.akeo.ie/')
+
+                return d.element('xpath', '/html/body/div[3]/ul[2]/li[1]/span/b/a')[0].href
+
