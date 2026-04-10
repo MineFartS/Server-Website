@@ -37,7 +37,7 @@ def _(
 
     data = getattr(program, os) ()
 
-    name = program.__name__
+    name = program.__name__.replace('_', ' ')
     ext: str = data.ext
     url:  URL = data.url
 
