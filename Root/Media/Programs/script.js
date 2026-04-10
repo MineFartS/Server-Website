@@ -11,7 +11,7 @@ API.call('/Media/Programs/list', {'os': OS}).then(t => {
             <a 
                 class = "option"
                 href = "${API.url}/Media/Programs/get?os=${OS}&name=${name}"
-            >${name.replaceAll('_', ' ')}</a>
+            >${name.replaceAll('_', ' ').trim()}</a>
         `)
 		
 	}

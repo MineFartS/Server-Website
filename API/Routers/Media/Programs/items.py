@@ -171,3 +171,36 @@ class Zadig:
             d.open('https://zadig.akeo.ie/')
 
             return d.element('xpath', '/html/body/div[3]/ul[2]/li[1]/span/b/a')[0].href
+
+class BlueStacks:
+    
+    Windows = "https://www.bluestacks.com/#:~:text=Download" # TODO
+
+class _7-Zip:
+
+    Windows = "https://www.7-zip.org/#:~:text=Windows x64 (64-bit)" # TODO
+
+class Advanced_Renamer:
+
+    Windows = "https://www.advancedrenamer.com/download#:~:text=Download for Windows" # TODO
+
+class FileZilla_Client:
+
+    Windows = "https://filezilla-project.org/download.php?type=client#:~:text=(64bit%20x86)" # TODO
+
+class FileZilla_Server:
+
+    Windows = "https://filezilla-project.org/download.php?type=server#:~:text=(64bit x86)" # TODO
+
+class FireFox:
+
+    Windows = "https://www.firefox.com/en-US/thanks/" # TODO
+
+class Flow_Frames:
+
+    Windows = "https://nmkd.itch.io/flowframes/purchase#:~:text=No%20Thanks,downloads" # TODO
+
+class Free_ISO_Creator:
+
+    Windows = "https://www.softsea.com/download/Free-ISO-Creator.html" # TODO
+
