@@ -176,7 +176,7 @@ class BlueStacks:
     
     Windows = "https://www.bluestacks.com/#:~:text=Download" # TODO
 
-class _7-Zip:
+class _7_Zip:
 
     Windows = "https://www.7-zip.org/#:~:text=Windows x64 (64-bit)" # TODO
 
