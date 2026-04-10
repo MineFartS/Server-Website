@@ -23,7 +23,7 @@ def _(
 
         if hasattr(obj, os):
 
-            programs += [name]
+            programs += [name.replace('_', ' ')]
 
     return programs
 
