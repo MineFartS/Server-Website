@@ -56,10 +56,12 @@ const API = {
         timeout = undefined
     ) => {
 
-        let args = [];
-
-        // Declare the base url for the request
-        args[0] = (API.url + url);
+        let args = [
+            API.url + url,
+            {
+                cache: 'no-store'
+            }
+        ];
 
         if (Object.keys(params).length > 0) {
             args[0] += '?';
@@ -67,7 +69,7 @@ const API = {
         }
 
         if (timeout) {
-            args[1] = {signal: AbortSignal.timeout(timeout * 1000)};
+            args[1]['signal'] = AbortSignal.timeout(timeout * 1000);
         }
 
         // Return a promise object with json formatting

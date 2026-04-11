@@ -72,31 +72,35 @@ enablerdsaadauth:i:0
 """
 
 @router.get('/connectRDP')
-async def read_item( # pyright: ignore[reportRedeclaration]
-    name: str
-) -> FileResponse:
+async def _(
+    username: str,
+    token: str
+) -> FileResponse: # pyright: ignore[reportReturnType]
+    
+    user = User(username)
 
-    id = VM.cap('ID', f'User-{name}')
+    if user.checkAuth(token):
 
-    code = templ.format(id=id)
+        code = templ.format(
+            id = VM.cap('ID', f'User-{username}')
+        )
 
-    file = temp(
-        name = 'connect',
-        ext = 'rdp'
-    )
+        file = temp(
+            name = 'connect',
+            ext = 'rdp'
+        )
 
-    with file.open('w') as f:
-        f.write(code)
+        with file.open('w') as f:
+            f.write(code)
 
-    return FileResponse(
-        path = str(file),
-        filename = f'{name}.rdp',
-        media_type = 'application/octet-stream'
-    )
+        return FileResponse(
+            path = str(file),
+            filename = f'{username}.rdp',
+            media_type = 'application/octet-stream'
+        )
 
 @router.get('/start')
-async def read_item( # pyright: ignore[reportRedeclaration]
-    name: str,
+async def _(
     username: str,
     token: str
 ) -> None:
@@ -105,12 +109,13 @@ async def read_item( # pyright: ignore[reportRedeclaration]
 
     if user.checkAuth(token):
 
-        # Start the virtual machine
-        VM.run('start', f'User-{name}')
+        VM.run(
+            'start', 
+            f'User-{username}'
+        )
 
 @router.get('/stop')
-async def read_item( # pyright: ignore[reportRedeclaration]
-    name: str,
+async def _(
     username: str,
     token: str
 ) -> None:
@@ -119,13 +124,23 @@ async def read_item( # pyright: ignore[reportRedeclaration]
 
     if user.checkAuth(token):
     
-        # Stop the virtual machine
-        VM.run('stop', f'User-{name}')
+        VM.run(
+            'stop', 
+            f'User-{username}'
+        )
 
 @router.get('/status')
 async def read_item(
-    name: str
-) -> bool:
+    username: str,
+    token: str
+) -> None | bool:
     
-    # Get the power status of the virtual machine
-    return VM.cap('status', f'User-{name}') # pyright: ignore[reportReturnType]
+    user = User(username)
+
+    if user.checkAuth(token):
+    
+        # Get the power status of the virtual machine
+        return VM.cap(
+            'status', 
+            f'User-{username}'
+        ) # pyright: ignore[reportReturnType]
