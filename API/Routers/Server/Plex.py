@@ -1,3 +1,4 @@
+from philh_myftp_biz.modules import Service
 from philh_myftp_biz.pc import Path
 from fastapi import APIRouter
 from typing import Literal
@@ -7,7 +8,8 @@ router = APIRouter(
     prefix = '/Server/Plex'
 )
 
-#
+Torrenting = Service('E:/Plex/Torrenting/')
+
 movies = Path('E:/Plex/Media/Movies/')
 shows = Path('E:/Plex/Media/Shows/')
 
@@ -17,6 +19,8 @@ async def read_item(
     Year: int,
     Type: Literal['movie', 'series']
 ) -> str:
+    
+    mess = "An unknown error has occurred"
     
     # Name of the movie file
     name = f'{Title} ({Year})'
@@ -30,8 +34,7 @@ async def read_item(
         # If the folder already exists
         if dir.exists:
             
-            # Return alert message
-            return 'Show already exists'
+            mess =  'Show already exists'
         
         # If the folder does not exist
         else:
@@ -39,8 +42,7 @@ async def read_item(
             # Create the folder
             dir.mkdir()
             
-            # Return alert message
-            return 'Show has been added to the download queue'
+            mess =  'Show has been added to the download queue'
 
     # If the media type is a movie
     elif Type == 'movie':
@@ -51,8 +53,7 @@ async def read_item(
             # If the file has the same name as the movie
             if p.name == name:
                 
-                # Return alert message
-                return 'Movie already exists'
+                mess = 'Movie already exists'
             
         # Path of Placeholder file
         todo = movies.child(f'/{name}.todo')
@@ -60,8 +61,7 @@ async def read_item(
         # If the placeholder file exists
         if todo.exists:
             
-            # Return alert message
-            return 'Movie is already in the download queue'
+            mess = 'Movie is already in the download queue'
         
         # If the placeholder file does not exist
         else:
@@ -69,8 +69,9 @@ async def read_item(
             # Create the placeholder file
             todo.open('w')
             
-            # Return alert message
-            return 'Movie has been added to the download queue'
+            mess = 'Movie has been added to the download queue'
 
+    if not Torrenting.running:
+        Torrenting.start()
 
-    return 'An unknown error has occurred'
+    return mess
