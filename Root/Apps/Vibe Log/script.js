@@ -2,6 +2,7 @@
 // get option element
 e['content'] = document.getElementById('content2')
 
+e.title.innerHTML += "<br>&#x2022;<br>Click the image that best matches your vibe"
 
 // Fetch 'files/index.json'
 fetch('/Apps/Goofy Stuff/Cursed Images/files/index.json').then(r => r.json()).then(items => {
@@ -12,11 +13,20 @@ fetch('/Apps/Goofy Stuff/Cursed Images/files/index.json').then(r => r.json()).th
     // Shuffle items
     items.sort(() => Math.random()-0.5)
 
-    for (let x=0; x<9; x++) {
+    let x, src, name;
+
+    for (x=0; x<9; x++) {
+
+        src = items[x].URL;
+
+        name = src.substring(src.lastIndexOf('/')+1);
 
         // Set the html of the 'content' element to an embed image
-        e.content.innerHTML += `<img src="${items[x].URL}?raw=true">`
-    
+        e.content.innerHTML += `
+        <a href="Share?name=${name}">
+            <img src="${src}?raw=true">    
+        </a>`
+
     }
 
 })
