@@ -8,3 +8,5 @@ let src = `https://philh.myftp.biz/Apps/Goofy%20Stuff/Cursed%20Images/files/${pa
 e.content.innerHTML = `<img src="${src}?raw=true">`
 
 e.title.textContent = `My Vibe (${parameters['iso']})`
+
+e.back.textContent = 'Back'
