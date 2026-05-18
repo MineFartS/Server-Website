@@ -4,6 +4,8 @@ e['content'] = document.getElementById('content2')
 
 e.title.innerHTML += "<br>&#x2022;<br>Click the image that best matches your vibe"
 
+let ISO = new Date().toISOString().substring(0, 10);
+
 // Fetch 'files/index.json'
 fetch('/Apps/Goofy Stuff/Cursed Images/files/index.json').then(r => r.json()).then(items => {
 
@@ -23,7 +25,7 @@ fetch('/Apps/Goofy Stuff/Cursed Images/files/index.json').then(r => r.json()).th
 
         // Set the html of the 'content' element to an embed image
         e.content.innerHTML += `
-        <a href="Share?name=${name}">
+        <a href="Share?name=${name}&iso=${ISO}">
             <img src="${src}?raw=true">    
         </a>`
 
