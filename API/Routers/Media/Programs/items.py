@@ -186,7 +186,7 @@ class Advanced_Renamer:
 
 class FileZilla_Client:
 
-    Windows = "https://filezilla-project.org/download.php?type=client#:~:text=(64bit%20x86)" # TODO
+    Windows = "https://filezilla-project.org/download.php?type=client#:~:text=(64bit x86)" # TODO
 
 class FileZilla_Server:
 
@@ -198,9 +198,114 @@ class FireFox:
 
 class Flow_Frames:
 
-    Windows = "https://nmkd.itch.io/flowframes/purchase#:~:text=No%20Thanks,downloads" # TODO
+    Windows = "https://nmkd.itch.io/flowframes/purchase#:~:text=No Thanks,downloads" # TODO
 
 class Free_ISO_Creator:
 
     Windows = "https://www.softsea.com/download/Free-ISO-Creator.html" # TODO
+
+class Ghidra:
+
+    Windows = "https://github.com/NationalSecurityAgency/ghidra/releases/latest" # TODO
+
+class MSYS2:
+
+    Windows = "https://www.msys2.org" # TODO
+
+class JadX:
+
+    Windows = "github.com/skylot/jadx/releases/latest" # TODO
+
+class Krokiet:
+
+    Windows = "https://github.com/qarmin/czkawka/releases/latest" # TODO
+
+class HP_BCU:
+
+    Windows = "https://ftp.hp.com/pub/softpaq/sp143501-144000/sp143621.exe"
+
+class NSIS:
+
+    Windows = "https://nsis.sourceforge.io/Download" # TODO
+
+class Crystal_Disk_Info:
+
+    Windows = "https://sourceforge.net/projects/crystaldiskinfo/files/latest/download" # TODO
+
+class Zello:
+
+    Windows = "https://archive.org/download/zello-setup_202606/ZelloSetup.exe"
+
+class Photoshop:
+
+    Windows = "" # TODO
+
+class Premiere_Pro:
+
+    Windows = "" # TODO
+
+class iMazing:
+
+    Windows = "" # TODO
+
+class iTunes:
+
+    Windows = "https://secure-appldnld.apple.com/itunes12/031-69284-20160802-7E7B2D20-552B-11E6-B2B9-696CECD541CE/iTunes64Setup.exe"
+
+class OBS:
+
+    Windows = "https://obsproject.com/download" # TODO
+
+class DVD_Decrypter:
+
+    Windows = "https://www.techspot.com/downloads/downloadnowfile/12/?evp=467c3cf24c6f97d63023fa2b8fc6ea1e&file=14" # TODO
+
+class Auto_Keyboard_Presser:
+
+    Windows = "https://sourceforge.net/projects/autokeyboardpresser/files/Autosofted_Auto_Keyboard_Presser_1.9.exe/download" # TODO
+
+class Eagler_Craft:
+
+    Windows = "https://archive.org/download/eaglercraftx-1.8-u29/EaglercraftX_1.8_Web.zip"
+
+class NBT_Editor:
+
+    Windows = "https://sourceforge.net/projects/nbteditor/files/latest/download" # TODO
+
+class Node_JS:
+
+    Windows = "https://nodejs.org/en/download" # TODO
+
+class Python:
+
+    Windows = "https://www.python.org/downloads/windows/" # TODO
+
+class Remove_Edge:
+
+    Windows = "https://github.com/ShadowWhisperer/Remove-MS-Edge/releases/download/2.3/Remove-Edge.exe"
+
+class Display_Drivers_Uninstaller:
+
+    Windows = "https://download.wagnardsoft.com/DDU/DDU v18.1.5.4_setup.exe" # TODO
+
+class Catalina_Patcher:
+
+    MacOS = "https://github.com/dosdude1/macos-catalina-patcher/releases/download/1.4.7/macOS.Catalina.Patcher.dmg"
+
+class Plex_DB_Repair:
+
+    Windows = "https://raw.githubusercontent.com/ChuckPa/DBRepair/refs/heads/master/Windows/DBRepair-Windows.ps1"
+
+    MacOS = "https://github.com/ChuckPa/DBRepair/releases/latest/download/DBRepair.sh"
+    Linux = MacOS
+
+class Free_File_Sync:
+
+    Windows = "https://github.com/hkneptune/FreeFileSync/releases/latest" # TODO
+    MacOS = Windows # TODO
+    Linux = Windows # TODO
+
+class Certify_The_Web:
+
+    Windows = "https://certifytheweb.com/home/download" # TODO
 
